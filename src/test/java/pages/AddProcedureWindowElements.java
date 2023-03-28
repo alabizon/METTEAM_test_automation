@@ -15,7 +15,7 @@ public class AddProcedureWindowElements extends BaseClass {
 	
 	//this element switch to frame from find procedures screen to add procedures screen
 	@FindBy (xpath = "//*[@id =\"frame_2\"]")
-	public WebElement windowSwitch;
+	public WebElement windowSwitch2;
 	
 	@FindBy (id = "cProcedureName")
 	public WebElement procName;

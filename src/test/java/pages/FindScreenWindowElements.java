@@ -28,6 +28,10 @@ public class FindScreenWindowElements extends BaseClass {
 	@FindBy (xpath = "//*[@id =\"frame_1\"]")
 	public WebElement WindowSwitch;
 	
+	//this element switch to Add frame from find screen
+	@FindBy (xpath = "//*[@id =\"frame_2\"]")
+	public WebElement WindowSwitch2;
+	
 	//this element switch to frame from Add Asset screen to Find Facility screen
 	@FindBy (xpath = "//*[@id=\"frame_3\"]")
 	public WebElement windowSwitchTo;

@@ -9,7 +9,7 @@ import utils.CommonMethods;
 public class LoginInvalidCredentials extends CommonMethods {
 	
 	@Given("Login With invalid login {string} and valid password {string}")
-	public void login_With_invalid_login_and_valid_password(String UserName, String Password) {
+	public void login_With_ivalid_login_and_valid_password(String UserName, String Password) {
 	    sendKeys(loginPageElements.login, UserName);
 	    sendKeys(loginPageElements.password, Password);
 	    click(loginPageElements.logInButton);

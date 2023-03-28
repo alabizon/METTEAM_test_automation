@@ -20,7 +20,8 @@ public class LoginPageElements extends BaseClass {
 	public WebElement password;
 	
 	// Log-in button
-	@FindBy (id ="btn-auth-submit")
+	//@FindBy (id ="btn-auth-submit")
+	@FindBy (xpath = "//*[@id=\"btn-auth-submit\"]")
 	public WebElement logInButton;
 	
 	// Change Password link

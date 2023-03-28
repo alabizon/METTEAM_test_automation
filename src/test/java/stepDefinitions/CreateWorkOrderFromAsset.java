@@ -13,10 +13,10 @@ public class CreateWorkOrderFromAsset extends CommonMethods {
 	@When("Click on Maintenance and click on the Asset")
 	public void click_on_Maintenance_and_click_on_the_Asset() throws InterruptedException {
 		Thread.sleep(2000);
-		consoleMenuMetTeamElements.btnMaintenance.click();
+		CommonMethods.click(concoleMenuMetTeamElements.btnMaintenance);
 		Thread.sleep(1000);
 		
-		maintenanceSubMenuElements.maintAssets.click();
+		CommonMethods.click(maintenanceSubMenuElements.maintAssets);
 		Thread.sleep(1000);
 		
 		}
@@ -24,7 +24,7 @@ public class CreateWorkOrderFromAsset extends CommonMethods {
 	@Then("Find Asset {string} is open and click Add button")
 	public void find_Asset_is_open_and_click_on_Add_button(String WindowName) throws Throwable {
 		
-		CommonMethods.switchToFrame(findScreenWindowElements.WindowSwitch);
+		CommonMethods.swithToFrame(findScreenWindowElements.WindowSwitch);
 		CommonMethods.waitForVisib(findScreenWindowElements.addButton);
 		CommonMethods.click(findScreenWindowElements.addButton);
 		
@@ -33,7 +33,7 @@ public class CreateWorkOrderFromAsset extends CommonMethods {
 	@Then("{string} window is opened and click ellipsis button next to the Customer")
 	public void window_is_opened_and_click_on_Elipsis_button_next_to_the_Customer(String WindowName) throws InterruptedException {
 		
-		CommonMethods.switchToFrame(addAssetWindowElements.windowSwitch);
+		CommonMethods.swithToFrame(addAssetWindowElements.windowSwitch);
 		CommonMethods.waitForVisib(addAssetWindowElements.elipsisButtonCustomer);
 		CommonMethods.click(addAssetWindowElements.elipsisButtonCustomer);
 		Thread.sleep(1000);
@@ -45,7 +45,7 @@ public class CreateWorkOrderFromAsset extends CommonMethods {
 		driver.switchTo().defaultContent();
 		Thread.sleep(1000);
 		
-		CommonMethods.switchToFrame(findScreenWindowElements.windowSwitchTo);
+		CommonMethods.swithToFrame(findScreenWindowElements.windowSwitchTo);
 		CommonMethods.waitForVisib(findScreenWindowElements.FindButton);
 		CommonMethods.click(findScreenWindowElements.FindButton);
 		Thread.sleep(1000);
@@ -76,7 +76,7 @@ public class CreateWorkOrderFromAsset extends CommonMethods {
 	public void click_on_elipsis_button_next_to_the_Type_Description_window_is_open(String string) throws Throwable {
 		Thread.sleep(1000);
 		driver.switchTo().defaultContent();
-		CommonMethods.switchToFrame(addAssetWindowElements.windowSwitch);
+		CommonMethods.swithToFrame(addAssetWindowElements.windowSwitch);
 		CommonMethods.waitForVisib(addAssetWindowElements.elipsisButtonTypeDescription);
 	    CommonMethods.click(addAssetWindowElements.elipsisButtonTypeDescription);
 	    Thread.sleep(1000);
@@ -88,7 +88,7 @@ public class CreateWorkOrderFromAsset extends CommonMethods {
 		Thread.sleep(1000);
 		driver.switchTo().parentFrame();
 		Thread.sleep(1000);
-		CommonMethods.switchToFrame(findScreenWindowElements.switch2);
+		CommonMethods.swithToFrame(findScreenWindowElements.switch2);
 		CommonMethods.waitForVisib(findScreenWindowElements.FindButton);
 	    CommonMethods.click(findScreenWindowElements.FindButton);
 	    Thread.sleep(1000);
@@ -114,7 +114,7 @@ public class CreateWorkOrderFromAsset extends CommonMethods {
 	@Then("click yes on 'Update all Asset data with current Type data?' window")
 	public void click_yes_on_Update_all_Asset_data_with_current_Type_data_window() throws Throwable {
 		Thread.sleep(3000);
-	    CommonMethods.switchToFrame(addAssetWindowElements.windowSwitch);
+	    CommonMethods.swithToFrame(addAssetWindowElements.windowSwitch);
 	    CommonMethods.waitForVisib(findTypeWindowElements.buttonYesOnChildWindow);
 	    CommonMethods.click(findTypeWindowElements.buttonYesOnChildWindow);
 	    Thread.sleep(2000);
@@ -125,7 +125,7 @@ public class CreateWorkOrderFromAsset extends CommonMethods {
 	@Then("click Save button and click Receive Asset button")
 	public void click_on_save_button_and_Receive_Asset() throws Throwable {
 		driver.switchTo().parentFrame();
-		CommonMethods.switchToFrame(addAssetWindowElements.windowSwitch);
+		CommonMethods.swithToFrame(addAssetWindowElements.windowSwitch);
 		CommonMethods.waitForVisib(addAssetWindowElements.buttonSave);
 		CommonMethods.click(addAssetWindowElements.buttonSave);
 		
@@ -142,7 +142,7 @@ public class CreateWorkOrderFromAsset extends CommonMethods {
 	public void window_is_opened_verify_title_and_click_on_Add_Result_button(String string) throws Throwable {
 		Thread.sleep(1000);
 		driver.switchTo().parentFrame();
-		CommonMethods.switchToFrame(editWorkOrderElements.FrameWorkOrder);
+		CommonMethods.swithToFrame(editWorkOrderElements.FrameWorkOrder);
 		CommonMethods.waitForClickability(editWorkOrderElements.buttonAddResult);
 		CommonMethods.click(editWorkOrderElements.buttonAddResult);
 		Thread.sleep(3000);
