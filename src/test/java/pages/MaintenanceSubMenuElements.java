@@ -13,7 +13,7 @@ public class MaintenanceSubMenuElements extends BaseClass {
 	public WebElement maintAssets;
 	
 	// Maintenance -> Types menu item 
-	@FindBy (id = "ext-gen133")
+	@FindBy (xpath = "/html/body/div[4]/ul/li[2]/a/span")
 	public WebElement maintTypes;
 		
 	// Maintenance -> Procedures menu item 
