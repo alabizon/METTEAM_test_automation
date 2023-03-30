@@ -9,15 +9,15 @@ import testBase.BaseClass;
 public class HelpSubMenuElements extends BaseClass {
 
 	// Help -> Help menu item 
-	@FindBy (id = "txt-mnuHelpHelps")
+	@FindBy (id = "ext-gen180")
 	public WebElement helpHelp;
 	
 	// Help -> Website menu item 
-	@FindBy (id = "txt-mnuHelpWebsite")
+	@FindBy (id = "ext-gen182")
 	public WebElement helpWebsite;
 		
 	// Help -> About menu item 
-	@FindBy (id = "txt-mnuHelpAbout")
+	@FindBy (id = "ext-gen185")
 	public WebElement helpAbout;
 		
 

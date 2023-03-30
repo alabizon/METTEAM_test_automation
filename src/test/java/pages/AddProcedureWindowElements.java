@@ -13,38 +13,34 @@ public class AddProcedureWindowElements extends BaseClass {
 	 * Beginning Elements from Add Procedure page
 	 */
 	
-	//this element switch to frame from find procedures screen to add procedures screen
-	@FindBy (xpath = "//*[@id =\"frame_2\"]")
-	public WebElement windowSwitch2;
-	
 	@FindBy (id = "cProcedureName")
 	public WebElement procName;
 	
-	@FindBy (id = "cProcedureNumber")
+	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[1]")
 	public WebElement procNumber;
 	
-	@FindBy (id = "cVersion")
+	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[2]")
 	public WebElement procVersion;
 	
-	@FindBy (id = "tProcedureDate")
+	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field'])[1]")
 	public WebElement procDate;
 	
-	@FindBy (id = "btn-nAttTemplateUID_display")
+	@FindBy (xpath = "/html/body/div[4]/div/form/div/div[1]/div/div/div[3]/div/div/img")
 	public WebElement elipsisButtonDataSheet;
 	
-	@FindBy (id = "cRevision")
+	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[3]")
 	public WebElement procRevision;
 	
-	@FindBy (id = "tRevisionDate")
+	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field'])[2]")
 	public WebElement procRevisionDate;
 	
-	@FindBy (id = "btn-nCategoryUID_display")
+	@FindBy (xpath = "/html/body/div[4]/div/form/div/div[1]/div/div/div[9]/div/div/img")
 	public WebElement elipsisButtonCategory;
 	
-	@FindBy (id = "btn-btnSave")
+	@FindBy (id = "ext-gen291")
 	public WebElement buttonSave;
 	
-	@FindBy (id = "btn-btnClose")
+	@FindBy (id = "ext-gen297")
 	public WebElement buttonClose;
 	
 	/**

@@ -25,35 +25,19 @@ public class FindScreenWindowElements extends BaseClass {
 	 * Beginning Elements from FindScreen
 	 */
 	//this element switch to frame from main page to find screen
-	@FindBy (xpath = "//*[@id =\"frame_1\"]")
-	public WebElement WindowSwitch;
+		
+	@FindBy (className = " x-btn-text tb-find")
+	public WebElement FindButton;
 	
-	//this element switch to Add frame from find screen
-	@FindBy (xpath = "//*[@id =\"frame_2\"]")
-	public WebElement WindowSwitch2;
-	
-	//this element switch to frame from Add Asset screen to Find Facility screen
-	@FindBy (xpath = "//*[@id=\"frame_3\"]")
-	public WebElement windowSwitchTo;
-		     
-	@FindBy (xpath = "//*[@id=\"frame_4\"]")
-	public WebElement switch2;
-	
-	@FindBy (xpath = "//*[@id=\"frame_16\"]")
-	public WebElement switch3;
-	
-
-	@FindBy (xpath = "//*[@id=\"btn-btnAdd\"]")
+	@FindBy (xpath = "/html/body/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[12]/table/tbody/tr[2]/td[2]/em/button")
 	public WebElement addButton;
 	
-	@FindBy (id = "btn-btnFind")
-	public WebElement FindButton;
+	@FindBy (className = " x-btn-text tb-ok")
+	public WebElement OkButton;
 	
 	@FindBy (xpath = "//*[@class=\"x-grid3-body\"]/div/table/tbody/tr/td/div")
 	public List<WebElement> gridTypesFromTheFindFacility;
-	
-	
-		
+			
 	public FindScreenWindowElements() {
 		
 	    PageFactory.initElements(driver, this);

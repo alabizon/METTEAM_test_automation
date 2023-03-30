@@ -9,47 +9,47 @@ import testBase.BaseClass;
 public class MaintenanceSubMenuElements extends BaseClass {
 
 	// Maintenance -> Asset menu item 
-	@FindBy (id = "txt-mnuMaintAssets")
+	@FindBy (id = "ext-gen131")
 	public WebElement maintAssets;
 	
 	// Maintenance -> Types menu item 
-	@FindBy (id = "txt-mnuMaintTypes")
+	@FindBy (id = "ext-gen133")
 	public WebElement maintTypes;
 		
 	// Maintenance -> Procedures menu item 
-	@FindBy (id = "txt-mnuMaintProcedures")
+	@FindBy (xpath = "/html/body/div[4]/ul/li[3]/a/span")
 	public WebElement maintProcedures;
 		
 	// Maintenance -> Facilities menu item 
-	@FindBy (id = "txt-mnuMaintFacilities")
+	@FindBy (id = "ext-gen137")
 	public WebElement maintFacilities;
 		
 	// Maintenance -> JobNumbers menu item 
-	@FindBy (id = "txt-mnuMaintJobNumbers")
+	@FindBy (id = "ext-gen139")
 	public WebElement maintJobNumbers;
 		
 	// Maintenance -> Units menu item 
-	@FindBy (id = "txt-mnuMaintUnits")
+	@FindBy (id = "ext-gen141")
 	public WebElement maintUnits;
 	
 	// Maintenance -> Parts menu item 
-	@FindBy (id = "txt-mnuMaintParts")
+	@FindBy (id = "ext-gen144")
 	public WebElement maintParts;
 	
 	// Maintenance -> ManualTemplates menu item 
-	@FindBy (id = "txt-mnuMaintManualTemplates")
+	@FindBy (id = "ext-gen147")
 	public WebElement maintManualTemplates;
 	
 	// Maintenance -> Files menu item 
-	@FindBy (id = "txt-mnuMaintFiles")
+	@FindBy (id = "ext-gen149")
 	public WebElement maintFiles;
 	
 	// Maintenance -> Accreditations menu item 
-	@FindBy (id = "txt-mnuMaintAccreditation")
+	@FindBy (id = "ext-gen151")
 	public WebElement maintAccreditations;
 	
 	// Maintenance -> DataCleanup menu item 
-	@FindBy (id = "txt-mnuMaintDataCleanup")
+	@FindBy (id = "ext-gen154")
 	public WebElement maintDataCleanup;
 	
 	

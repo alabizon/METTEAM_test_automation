@@ -21,7 +21,7 @@ public class LoginPageElements extends BaseClass {
 	
 	// Log-in button
 	//@FindBy (id ="btn-auth-submit")
-	@FindBy (xpath = "//*[@id=\"btn-auth-submit\"]")
+	@FindBy (xpath = "//*[@id=\"ext-gen22\"]")
 	public WebElement logInButton;
 	
 	// Change Password link
@@ -29,7 +29,7 @@ public class LoginPageElements extends BaseClass {
 	public WebElement changePassword;
 	
 	// Error window title
-	@FindBy (id = "ext-gen39")
+	@FindBy (id = "ext-gen45")
 	public WebElement errorWindowsHeader; 
 	
 	// Change Password window title
@@ -45,11 +45,11 @@ public class LoginPageElements extends BaseClass {
 	public WebElement changePasswordCancel;
 	
 	// Error window text
-	@FindBy (id = "ext-gen47")
+	@FindBy (id = "ext-gen57")
 	public WebElement errorWindowsText; 
 	
      // Ok button from the Error message. 
-	 @FindBy (id = "btn-id-OK")
+	 @FindBy (id = "ext-gen47")
 	 public WebElement 	okButton;
 	 
 	 /**

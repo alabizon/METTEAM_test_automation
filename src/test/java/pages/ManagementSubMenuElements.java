@@ -9,31 +9,31 @@ import testBase.BaseClass;
 public class ManagementSubMenuElements extends BaseClass {
 
 	// Management -> Business Status menu item 
-	@FindBy (id = "txt-mnuBusinessStatus")
+	@FindBy (id = "ext-gen77")
 	public WebElement manageBusinessStatus;
 	
 	// Management -> Billing menu item 
-	@FindBy (id = "txt-mnuBilling")
+	@FindBy (id = "ext-gen79")
 	public WebElement manageBilling;
 		
 	// Management -> Problem Reports menu item 
-	@FindBy (id = "txt-mnuProblemReports")
+	@FindBy (id = "ext-gen82")
 	public WebElement manageProblemReports;
 		
 	// Management -> Tech Assignment menu item 
-	@FindBy (id = "txt-mnuTechAssignments")
+	@FindBy (id = "ext-gen84")
 	public WebElement manageTechAssignment;
 		
 	// Management -> Quote menu item 
-	@FindBy (id = "txt-mnuQuote")
+	@FindBy (id = "ext-gen86")
 	public WebElement manageQuote;
 		
 	// Management -> Contract Pricing menu item 
-	@FindBy (id = "txt-mnuContractPricing")
+	@FindBy (id = "ext-gen88")
 	public WebElement manageContractPricing;
 	
 	// Management -> Calendar menu item 
-	@FindBy (id = "txt-mnuManageCalendar")
+	@FindBy (id = "ext-gen91")
 	public WebElement manageCalendar;
 	
 	

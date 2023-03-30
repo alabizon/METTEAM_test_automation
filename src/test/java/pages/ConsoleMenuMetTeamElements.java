@@ -9,35 +9,35 @@ import testBase.BaseClass;
 public class ConsoleMenuMetTeamElements extends BaseClass{
 
 	// File menu item
-	@FindBy (id = "btn-mnuFile")
+	@FindBy (id = "ext-gen19")
 	public WebElement btnFile;
 	
 	// Workflow menu item
-	@FindBy (id = "btn-mnuWorkflow")
+	@FindBy (id = "ext-gen21")
 	public WebElement btnWorkflow;
 	
 	// Maintenance menu item
-	@FindBy (id = "btn-mnuMaintenance")
+	@FindBy (id = "ext-gen23")
 	public WebElement btnMaintenance;
 	
 	// Management menu item
-	@FindBy (id = "btn-mnuManagement")
+	@FindBy (id = "ext-gen25")
 	public WebElement btnManagement;
 	
 	// Reports menu item
-	@FindBy (id = "btn-mnuReports")
+	@FindBy (id = "ext-gen27")
 	public WebElement btnReports;
 	
 	// Setup menu item
-	@FindBy (id = "btn-mnuSetup")
+	@FindBy (id = "ext-gen29")
 	public WebElement btnSetup;
 	
 	// Help menu item
-	@FindBy (id = "btn-mnuHelp")
+	@FindBy (id = "ext-gen31")
 	public WebElement btnHelp;
 	
 	// Configure menu item
-	@FindBy (id = "btn-mnuSystem")
+	@FindBy (id = "ext-gen33")
 	public WebElement btnConfigure;
 	
 	

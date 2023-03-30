@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -13,18 +15,21 @@ public class AttachDataSheetElements extends BaseClass {
 	 * Beginning Elements from Add Procedure page
 	 */
 	
-	//this element switch to frame from find procedures screen to add procedures screen
-	@FindBy (xpath = "//*[@id =\"frame_3\"]")
-	public WebElement windowSwitch2;
-	
-	@FindBy (id = "ext-comp-1016")
+	@FindBy (className = "x-form-text x-form-field x-trigger-noedit x-form-focus")
 	public WebElement attachDataSheetLinkToSearchValue;
 	
-	@FindBy (id = "btn-btnFind")
+	@FindBy (xpath = "//*[@class = \"x-combo-list-inner\"]/div")
+	public List<WebElement> linkToSearchValueClick;
+	
+	@FindBy (xpath = "/html/body/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[5]/table/tbody/tr[2]/td[2]/em/button")
 	public WebElement attachDataSheetFind;
 	
-	@FindBy (id = "btn-btnOk")
+	@FindBy (xpath = "//*[@class='x-grid3-col x-grid3-cell x-grid3-td-cFileName ']/div")
+	public List<WebElement> attachDataSheetResults;
+	
+	@FindBy (xpath = "/html/body/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[13]/table/tbody/tr[2]/td[2]/em/button")
 	public WebElement attachDataSheetOk;
+
 	
 	/**
 	 * End Elements Add Procedure page

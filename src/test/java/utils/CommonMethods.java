@@ -25,7 +25,7 @@ import testBase.PageInitializer;
 public class CommonMethods extends PageInitializer {
 	
 	/**
-	 * Use this method in need of clicking on a WebElement by selenium WebDriver.
+	 * Use this method in need of clicking on a WebElement by Selenium WebDriver.
 	 * 
 	 * @param element Pass the desired WebElement to be clicked.
 	 */
@@ -35,7 +35,7 @@ public class CommonMethods extends PageInitializer {
 	
 	
 	/**
-	 * Use this method in need of entering value to a text box through selenium
+	 * Use this method in need of entering value to a text box through Selenium
 	 * WebDriver.
 	 * 
 	 * @param element Pass the element to which the text needs to be entered.
@@ -48,7 +48,7 @@ public class CommonMethods extends PageInitializer {
 	
 	/**
 	 * Use this method in need of entering keyboard keys into a WebElement by
-	 * selenium WebDriver.
+	 * Selenium WebDriver.
 	 * 
 	 * @param element     Pass the element to which the key needs to be entered.
 	 * @param keyboardKey Pass the desired keyboardKey to be entered to an element.
@@ -58,7 +58,7 @@ public class CommonMethods extends PageInitializer {
 	}
 	
 	/**
-	 * Use this method in need of retrieving the text of an element through selenium
+	 * Use this method in need of retrieving the text of an element through Selenium
 	 * WebDriver.
 	 * 
 	 * @param element Pass the element from which the text to be retrieved.
@@ -203,7 +203,7 @@ public class CommonMethods extends PageInitializer {
 		}
 	}
 	/**
-	 * Use this method to pass date as a string. You can concatinate with any String
+	 * Use this method to pass date as a string. You can concatenate with any String
 	 * and get unique name
 	 */
 	public static String getDateAsString() {

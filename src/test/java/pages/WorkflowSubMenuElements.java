@@ -9,35 +9,35 @@ import testBase.BaseClass;
 public class WorkflowSubMenuElements extends BaseClass {
 
 	// Workflow -> Receiving menu item 
-	@FindBy (id = "txt-mnuWorkflowReceiving")
+	@FindBy (id = "ext-gen110")
 	public WebElement wflowReceiving;
 	
 	// Workflow -> WorkOrders menu item 
-	@FindBy (id = "txt-mnuWorkflowWorkOrders")
+	@FindBy (id = "ext-gen112")
 	public WebElement wflowWorkOrders;
 		
 	// Workflow -> Returning menu item 
-	@FindBy (id = "txt-mnuReturning")
-	public WebElement wflowreturning;
+	@FindBy (id = "ext-gen114")
+	public WebElement wflowReturning;
 		
 	// Workflow -> Shipping menu item 
-	@FindBy (id = "txt-mnuShipping")
+	@FindBy (id = "ext-gen117")
 	public WebElement wflowShipping;
 		
 	// Workflow -> BatchChange menu item 
-	@FindBy (id = "txt-mnuBatchChange")
+	@FindBy (id = "ext-gen119")
 	public WebElement wflowBatchChange;
 		
 	// Workflow -> ToolAssignments menu item 
-	@FindBy (id = "txt-mnuWorkflowTools")
+	@FindBy (id = "ext-gen121")
 	public WebElement wflowToolAssignments;
 	
 	// Workflow -> CombineWorkOrders menu item 
-	@FindBy (id = "txt-mnuCombineWorkOrders")
+	@FindBy (id = "ext-gen123")
 	public WebElement wflowCombineWorkOrders;
 	
 	// Workflow -> MyWork menu item 
-	@FindBy (id = "txt-mnuMyWork")
+	@FindBy (id = "ext-gen126")
 	public WebElement wflowMuWork;
 	
 	

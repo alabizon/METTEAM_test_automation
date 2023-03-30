@@ -9,15 +9,15 @@ import testBase.BaseClass;
 public class SetupSubMenuElements extends BaseClass {
 
 	// Setup -> Contacts menu item 
-	@FindBy (id = "txt-mnuSetupContacts")
+	@FindBy (id = "ext-gen68")
 	public WebElement setupContacts;
 	
 	// Setup -> Users menu item 
-	@FindBy (id = "txt-mnuSetupUsers")
+	@FindBy (id = "ext-gen70")
 	public WebElement setupUsers;
 		
 	// Setup -> Services menu item 
-	@FindBy (id = "txt-mnuSetupServices")
+	@FindBy (id = "ext-gen72")
 	public WebElement setupServices;
 		
 
