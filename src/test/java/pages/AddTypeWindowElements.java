@@ -46,10 +46,10 @@ public class AddTypeWindowElements extends BaseClass {
 	@FindBy (id = "cFamily")
 	public WebElement typeFamily;
 	
-	@FindBy (className = " x-btn-text tb-save")
+	@FindBy (id = "tbSave")
 	public WebElement typeSave;
 	
-	@FindBy (className = " x-btn-text tb-close")
+	@FindBy (id = "tbClose")
 	public WebElement typeClose;
 	
 	/**

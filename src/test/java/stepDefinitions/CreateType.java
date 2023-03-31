@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.CommonMethods;
 import utils.JsCommonMethods;
+import org.openqa.selenium.interactions.Actions;
 
 public class CreateType extends CommonMethods {
 	
@@ -55,15 +56,50 @@ public class CreateType extends CommonMethods {
 	public void enter_and_click_Find_button(String string) throws Throwable {
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame3);
-		Thread.sleep(2000);
-		CommonMethods.selectValueFromBootStrapDropDown(findFacilityWindowElements.findFacilityFacilityNameSearchValue, string);
-		Thread.sleep(2000);
+		CommonMethods.waitForVisib(findFacilityWindowElements.findFacilityFacilityNameSearchValue);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(findFacilityWindowElements.findFacilityFacilityNameSearchValue).click().sendKeys(string).build().perform();
 		CommonMethods.click(findFacilityWindowElements.FindButton);
-		Thread.sleep(1000);
 		
 	}
 	
+	@Then("Click OK button and enter Model_Number")
+	public void click_OK_button_and_enter_Model_Number() {
+		CommonMethods.click(findFacilityWindowElements.OkButton);
+		driver.switchTo().defaultContent();
+		CommonMethods.swithToFrame(frames.Frame2);
+		CommonMethods.sendKeys(addTypeWindowElements.typeModelNumber, "2468");
+		
+	}
 	
+	@Then("Enter Weight and enter Dimensions")
+	public void enter_Weight_and_enter_Dimensions() throws Throwable {
+		CommonMethods.sendKeys(addTypeWindowElements.typeWeight, "10");
+		CommonMethods.sendKeys(addTypeWindowElements.typeDimension, "5x5");
+		
+	}
+	
+	@Then("Enter Size and enter Stock_Number")
+	public void enter_Size_and_enter_Stock_Number() {
+		CommonMethods.sendKeys(addTypeWindowElements.typeSize, "2x2");
+		CommonMethods.sendKeys(addTypeWindowElements.typeStockNumber, "369");
+		
+	}
+	
+	@Then("Enter Class and enter Family")
+	public void enter_Class_and_enter_Family() {
+		CommonMethods.sendKeys(addTypeWindowElements.typeClass, "TestClass");
+		CommonMethods.sendKeys(addTypeWindowElements.typeFamily, "TestFamily");
+		
+	}
+	
+	@Then("Click Save buttn and click Close button")
+	public void click_save_buttn_and_click_close_button() throws Throwable {
+		CommonMethods.click(addTypeWindowElements.typeSave);
+		Thread.sleep(2000);
+		CommonMethods.click(addTypeWindowElements.typeClose);
+		
+	}
 	
 }
 

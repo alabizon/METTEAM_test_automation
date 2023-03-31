@@ -14,13 +14,13 @@ public class FindFacilityWindowElements extends BaseClass {
 	 * Beginning Elements from Find Facility Screen
 	 */
 		
-	@FindBy (xpath = "(//*[@class = 'x-grid3-cell-inner x-grid3-col-cValue'])[1]")
-	public List<WebElement> findFacilityFacilityNameSearchValue;
+	@FindBy (xpath = "//*[@class = 'x-grid3-col x-grid3-cell x-grid3-td-cValue x-grid3-cell-last x-grid3-cell-selected']/div")
+	public WebElement findFacilityFacilityNameSearchValue;
 		
 	@FindBy (xpath = "/html/body/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[5]/table/tbody/tr[2]/td[2]/em/button")
 	public WebElement FindButton;
 	
-	@FindBy (className = " x-btn-text tb-ok")
+	@FindBy (xpath = "/html/body/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[13]/table/tbody/tr[2]/td[2]/em/button")
 	public WebElement OkButton;
 	
 	public FindFacilityWindowElements() {
