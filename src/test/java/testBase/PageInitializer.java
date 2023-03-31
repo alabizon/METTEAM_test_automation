@@ -7,6 +7,7 @@ import pages.AttachDataSheetElements;
 import pages.CategoryWindowElements;
 import pages.ConsoleMenuMetTeamElements;
 import pages.EditWorkOrderElements;
+import pages.FindFacilityWindowElements;
 import pages.FindScreenWindowElements;
 import pages.FindTypeWindowElements;
 import pages.Frames;
@@ -28,6 +29,7 @@ public class PageInitializer extends BaseClass {
 	protected static AttachDataSheetElements attachDataSheetElements;
 	protected static CategoryWindowElements categoryWindowElements;
 	protected static AddTypeWindowElements addTypeWindowElements;
+	protected static FindFacilityWindowElements findFacilityWindowElements;
 	public static void initializePageObjects() {
 		findScreenWindowElements = new FindScreenWindowElements();
 		loginPageElements = new LoginPageElements();
@@ -41,6 +43,7 @@ public class PageInitializer extends BaseClass {
 		attachDataSheetElements = new AttachDataSheetElements();
 		categoryWindowElements = new CategoryWindowElements();
 		addTypeWindowElements = new AddTypeWindowElements();
+		findFacilityWindowElements = new FindFacilityWindowElements();
 			
 	}
 }

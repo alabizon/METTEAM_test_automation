@@ -16,34 +16,34 @@ public class AddTypeWindowElements extends BaseClass {
 	@FindBy (id = "cDescription")
 	public WebElement typeDescription;
 	
-	@FindBy (xpath = "(//*[@class = ' x-form-text x-form-field x-abs-layout-item'])[1]")
+	@FindBy (id = "nItemCost")
 	public WebElement typeItemCost;
 	
-	@FindBy (xpath = "(//*[@class = ' x-form-text x-form-field x-abs-layout-item'])[2]")
+	@FindBy (id = "nReplacementCost")
 	public WebElement typeReplaceCost;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field'])[1]")
-	public WebElement typeManufacturer;
+	@FindBy (xpath = "(//*[@class = 'x-form-trigger btn-trigger-search'])[1]")
+	public WebElement elipsisButtonManufacturer;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[3]")
+	@FindBy (id = "cModelNumber")
 	public WebElement typeModelNumber;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[6]")
+	@FindBy (id = "cWeight")
 	public WebElement typeWeight;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[3]")
+	@FindBy (id = "cPartNumber")
 	public WebElement typeSize;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[3]")
+	@FindBy (id = "cStockNumber")
 	public WebElement typeStockNumber;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[7]")
+	@FindBy (id = "cDimension")
 	public WebElement typeDimension;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[3]")
+	@FindBy (id = "cClass")
 	public WebElement typeClass;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[5]")
+	@FindBy (id = "cFamily")
 	public WebElement typeFamily;
 	
 	@FindBy (className = " x-btn-text tb-save")
