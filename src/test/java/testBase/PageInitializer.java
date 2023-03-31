@@ -1,6 +1,7 @@
 package testBase;
 
 import pages.AddAssetWindowElements;
+import pages.AddPartWindowElements;
 import pages.AddProcedureWindowElements;
 import pages.AddTypeWindowElements;
 import pages.AttachDataSheetElements;
@@ -10,6 +11,7 @@ import pages.EditWorkOrderElements;
 import pages.FindFacilityWindowElements;
 import pages.FindScreenWindowElements;
 import pages.FindTypeWindowElements;
+import pages.FindUserWindowElements;
 import pages.Frames;
 import pages.LoginPageElements;
 import pages.MaintenanceSubMenuElements;
@@ -30,6 +32,8 @@ public class PageInitializer extends BaseClass {
 	protected static CategoryWindowElements categoryWindowElements;
 	protected static AddTypeWindowElements addTypeWindowElements;
 	protected static FindFacilityWindowElements findFacilityWindowElements;
+	protected static AddPartWindowElements addPartWindowElements;
+	protected static FindUserWindowElements findUserWindowElements;
 	public static void initializePageObjects() {
 		findScreenWindowElements = new FindScreenWindowElements();
 		loginPageElements = new LoginPageElements();
@@ -44,6 +48,8 @@ public class PageInitializer extends BaseClass {
 		categoryWindowElements = new CategoryWindowElements();
 		addTypeWindowElements = new AddTypeWindowElements();
 		findFacilityWindowElements = new FindFacilityWindowElements();
+		addPartWindowElements = new AddPartWindowElements();
+		findUserWindowElements = new FindUserWindowElements();
 			
 	}
 }

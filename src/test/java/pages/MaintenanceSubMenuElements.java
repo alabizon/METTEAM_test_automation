@@ -33,7 +33,7 @@ public class MaintenanceSubMenuElements extends BaseClass {
 	public WebElement maintUnits;
 	
 	// Maintenance -> Parts menu item 
-	@FindBy (id = "ext-gen144")
+	@FindBy (id = "ext-gen70")
 	public WebElement maintParts;
 	
 	// Maintenance -> ManualTemplates menu item 
