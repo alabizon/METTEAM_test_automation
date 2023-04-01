@@ -45,7 +45,7 @@ public class MaintenanceSubMenuElements extends BaseClass {
 	public WebElement maintFiles;
 	
 	// Maintenance -> Accreditations menu item 
-	@FindBy (id = "ext-gen151")
+	@FindBy (id = "mnuMaintAccreditation")
 	public WebElement maintAccreditations;
 	
 	// Maintenance -> DataCleanup menu item 

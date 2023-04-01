@@ -1,5 +1,6 @@
 package testBase;
 
+import pages.AddAccreditationWindowElements;
 import pages.AddAssetWindowElements;
 import pages.AddPartWindowElements;
 import pages.AddProcedureWindowElements;
@@ -34,6 +35,7 @@ public class PageInitializer extends BaseClass {
 	protected static FindFacilityWindowElements findFacilityWindowElements;
 	protected static AddPartWindowElements addPartWindowElements;
 	protected static FindUserWindowElements findUserWindowElements;
+	protected static AddAccreditationWindowElements addAccreditationWindowElements;
 	public static void initializePageObjects() {
 		findScreenWindowElements = new FindScreenWindowElements();
 		loginPageElements = new LoginPageElements();
@@ -50,6 +52,7 @@ public class PageInitializer extends BaseClass {
 		findFacilityWindowElements = new FindFacilityWindowElements();
 		addPartWindowElements = new AddPartWindowElements();
 		findUserWindowElements = new FindUserWindowElements();
+		addAccreditationWindowElements = new AddAccreditationWindowElements();
 			
 	}
 }
