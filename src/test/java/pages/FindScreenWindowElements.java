@@ -29,7 +29,7 @@ public class FindScreenWindowElements extends BaseClass {
 	@FindBy (className = " x-btn-text tb-find")
 	public WebElement FindButton;
 	
-	@FindBy (xpath = "/html/body/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[12]/table/tbody/tr[2]/td[2]/em/button")
+	@FindBy (xpath = "//*[@type='button' and contains(text(),'Add')]")
 	public WebElement addButton;
 	
 	@FindBy (className = " x-btn-text tb-ok")

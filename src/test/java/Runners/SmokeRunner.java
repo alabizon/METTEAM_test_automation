@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 						// implementation
 		monochrome = true, // when set as true, will format the console outcome
 		tags = "@Smoke", 
-		strict = false, // when set as true, will fail the execution when undefined step is
+		strict = true, // when set as true, will fail the execution when undefined step is
 												// found
 		plugin = { "pretty", // will print the steps inside the console
 				"html:target/cucumber-default-reports", // generates default html report

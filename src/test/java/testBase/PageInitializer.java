@@ -4,6 +4,7 @@ import pages.AddAccreditationWindowElements;
 import pages.AddAssetWindowElements;
 import pages.AddPartWindowElements;
 import pages.AddProcedureWindowElements;
+import pages.AddTemplateWindowElements;
 import pages.AddTypeWindowElements;
 import pages.AttachDataSheetElements;
 import pages.CategoryWindowElements;
@@ -36,6 +37,7 @@ public class PageInitializer extends BaseClass {
 	protected static AddPartWindowElements addPartWindowElements;
 	protected static FindUserWindowElements findUserWindowElements;
 	protected static AddAccreditationWindowElements addAccreditationWindowElements;
+	protected static AddTemplateWindowElements addTemplateWindowElements;
 	public static void initializePageObjects() {
 		findScreenWindowElements = new FindScreenWindowElements();
 		loginPageElements = new LoginPageElements();
@@ -53,6 +55,7 @@ public class PageInitializer extends BaseClass {
 		addPartWindowElements = new AddPartWindowElements();
 		findUserWindowElements = new FindUserWindowElements();
 		addAccreditationWindowElements = new AddAccreditationWindowElements();
+		addTemplateWindowElements = new AddTemplateWindowElements();
 			
 	}
 }

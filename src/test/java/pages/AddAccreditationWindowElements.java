@@ -13,13 +13,13 @@ public class AddAccreditationWindowElements extends BaseClass {
 	 * Beginning Elements from Add Accreditation page
 	 */
 	
-	@FindBy (id = "cCode")
+	@FindBy (xpath = "//*[@id='cCode' and @name ='cCode']")
 	public WebElement accredCode;
 	
-	@FindBy (id = "cType")
+	@FindBy (xpath = "//*[@id='cType' and @class = 'x-form-text x-form-field x-abs-layout-item']")
 	public WebElement accredType;
 	
-	@FindBy (id = "cDescription")
+	@FindBy (xpath = "//*[@id='cDescription' and @class = 'x-form-text x-form-field x-abs-layout-item']")
 	public WebElement accredDescription;
 	
 	@FindBy (id = "tStartDate")

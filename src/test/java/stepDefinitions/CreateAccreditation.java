@@ -16,7 +16,7 @@ public class CreateAccreditation extends CommonMethods {
 		CommonMethods.click(concoleMenuMetTeamElements.btnMaintenance);
 		Thread.sleep(1000);
 		maintenanceSubMenuElements.maintAccreditations.click();
-		CommonMethods.waitForVisib(frames.Frame1);
+
 		
 	}
 
@@ -28,28 +28,24 @@ public class CreateAccreditation extends CommonMethods {
 		
 	}
 	
-	@Then("{string} window opens and enter Code")
-	public void window_opens_and_enter_Code(String string) {
+	
+	@Then("Enter Type and enter Description")
+	public void enter_Type_and_enter_Description() {
+		driver.switchTo().defaultContent();
+		CommonMethods.waitForVisib(frames.Frame2);
+		CommonMethods.sendKeys(addAccreditationWindowElements.accredType, "Test Type");
+		CommonMethods.sendKeys(addAccreditationWindowElements.accredDescription, "Test Descr");
+	}
+	
+	
+	@Then("{string} wnd is open and enter Code")
+	public void wnd_is_open_and_enter_Code(String string) {
 		driver.switchTo().defaultContent();
 		CommonMethods.waitForVisib(frames.Frame2);
 		//JsCommonMethods.enterValueByJS(addAccreditationWindowElements.accredCode, "Test Accreditation");
 		CommonMethods.sendKeys(addAccreditationWindowElements.accredCode, "Test Accreditation");
 		
 	}
-	
-	@Then("Enter Type and enter Description")
-	public void enter_Type_and_enter_Description() {
-		CommonMethods.sendKeys(addAccreditationWindowElements.accredType, "22");
-		CommonMethods.sendKeys(addAccreditationWindowElements.accredDescription, "Auto");
-		
-	}
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
