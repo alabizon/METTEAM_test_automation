@@ -1,6 +1,6 @@
 Feature: Create Procedure Steps
 
-  @Regression @Alex
+  @Procedure @Alex
   Scenario Outline: MetTeam Procedure
     Given Login With valid credentials
     When Click Maintenance and click Procedures

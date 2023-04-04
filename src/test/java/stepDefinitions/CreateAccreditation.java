@@ -35,6 +35,7 @@ public class CreateAccreditation extends CommonMethods {
 	
 	@Then("Enter Code and enter Type and enter Description")
 	public void enter_Code_and_enter_Type_and_enter_Description() {
+		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame2);
 		CommonMethods.waitForVisib(addAccreditationWindowElements.accredCode);
 		CommonMethods.sendKeys(addAccreditationWindowElements.accredCode, "Accreditation_"+CommonMethods.getDateAsString());

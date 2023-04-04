@@ -9,15 +9,15 @@ import testBase.BaseClass;
 public class SetupSubMenuElements extends BaseClass {
 
 	// Setup -> Contacts menu item 
-	@FindBy (id = "ext-gen68")
+	@FindBy (xpath = "(//*[@class = 'x-menu-item-text'])[1]")
 	public WebElement setupContacts;
 	
 	// Setup -> Users menu item 
-	@FindBy (id = "ext-gen70")
+	@FindBy (xpath = "(//*[@class = 'x-menu-item-text'])[2]")
 	public WebElement setupUsers;
 		
 	// Setup -> Services menu item 
-	@FindBy (id = "ext-gen72")
+	@FindBy (xpath = "(//*[@class = 'x-menu-item-text'])[3]")
 	public WebElement setupServices;
 		
 

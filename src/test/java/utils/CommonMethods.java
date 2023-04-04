@@ -32,8 +32,8 @@ public class CommonMethods extends PageInitializer {
 	 */
 	public static void click(WebElement element) {
 		element.click();
+		
 	}
-	
 	
 	/**
 	 * Use this method in need of entering value to a text box through Selenium
@@ -45,6 +45,7 @@ public class CommonMethods extends PageInitializer {
 	public static void sendKeys(WebElement element, String value) {
 		element.clear();
 		element.sendKeys(value);
+		
 	}
 	
 	/**
@@ -56,6 +57,7 @@ public class CommonMethods extends PageInitializer {
 	 */
 	public static void sendKeys(WebElement element, Keys keyboardKey) {
 		element.sendKeys(keyboardKey);
+		
 	}
 	
 	/**
@@ -67,6 +69,7 @@ public class CommonMethods extends PageInitializer {
 	 */
 	public static String getText(WebElement element) {
 		return element.getText();
+		
 	}
 		
 	/**
@@ -79,7 +82,9 @@ public class CommonMethods extends PageInitializer {
 	public static void selectDropDownValue(String VisibleTextOfDD, WebElement dropDownWebEl) {
 		Select select = new Select(dropDownWebEl);
 		select.selectByVisibleText(VisibleTextOfDD);
+		
 	}
+	
 	/**
 	 * Use this over loaded method in need of selecting an element of dropDown by
 	 * Value.
@@ -90,7 +95,9 @@ public class CommonMethods extends PageInitializer {
 	public static void selectDropDownValue(WebElement element, String value) {
 		Select select = new Select(element);
 		select.selectByValue(value);
+		
 	}
+	
 	/**
 	 * Use this over loaded method in need of selecting an element of dropDown by
 	 * index.
@@ -101,6 +108,7 @@ public class CommonMethods extends PageInitializer {
 	public static void selectDropDownValue(WebElement dropDownElement, int index) {
 		Select select = new Select(dropDownElement);
 		select.selectByIndex(index);
+		
 	}
 
 	/**
@@ -115,6 +123,7 @@ public class CommonMethods extends PageInitializer {
 		} catch (Exception e) {
 			return false;
 		}
+		
 	}
 	
 	/**
@@ -129,7 +138,9 @@ public class CommonMethods extends PageInitializer {
 		} catch (Exception e) {
 			return false;
 		}
+		
 	}
+	
 	/**
 	 * This method will wait until element becomes clickable
 	 * 
@@ -137,21 +148,22 @@ public class CommonMethods extends PageInitializer {
 	 */
 	public static void waitForClickability(WebElement element) {
 		getWaitObject().until(ExpectedConditions.elementToBeClickable(element));
+		
 	}
+	
 	/**
 	 * explicitly wait 
 	 * @return
 	 */
-
 	public static WebDriverWait getWaitObject() {
 		return new WebDriverWait(driver, Constants.EXPLICIT_WAIT_TIME);
+		
 	}
 	
 	/**
 	 * Wait for visibility element
 	 * @param element
 	 */
-	
 	public static void  waitForVisib(WebElement element) {
 		getWaitObject().until(ExpectedConditions.visibilityOfAllElements(element));
 	}
@@ -160,8 +172,6 @@ public class CommonMethods extends PageInitializer {
 	 * Method that will take a screenshot and store with name in specified location with .png extension
 	 * @param fileName
 	 */
-	
-	
 	public static byte[] takeScreenshot(String fileName) {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		byte[] bytes = ts.getScreenshotAs(OutputType.BYTES);
@@ -176,6 +186,7 @@ public class CommonMethods extends PageInitializer {
 		return bytes;
 		
 	}
+	
 	/**
 	 * This method will generate timeStamp
 	 * @return
@@ -187,7 +198,9 @@ public class CommonMethods extends PageInitializer {
 		SimpleDateFormat sdf= new SimpleDateFormat("yyyy-MM-dd_HH_mm_ss");
 		
 		return sdf.format(date);
+		
 	}
+	
 	/**
 	 * Use this method to select a checkbox value
 	 */
@@ -202,7 +215,9 @@ public class CommonMethods extends PageInitializer {
 				}
 			}
 		}
+		
 	}
+	
 	/**
 	 * Use this method to pass date as a string. You can concatenate with any String
 	 * and get unique name
@@ -214,6 +229,7 @@ public class CommonMethods extends PageInitializer {
 		String dateAsString = formatter.format(ts).toString();
 		dateAsString = dateAsString.replaceAll("[^A-Za-z0-9]", "");
 		return dateAsString;
+		
 	}
 	
 	/**
@@ -232,6 +248,7 @@ public class CommonMethods extends PageInitializer {
 		}
 
 	}
+	
 	/**
 	 *by WebElement switch
 	 * @param iFrame
@@ -249,7 +266,6 @@ public class CommonMethods extends PageInitializer {
 	 * ByIndex switch
 	 * @param frameIndex
 	 */
-	
 	public static void swithToFrame(int frameIndex) {
 		try {
 			driver.switchTo().frame(frameIndex);
@@ -257,7 +273,9 @@ public class CommonMethods extends PageInitializer {
 		}catch(NoSuchFrameException  e){
 			e.printStackTrace();
 		}
+		
 	}
+	
 	/**
 	 * By name or Id switch
 	 * @param nameOrId
@@ -269,7 +287,9 @@ public class CommonMethods extends PageInitializer {
 		}catch(NoSuchFrameException  e){
 			e.printStackTrace();
 		}
+		
 	}
+	
 	/**
 	 * 
 	 * this method will switch to child window
@@ -281,14 +301,19 @@ public class CommonMethods extends PageInitializer {
 		if(!window.equals(mainWindow)) {
 			driver.switchTo().window(window);
 			break;
-	   }
-	  }
-	
+	    	}
+	  	}
 	
 	 }
 	
 	/**
-	 * This Method read JsonFile
+	 * This Method write to Json File
+	 */
+	
+	
+	
+	/**
+	 * This Method read Json File
 	 */
 	static String jsonFile;
 	public static  String readJson(String fileName) {
@@ -300,8 +325,6 @@ public class CommonMethods extends PageInitializer {
 		}
 		return jsonFile;
 	}
-	
-
 	
 }
 	

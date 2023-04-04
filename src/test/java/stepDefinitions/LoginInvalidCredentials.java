@@ -18,13 +18,10 @@ public class LoginInvalidCredentials extends CommonMethods {
 	@Then("verify error message {string} from the page and header {string}")
 	public void verify_error_message_from_the_page_and_header(String TextFromPage, String Header) throws InterruptedException {
 	Thread.sleep(2000);
-	
 		Assert.assertEquals(Header,loginPageElements.errorWindowsHeader.getText());
 	    Assert.assertEquals(TextFromPage,loginPageElements.errorWindowsText.getText());
 	    click(loginPageElements.okButton);
 	    
 	}
-
-
 
 }

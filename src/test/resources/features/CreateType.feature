@@ -1,6 +1,6 @@
 Feature: Create Type Steps
 
-  @Regression2 @Alex
+  @Type @Alex
   Scenario Outline: MetTeam Type
     Given Login With valid credentials
     When Click Maintenance and click Type

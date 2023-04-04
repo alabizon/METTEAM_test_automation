@@ -30,6 +30,7 @@ public class CreatePart extends CommonMethods {
 	
 	@Then("{string} wnd is open and enter Description")
 	public void wnd_is_open_and_enter_Description(String string) throws Throwable {
+		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame2);
 		CommonMethods.waitForVisib(addPartWindowElements.partDescription);
 		CommonMethods.sendKeys(addPartWindowElements.partDescription, "TestPart_"+CommonMethods.getDateAsString());

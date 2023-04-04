@@ -1,4 +1,4 @@
-package pages;
+	package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,35 +9,35 @@ import testBase.BaseClass;
 public class ConsoleMenuMetTeamElements extends BaseClass{
 
 	// File menu item
-	@FindBy (id = "ext-gen19")
+	@FindBy (xpath = "(//*[@class = ' x-btn-text'])[1]")
 	public WebElement btnFile;
 	
 	// Workflow menu item
-	@FindBy (id = "ext-gen21")
+	@FindBy (xpath = "(//*[@class = ' x-btn-text'])[2]")
 	public WebElement btnWorkflow;
 	
 	// Maintenance menu item
-	@FindBy (id = "ext-gen23")
+	@FindBy (xpath = "(//*[@class = ' x-btn-text'])[3]")
 	public WebElement btnMaintenance;
 	
 	// Management menu item
-	@FindBy (id = "ext-gen25")
+	@FindBy (xpath = "(//*[@class = ' x-btn-text'])[4]")
 	public WebElement btnManagement;
 	
 	// Reports menu item
-	@FindBy (id = "ext-gen27")
+	@FindBy (xpath = "(//*[@class = ' x-btn-text'])[5]")
 	public WebElement btnReports;
 	
 	// Setup menu item
-	@FindBy (id = "ext-gen29")
+	@FindBy (xpath = "(//*[@class = ' x-btn-text'])[6]")
 	public WebElement btnSetup;
 	
 	// Help menu item
-	@FindBy (id = "ext-gen31")
+	@FindBy (xpath = "(//*[@class = ' x-btn-text'])[7]")
 	public WebElement btnHelp;
 	
 	// Configure menu item
-	@FindBy (id = "ext-gen33")
+	@FindBy (xpath = "(//*[@class = ' x-btn-text'])[8]")
 	public WebElement btnConfigure;
 	
 	

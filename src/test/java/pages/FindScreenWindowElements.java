@@ -29,6 +29,9 @@ public class FindScreenWindowElements extends BaseClass {
 	@FindBy (className = " x-btn-text tb-find")
 	public WebElement FindButton;
 	
+	@FindBy (className = "x-grid3-cell-inner x-grid3-col-cFacilityName")
+	public WebElement topGridTopRecord;
+	
 	@FindBy (xpath = "//*[@type='button' and contains(text(),'Add')]")
 	public WebElement addButton;
 	

@@ -2,6 +2,7 @@ package testBase;
 
 import pages.AddAccreditationWindowElements;
 import pages.AddAssetWindowElements;
+import pages.AddContactWindowElements;
 import pages.AddPartWindowElements;
 import pages.AddProcedureWindowElements;
 import pages.AddTemplateWindowElements;
@@ -17,6 +18,7 @@ import pages.FindUserWindowElements;
 import pages.Frames;
 import pages.LoginPageElements;
 import pages.MaintenanceSubMenuElements;
+import pages.SetupSubMenuElements;
 
 
 public class PageInitializer extends BaseClass {
@@ -38,6 +40,8 @@ public class PageInitializer extends BaseClass {
 	protected static FindUserWindowElements findUserWindowElements;
 	protected static AddAccreditationWindowElements addAccreditationWindowElements;
 	protected static AddTemplateWindowElements addTemplateWindowElements;
+	protected static SetupSubMenuElements setupSubMenuElements;
+	protected static AddContactWindowElements addContactWindowElements;
 	public static void initializePageObjects() {
 		findScreenWindowElements = new FindScreenWindowElements();
 		loginPageElements = new LoginPageElements();
@@ -56,6 +60,8 @@ public class PageInitializer extends BaseClass {
 		findUserWindowElements = new FindUserWindowElements();
 		addAccreditationWindowElements = new AddAccreditationWindowElements();
 		addTemplateWindowElements = new AddTemplateWindowElements();
+		setupSubMenuElements = new SetupSubMenuElements();
+		addContactWindowElements = new AddContactWindowElements();
 			
 	}
 }

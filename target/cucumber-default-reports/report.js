@@ -1,61 +1,19 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/CreateAccreditation.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Login.feature");
 formatter.feature({
-  "name": "Create Accreditation Steps",
+  "name": "Login",
   "description": "",
   "keyword": "Feature"
 });
-formatter.scenarioOutline({
-  "name": "MetTeam Parts",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@Regression4"
-    },
-    {
-      "name": "@Alex"
-    }
-  ]
-});
-formatter.step({
-  "name": "Login With valid credentials",
-  "keyword": "Given "
-});
-formatter.step({
-  "name": "Click Maintenance and click Accreditations",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "\"Find Accreditation\" window opens and click Add button",
-  "keyword": "Then "
-});
-formatter.examples({
-  "name": "",
-  "description": "",
-  "keyword": "Examples",
-  "rows": [
-    {
-      "cells": [
-        ""
-      ]
-    },
-    {
-      "cells": [
-        ""
-      ]
-    }
-  ]
-});
 formatter.scenario({
-  "name": "MetTeam Parts",
+  "name": "MetTeam user story login",
   "description": "",
-  "keyword": "Scenario Outline",
+  "keyword": "Scenario",
   "tags": [
     {
-      "name": "@Regression4"
+      "name": "@Login"
     },
     {
-      "name": "@Alex"
+      "name": "@Denys"
     }
   ]
 });
@@ -67,32 +25,106 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "stepDefinitions.LoginPageStepDefinitions.login_With_valid_credentials()"
+  "location": "stepDefinitions.LoginValidCredentials.login_With_valid_credentials()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click Maintenance and click Accreditations",
+  "name": "Verify you login in as \"Admin\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateAccreditation.click_Maintenance_and_click_Accreditations()"
+  "location": "stepDefinitions.LoginValidCredentials.verify_you_login_in_as(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.embedding("image/png", "embedded0.png", "MetTeam user story login");
+formatter.after({
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "name": "MetTeam user story with login Invalid Credentials",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@Login"
+    },
+    {
+      "name": "@Denys"
+    }
+  ]
+});
+formatter.step({
+  "name": "Login With invalid login \"\u003cLogin\u003e\" and valid password \"\u003cPassword\u003e\"",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "verify error message \"\u003ctext from page\u003e\" from the page and header \"\u003cHeader\u003e\"",
+  "keyword": "Then "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "Login",
+        "Password",
+        "text from page",
+        "Header"
+      ]
+    },
+    {
+      "cells": [
+        "admin1",
+        "admin",
+        "Invalid User Name or Password",
+        "Login Error"
+      ]
+    }
+  ]
+});
+formatter.scenario({
+  "name": "MetTeam user story with login Invalid Credentials",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@Login"
+    },
+    {
+      "name": "@Denys"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Login With invalid login \"admin1\" and valid password \"admin\"",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepDefinitions.LoginInvalidCredentials.login_With_ivalid_login_and_valid_password(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Find Accreditation\" window opens and click Add button",
+  "name": "verify error message \"Invalid User Name or Password\" from the page and header \"Login Error\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreatePart.window_opens_and_click_Add_button(java.lang.String)"
+  "location": "stepDefinitions.LoginInvalidCredentials.verify_error_message_from_the_page_and_header(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png", "MetTeam Parts");
+formatter.embedding("image/png", "embedded1.png", "MetTeam user story with login Invalid Credentials");
 formatter.after({
   "status": "passed"
 });

@@ -1,6 +1,6 @@
 Feature: Create Part Steps
 
-  @Regression3 @Alex
+  @Part @Alex
   Scenario Outline: MetTeam Parts
     Given Login With valid credentials
     When Click Maintenance and click Parts
