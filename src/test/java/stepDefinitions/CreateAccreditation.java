@@ -16,37 +16,39 @@ public class CreateAccreditation extends CommonMethods {
 		CommonMethods.click(concoleMenuMetTeamElements.btnMaintenance);
 		Thread.sleep(1000);
 		maintenanceSubMenuElements.maintAccreditations.click();
+		CommonMethods.waitForVisib(frames.Frame1);
 
-		
 	}
 
-	@Then("{string} wind is open and click Add button")
-	public void wind_is_open_and_click_Add_button(String string) throws Throwable {
+	@Then("{string} window opens")
+	public void window_opens(String string) {
 		CommonMethods.swithToFrame(frames.Frame1);
+		
+	}
+	
+	@Then("Click Add button and {string} window is open")
+	public void click_Add_button_and_window_is_open(String string) {
 		CommonMethods.waitForVisib(findScreenWindowElements.addButton);
-		CommonMethods.click(findScreenWindowElements.addButton);
+		CommonMethods.click(findScreenWindowElements.addButton);		
 		
 	}
 	
-	
-	@Then("Enter Type and enter Description")
-	public void enter_Type_and_enter_Description() {
-		driver.switchTo().defaultContent();
-		CommonMethods.waitForVisib(frames.Frame2);
-		CommonMethods.sendKeys(addAccreditationWindowElements.accredType, "Test Type");
-		CommonMethods.sendKeys(addAccreditationWindowElements.accredDescription, "Test Descr");
-	}
-	
-	
-	@Then("{string} wnd is open and enter Code")
-	public void wnd_is_open_and_enter_Code(String string) {
-		driver.switchTo().defaultContent();
-		CommonMethods.waitForVisib(frames.Frame2);
-		//JsCommonMethods.enterValueByJS(addAccreditationWindowElements.accredCode, "Test Accreditation");
-		CommonMethods.sendKeys(addAccreditationWindowElements.accredCode, "Test Accreditation");
+	@Then("Enter Code and enter Type and enter Description")
+	public void enter_Code_and_enter_Type_and_enter_Description() {
+		CommonMethods.swithToFrame(frames.Frame2);
+		CommonMethods.waitForVisib(addAccreditationWindowElements.accredCode);
+		CommonMethods.sendKeys(addAccreditationWindowElements.accredCode, "Accreditation_"+CommonMethods.getDateAsString());
+		CommonMethods.sendKeys(addAccreditationWindowElements.accredType, "22");
+		CommonMethods.sendKeys(addAccreditationWindowElements.accredDescription, "Auto");
 		
 	}
 	
+	@Then("Enter Satrt_Date and enter End_Date")
+	public void enter_Satrt_Date_and_enter_End_Date() {
+		CommonMethods.sendKeys(addAccreditationWindowElements.accredStartDate, "07/15/2022");
+		CommonMethods.sendKeys(addAccreditationWindowElements.accredEndDate, "11/22/2022");
+		
+	}
 	
 	
 }

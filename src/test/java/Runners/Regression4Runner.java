@@ -22,6 +22,6 @@ import io.cucumber.junit.CucumberOptions;
 )
 
 
-public class Regression4Runner2 {
+public class Regression4Runner {
 
 }
