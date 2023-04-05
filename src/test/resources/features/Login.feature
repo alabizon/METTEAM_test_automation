@@ -1,7 +1,7 @@
 Feature: Login
 
   @Login @Denys
-  Scenario: MetTeam user story login 
+  Scenario: MetTeam user story with login Valid Credentials 
   	
   	Given Login With valid credentials
   	When Verify you login in as "Admin"

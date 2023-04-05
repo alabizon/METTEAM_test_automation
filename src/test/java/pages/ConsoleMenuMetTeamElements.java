@@ -40,6 +40,9 @@ public class ConsoleMenuMetTeamElements extends BaseClass{
 	@FindBy (xpath = "(//*[@class = ' x-btn-text'])[8]")
 	public WebElement btnConfigure;
 	
+	// Logoff menu item
+	@FindBy (xpath = "(//*[@class = ' x-btn-text'])[9]")
+	public WebElement btnLogoff;
 	
 public ConsoleMenuMetTeamElements() {
 		

@@ -13,10 +13,10 @@ import java.util.Set;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchFrameException;
-import org.openqa.selenium.NoSuchWindowException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -35,6 +35,16 @@ public class CommonMethods extends PageInitializer {
 		
 	}
 	
+	/**
+	 * Use this method in need of double clicking on a WebElement by selenium WebDriver.
+	 * @param element Pass the desired WebElement to be clicked two times.
+	 */
+	public static void doubleClick(WebElement element) {
+		Actions actions = new Actions(driver);
+		actions.doubleClick(element).build().perform();
+		
+	}
+		
 	/**
 	 * Use this method in need of entering value to a text box through Selenium
 	 * WebDriver.

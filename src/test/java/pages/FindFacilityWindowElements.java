@@ -20,6 +20,9 @@ public class FindFacilityWindowElements extends BaseClass {
 	@FindBy (xpath = "/html/body/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[5]/table/tbody/tr[2]/td[2]/em/button")
 	public WebElement FindButton;
 	
+	@FindBy (xpath = "/html/body/div[4]/div/div[1]/div/div/div/div/div[1]/div/div[1]/div[2]/div/div")
+	public WebElement topFacilityFromTopGrid;
+	
 	@FindBy (xpath = "/html/body/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[13]/table/tbody/tr[2]/td[2]/em/button")
 	public WebElement OkButton;
 	

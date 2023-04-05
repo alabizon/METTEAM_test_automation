@@ -1,6 +1,6 @@
 Feature: Create Part Steps
 
-  @Contact @Alex
+  @Contact @Alex 
   Scenario Outline: MetTeam Contacts
     Given Login With valid credentials
     When Click Setup and click Contacts

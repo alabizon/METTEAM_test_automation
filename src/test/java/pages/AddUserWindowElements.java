@@ -46,13 +46,13 @@ public class AddUserWindowElements extends BaseClass {
 	@FindBy (id = "cPayGrade")
 	public WebElement userPayGrade;
 	
-	@FindBy (className = " x-btn-text tb-save")
+	@FindBy (xpath = "/html/body/div[1]/div/div/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[7]/table/tbody/tr[2]/td[2]/em/button")
 	public WebElement buttonSave;
 	
-	@FindBy (xpath = "/html/body/div[11]/div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table")
+	@FindBy (xpath = "/html/body/div[13]/div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button")
 	public WebElement okOnAlert;
 	
-	@FindBy (className = " x-btn-text tb-user")
+	@FindBy (xpath = "/html/body/div[1]/div/div/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[5]/table/tbody/tr[2]/td[2]/em/button")
 	public WebElement buttonGroups;
 	
 	@FindBy (id = "tbClose")

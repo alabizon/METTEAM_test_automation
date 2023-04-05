@@ -19,7 +19,6 @@ public class JsCommonMethods extends PageInitializer {
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
 	}
 
-
 	/**
 	 * Method return Object of JavaScript Executor type
 	 * 
@@ -38,7 +37,6 @@ public class JsCommonMethods extends PageInitializer {
 	public static void jsClick(WebElement element) {
 		getJSExecutor().executeScript("arguments[0].click();", element);
 	}
-	
 
 	/**
 	 * Use this method in need of generating alert in runtime while an issue raises.
@@ -91,6 +89,7 @@ public class JsCommonMethods extends PageInitializer {
 	public static void scrollDown(int pixel) {
 		getJSExecutor().executeScript("window.scrollBy(0," + pixel + ")");
 	}
+	
 	/**
 	 * Use this method in need of clearing WebElement internally. This is used when
 	 * WebDriver is failed to clear a text box value.
@@ -107,7 +106,6 @@ public class JsCommonMethods extends PageInitializer {
 	 * @param radioOrCheckBoxes
 	 * @param value
 	 */
-	
 	public static void clickRadioOrCheckBox(List<WebElement> radioOrCheckBoxes, String value) {
 		String actualValue;
 		for (WebElement radioOrCheckBox : radioOrCheckBoxes) {

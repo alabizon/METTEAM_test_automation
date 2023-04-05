@@ -25,7 +25,6 @@ public class CreateType extends CommonMethods {
 		CommonMethods.swithToFrame(frames.Frame1);
 		CommonMethods.waitForVisib(findScreenWindowElements.addButton);
 		CommonMethods.click(findScreenWindowElements.addButton);
-		//CommonMethods.waitForVisib(frames.Frame2);
 		
 	}
 	

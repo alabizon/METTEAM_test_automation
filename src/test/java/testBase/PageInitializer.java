@@ -7,6 +7,8 @@ import pages.AddPartWindowElements;
 import pages.AddProcedureWindowElements;
 import pages.AddTemplateWindowElements;
 import pages.AddTypeWindowElements;
+import pages.AddUserWindowElements;
+import pages.AssignGroupsWindowElements;
 import pages.AttachDataSheetElements;
 import pages.CategoryWindowElements;
 import pages.ConsoleMenuMetTeamElements;
@@ -42,6 +44,8 @@ public class PageInitializer extends BaseClass {
 	protected static AddTemplateWindowElements addTemplateWindowElements;
 	protected static SetupSubMenuElements setupSubMenuElements;
 	protected static AddContactWindowElements addContactWindowElements;
+	protected static AddUserWindowElements addUserWindowElements;
+	protected static AssignGroupsWindowElements assignGroupsWindowElements;
 	public static void initializePageObjects() {
 		findScreenWindowElements = new FindScreenWindowElements();
 		loginPageElements = new LoginPageElements();
@@ -62,6 +66,8 @@ public class PageInitializer extends BaseClass {
 		addTemplateWindowElements = new AddTemplateWindowElements();
 		setupSubMenuElements = new SetupSubMenuElements();
 		addContactWindowElements = new AddContactWindowElements();
+		addUserWindowElements = new AddUserWindowElements();
+		assignGroupsWindowElements = new AssignGroupsWindowElements();
 			
 	}
 }
