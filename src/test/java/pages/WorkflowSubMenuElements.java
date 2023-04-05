@@ -9,35 +9,35 @@ import testBase.BaseClass;
 public class WorkflowSubMenuElements extends BaseClass {
 
 	// Workflow -> Receiving menu item 
-	@FindBy (id = "ext-gen110")
+	@FindBy (xpath = "/html/body/div[5]/ul/li[1]/a/span")
 	public WebElement wflowReceiving;
 	
 	// Workflow -> WorkOrders menu item 
-	@FindBy (id = "ext-gen112")
+	@FindBy (xpath = "/html/body/div[5]/ul/li[2]/a/span")
 	public WebElement wflowWorkOrders;
 		
 	// Workflow -> Returning menu item 
-	@FindBy (id = "ext-gen114")
+	@FindBy (xpath = "/html/body/div[5]/ul/li[3]/a/span")
 	public WebElement wflowReturning;
 		
 	// Workflow -> Shipping menu item 
-	@FindBy (id = "ext-gen117")
+	@FindBy (xpath = "/html/body/div[5]/ul/li[5]/a/span")
 	public WebElement wflowShipping;
 		
 	// Workflow -> BatchChange menu item 
-	@FindBy (id = "ext-gen119")
+	@FindBy (xpath = "/html/body/div[5]/ul/li[6]/a/span")
 	public WebElement wflowBatchChange;
 		
 	// Workflow -> ToolAssignments menu item 
-	@FindBy (id = "ext-gen121")
+	@FindBy (xpath = "/html/body/div[5]/ul/li[7]/a/span")
 	public WebElement wflowToolAssignments;
 	
 	// Workflow -> CombineWorkOrders menu item 
-	@FindBy (id = "ext-gen123")
+	@FindBy (xpath = "/html/body/div[5]/ul/li[8]/a/span")
 	public WebElement wflowCombineWorkOrders;
 	
 	// Workflow -> MyWork menu item 
-	@FindBy (id = "ext-gen126")
+	@FindBy (xpath = "/html/body/div[5]/ul/li[10]/a/span")
 	public WebElement wflowMuWork;
 	
 	

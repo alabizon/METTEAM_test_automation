@@ -9,15 +9,15 @@ import testBase.BaseClass;
 public class FileSubMenuElements extends BaseClass {
 
 	// File -> Logoff menu item 
-	@FindBy (id = "ext-gen57")
+	@FindBy (xpath = "/html/body/div[6]/ul/li[1]/a/span")
 	public WebElement fileLogoff;
 	
 	// File -> Import menu item 
-	@FindBy (id = "ext-gen60")
+	@FindBy (xpath = "/html/body/div[6]/ul/li[3]/a/span")
 	public WebElement fileImport;
 		
 	// File -> Mobile menu item 
-	@FindBy (id = "ext-gen62")
+	@FindBy (xpath = "<span class=\"x-menu-item-text\" id=\"txt-mnuMobile\">Mobile</span>")
 	public WebElement fileMobile;
 		
 

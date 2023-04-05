@@ -44,8 +44,8 @@ public class CreateAccreditation extends CommonMethods {
 		
 	}
 	
-	@Then("Enter Satrt_Date and enter End_Date")
-	public void enter_Satrt_Date_and_enter_End_Date() {
+	@Then("Enter Start_Date and enter End_Date")
+	public void enter_Start_Date_and_enter_End_Date() {
 		CommonMethods.sendKeys(addAccreditationWindowElements.accredStartDate, "07/15/2022");
 		CommonMethods.sendKeys(addAccreditationWindowElements.accredEndDate, "11/22/2022");
 		

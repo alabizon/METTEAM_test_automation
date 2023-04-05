@@ -9,19 +9,19 @@ import testBase.BaseClass;
 public class ReportsSubMenuElements extends BaseClass {
 
 	// Reports -> Recall menu item 
-	@FindBy (id = "ext-gen96")
+	@FindBy (xpath = "/html/body/div[8]/ul/li[1]/a/span")
 	public WebElement reportRecall;
 	
 	// Reports -> Batch Printing menu item 
-	@FindBy (id = "ext-gen99")
+	@FindBy (xpath = "/html/body/div[8]/ul/li[3]/a/span")
 	public WebElement reportBatchPrinting;
 		
 	// Reports -> Custom Reports menu item 
-	@FindBy (id = "ext-gen102")
+	@FindBy (xpath = "/html/body/div[8]/ul/li[5]/a/span")
 	public WebElement reportCustomReports;
 		
 	// Reports -> Alerting Schedules menu item 
-	@FindBy (id = "ext-gen105")
+	@FindBy (xpath = "/html/body/div[8]/ul/li[5]/a/span")
 	public WebElement reportAlertingSchedules;
 		
 

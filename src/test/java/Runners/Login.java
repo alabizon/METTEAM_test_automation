@@ -1,5 +1,4 @@
 package Runners;
-
 import org.junit.runner.RunWith;
 
 import io.cucumber.junit.Cucumber;
@@ -12,8 +11,8 @@ import io.cucumber.junit.CucumberOptions;
 		dryRun = false, // when set as true, will run over the feature steps and identify the missing
 						// implementation
 		monochrome = true, // when set as true, will format the console outcome
-		tags = "@User", 
-		strict = false, // when set as true, will fail the execution when undefined step is
+		tags = "@Login", 
+		strict = true, // when set as true, will fail the execution when undefined step is
 												// found
 		plugin = { "pretty", // will print the steps inside the console
 				"html:target/cucumber-default-reports", // generates default html report
@@ -21,7 +20,6 @@ import io.cucumber.junit.CucumberOptions;
 				"json:target/cucumber.json" } // generates json reports
 )
 
-
-public class UserRunner {
+public class Login {
 
 }

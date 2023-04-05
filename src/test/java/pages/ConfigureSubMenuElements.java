@@ -9,39 +9,39 @@ import testBase.BaseClass;
 public class ConfigureSubMenuElements extends BaseClass {
 
 	// Configure -> Send System Message menu item 
-	@FindBy (id = "ext-gen159")
+	@FindBy (xpath = "/html/body/div[10]/ul/li[1]/a/span")
 	public WebElement confSysMessage;
 	
 	// Configure -> System Defaults menu item 
-	@FindBy (id = "ext-gen161")
+	@FindBy (xpath = "/html/body/div[10]/ul/li[2]/a/span")
 	public WebElement confSysDefaults;
 		
 	// Configure -> Menu Security menu item 
-	@FindBy (id = "ext-gen163")
+	@FindBy (xpath = "/html/body/div[10]/ul/li[3]/a/span")
 	public WebElement confMenuSecurity;
 		
 	// Configure -> MET/CAL Security menu item 
-	@FindBy (id = "ext-gen165")
+	@FindBy (xpath = "/html/body/div[10]/ul/li[4]/a/span")
 	public WebElement confMetcalSecurity;
 		
 	// Configure -> MET/CAL Prompts menu item 
-	@FindBy (id = "ext-gen167")
+	@FindBy (xpath = "/html/body/div[10]/ul/li[5]/a/span")
 	public WebElement confMetcalPrompts;
 		
 	// Configure -> Data Checks menu item 
-	@FindBy (id = "ext-gen169")
+	@FindBy (xpath = "/html/body/div[10]/ul/li[6]/a/span")
 	public WebElement confDataChecks;
 	
 	// Configure -> Extended Data menu item 
-	@FindBy (id = "ext-gen171")
+	@FindBy (xpath = "/html/body/div[10]/ul/li[7]/a/span")
 	public WebElement confExtData;
 	
 	// Configure -> Groups menu item 
-	@FindBy (id = "ext-gen173")
+	@FindBy (xpath = "/html/body/div[10]/ul/li[8]/a/span")
 	public WebElement confGroups;
 	
 	// Configure -> Alert Engine Configuration menu item
-	@FindBy (id = "ext-gen175")
+	@FindBy (xpath = "/html/body/div[10]/ul/li[9]/a/span")
 	public WebElement confAlertEngineConfig;
 	
 	

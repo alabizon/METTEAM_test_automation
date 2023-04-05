@@ -9,7 +9,7 @@ import testBase.BaseClass;
 public class MaintenanceSubMenuElements extends BaseClass {
 
 	// Maintenance -> Asset menu item 
-	@FindBy (id = "ext-gen131")
+	@FindBy (xpath = "/html/body/div[4]/ul/li[1]/a/span")
 	public WebElement maintAssets;
 	
 	// Maintenance -> Types menu item 
@@ -21,35 +21,35 @@ public class MaintenanceSubMenuElements extends BaseClass {
 	public WebElement maintProcedures;
 		
 	// Maintenance -> Facilities menu item 
-	@FindBy (id = "ext-gen137")
+	@FindBy (xpath = "/html/body/div[4]/ul/li[4]/a/span")
 	public WebElement maintFacilities;
 		
 	// Maintenance -> JobNumbers menu item 
-	@FindBy (id = "ext-gen139")
+	@FindBy (xpath = "/html/body/div[4]/ul/li[5]/a/span")
 	public WebElement maintJobNumbers;
 		
 	// Maintenance -> Units menu item 
-	@FindBy (id = "ext-gen141")
+	@FindBy (xpath = "/html/body/div[4]/ul/li[6]/a/span")
 	public WebElement maintUnits;
 	
 	// Maintenance -> Parts menu item 
-	@FindBy (id = "ext-gen70")
+	@FindBy (xpath = "/html/body/div[4]/ul/li[8]/a/span")
 	public WebElement maintParts;
 	
 	// Maintenance -> ManualTemplates menu item 
-	@FindBy (id = "ext-gen147")
+	@FindBy (xpath = "/html/body/div[4]/ul/li[10]/a/span")
 	public WebElement maintManualTemplates;
 	
 	// Maintenance -> Files menu item 
-	@FindBy (id = "ext-gen149")
+	@FindBy (xpath = "/html/body/div[4]/ul/li[11]/a/span")
 	public WebElement maintFiles;
 	
 	// Maintenance -> Accreditations menu item 
-	@FindBy (id = "mnuMaintAccreditation")
+	@FindBy (xpath = "/html/body/div[4]/ul/li[12]/a/span")
 	public WebElement maintAccreditations;
 	
 	// Maintenance -> DataCleanup menu item 
-	@FindBy (id = "ext-gen154")
+	@FindBy (xpath = "/html/body/div[4]/ul/li[14]/a/span")
 	public WebElement maintDataCleanup;
 	
 	
