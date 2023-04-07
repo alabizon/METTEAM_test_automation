@@ -17,6 +17,7 @@ public class JsCommonMethods extends PageInitializer {
 	public static void scrollIntoView(WebElement element) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
+		
 	}
 
 	/**
@@ -27,6 +28,7 @@ public class JsCommonMethods extends PageInitializer {
 	public static JavascriptExecutor getJSExecutor() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		return js;
+		
 	}
 
 	/**
@@ -36,6 +38,7 @@ public class JsCommonMethods extends PageInitializer {
 	 */
 	public static void jsClick(WebElement element) {
 		getJSExecutor().executeScript("arguments[0].click();", element);
+		
 	}
 
 	/**
@@ -47,6 +50,7 @@ public class JsCommonMethods extends PageInitializer {
 	public static void generateAlert(WebDriver driver, String message) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("alert('" + message + "')");
+		
 	}
 	
 	/**
@@ -58,6 +62,7 @@ public class JsCommonMethods extends PageInitializer {
 	public static void refreshBrowserByJS(WebDriver driver) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("history.go(0)");
+		
 	}
 	
 	/**
@@ -70,6 +75,7 @@ public class JsCommonMethods extends PageInitializer {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		String title = js.executeScript("return document.title;").toString();
 		return title;
+		
 	}
 	
 	/**
@@ -79,6 +85,7 @@ public class JsCommonMethods extends PageInitializer {
 	 */
 	public static void scrollUp(int pixel) {
 		getJSExecutor().executeScript("window.scrollBy(0, -" + pixel + ")");
+		
 	}
 	
 	/**
@@ -88,6 +95,7 @@ public class JsCommonMethods extends PageInitializer {
 	 */
 	public static void scrollDown(int pixel) {
 		getJSExecutor().executeScript("window.scrollBy(0," + pixel + ")");
+		
 	}
 	
 	/**
@@ -99,6 +107,7 @@ public class JsCommonMethods extends PageInitializer {
 	public static void clearByJS(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].value = '';", element);
+		
 	}
 	
 	/**
@@ -114,8 +123,8 @@ public class JsCommonMethods extends PageInitializer {
 				jsClick(radioOrCheckBox);
 				break;
 			}
-			
 		}
+		
 	}
 
 	/**
@@ -127,6 +136,7 @@ public class JsCommonMethods extends PageInitializer {
 	public static void enterValueByJS(WebElement element, String value) {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("arguments[0].value=value;");
+		
 	}
 	
 	/**
@@ -137,6 +147,7 @@ public class JsCommonMethods extends PageInitializer {
 	public static void drawBlueBorder(WebElement element) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("arguments[0].style.border='3px solid blue'", element);
+		
 	}
 
 	/**
@@ -147,16 +158,8 @@ public class JsCommonMethods extends PageInitializer {
 	public static void drawRedBorder(WebElement element) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("arguments[0].style.border='3px solid Red'", element);
-	}
-
-	public static void clickRadioOrCheckBox(WebElement webElement, String value) {
-		// TODO Auto-generated method stub
 		
 	}
-
-	
-	
-	
 	
 }
 	

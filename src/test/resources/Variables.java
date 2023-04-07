@@ -1,6 +1,7 @@
 
 public class Variables {
 	
-	public void String PROCEDURE_NAME = {string}; 
+	public void String TEMP_VARIABLE = {string}; 
+	
 
 }

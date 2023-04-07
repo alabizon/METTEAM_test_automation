@@ -21,6 +21,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import stepDefinitions.assignGroupsWindowElements;
 import testBase.PageInitializer;
 
 public class CommonMethods extends PageInitializer {
@@ -42,6 +43,16 @@ public class CommonMethods extends PageInitializer {
 	public static void doubleClick(WebElement element) {
 		Actions actions = new Actions(driver);
 		actions.doubleClick(element).build().perform();
+		
+	}
+	
+	/**
+	 * Use this method in need of right-clicking on a WebElement by selenium WebDriver.
+	 * @param element Pass the desired WebElement to be right-clicked times.
+	 */
+	public static void rightClick(WebElement element) {
+		Actions actions = new Actions(driver);
+		actions.contextClick(element).build().perform();
 		
 	}
 		
@@ -334,6 +345,20 @@ public class CommonMethods extends PageInitializer {
 			e.printStackTrace();
 		}
 		return jsonFile;
+	}
+	
+	/**
+	 * Use this method in need of parsing list of elements.
+	 * 
+	 */
+	public void parseWebElements(List<WebElement> elements) {
+	    for (WebElement element : elements) {
+	        // Do something with each element, such as getting its text or attribute values
+	        String text = element.getText();
+	        String href = element.getAttribute("");
+	        System.out.println("Element text: " + text);
+	        System.out.println("Element href: " + href);
+	    }
 	}
 	
 }

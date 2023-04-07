@@ -3,6 +3,7 @@ package testBase;
 import pages.AddAccreditationWindowElements;
 import pages.AddAssetWindowElements;
 import pages.AddContactWindowElements;
+import pages.AddGroupWindowElements;
 import pages.AddPartWindowElements;
 import pages.AddProcedureWindowElements;
 import pages.AddTemplateWindowElements;
@@ -11,6 +12,7 @@ import pages.AddUserWindowElements;
 import pages.AssignGroupsWindowElements;
 import pages.AttachDataSheetElements;
 import pages.CategoryWindowElements;
+import pages.ConfigureSubMenuElements;
 import pages.ConsoleMenuMetTeamElements;
 import pages.EditWorkOrderElements;
 import pages.FindFacilityWindowElements;
@@ -46,6 +48,8 @@ public class PageInitializer extends BaseClass {
 	protected static AddContactWindowElements addContactWindowElements;
 	protected static AddUserWindowElements addUserWindowElements;
 	protected static AssignGroupsWindowElements assignGroupsWindowElements;
+	protected static AddGroupWindowElements addGroupWindowElements;
+	protected static ConfigureSubMenuElements configureSubMenuElements;
 	public static void initializePageObjects() {
 		findScreenWindowElements = new FindScreenWindowElements();
 		loginPageElements = new LoginPageElements();
@@ -68,6 +72,8 @@ public class PageInitializer extends BaseClass {
 		addContactWindowElements = new AddContactWindowElements();
 		addUserWindowElements = new AddUserWindowElements();
 		assignGroupsWindowElements = new AssignGroupsWindowElements();
+		addGroupWindowElements = new AddGroupWindowElements();
+		configureSubMenuElements = new ConfigureSubMenuElements();
 			
 	}
 }

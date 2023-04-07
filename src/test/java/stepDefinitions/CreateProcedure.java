@@ -96,12 +96,12 @@ public class CreateProcedure extends CommonMethods {
 		CommonMethods.waitForVisib(categoryWindowElements.categoryOk);
 		CommonMethods.click(categoryWindowElements.categoryOk);
 		Thread.sleep(2000);
-		driver.switchTo().defaultContent();
 		
 	}
 	
 	@Then("Click Save button and click Close button")
 	public void click_Save_button_and_click_Close_button() throws Throwable {
+		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame2);
 		CommonMethods.click(addProcedureWindowElements.buttonSave);
 		Thread.sleep(2000);

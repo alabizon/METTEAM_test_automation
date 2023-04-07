@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -48,6 +50,9 @@ public class AssignGroupsWindowElements extends BaseClass {
 	
 	@FindBy (id = "/html/body/div[1]/div/div/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[10]/table/tbody/tr[2]/td[2]/em/button")
 	public WebElement buttonClose;
+	
+	@FindBy (xpath = "/html/body/div[1]/div[2]/div/div[2]/div/div[1]/div[2]/div")
+	public List<WebElement> groupsList;
 	
 	/**
 	 * End Elements Assign Groups page

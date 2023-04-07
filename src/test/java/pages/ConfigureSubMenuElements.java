@@ -9,39 +9,39 @@ import testBase.BaseClass;
 public class ConfigureSubMenuElements extends BaseClass {
 
 	// Configure -> Send System Message menu item 
-	@FindBy (xpath = "/html/body/div[10]/ul/li[1]/a/span")
+	@FindBy (xpath = "//*[@id=\'x-menu-el-mnuSystemEvent\']")
 	public WebElement confSysMessage;
 	
 	// Configure -> System Defaults menu item 
-	@FindBy (xpath = "/html/body/div[10]/ul/li[2]/a/span")
+	@FindBy (xpath = "//*[@id=\'x-menu-el-mnuSystemDefaults\']")
 	public WebElement confSysDefaults;
 		
 	// Configure -> Menu Security menu item 
-	@FindBy (xpath = "/html/body/div[10]/ul/li[3]/a/span")
+	@FindBy (xpath = "//*[@id=\'x-menu-el-mnuSystemConfigureMenu\']")
 	public WebElement confMenuSecurity;
 		
 	// Configure -> MET/CAL Security menu item 
-	@FindBy (xpath = "/html/body/div[10]/ul/li[4]/a/span")
+	@FindBy (xpath = "//*[@id=\'x-menu-el-mnuSystemConfigureMetCalMenu\']")
 	public WebElement confMetcalSecurity;
 		
 	// Configure -> MET/CAL Prompts menu item 
-	@FindBy (xpath = "/html/body/div[10]/ul/li[5]/a/span")
+	@FindBy (xpath = "//*[@id=\'x-menu-el-mnuSystemMetCalPromptsMenu\']")
 	public WebElement confMetcalPrompts;
 		
 	// Configure -> Data Checks menu item 
-	@FindBy (xpath = "/html/body/div[10]/ul/li[6]/a/span")
+	@FindBy (xpath = "//*[@id=\'x-menu-el-mnuSystemValidations\']")
 	public WebElement confDataChecks;
 	
 	// Configure -> Extended Data menu item 
-	@FindBy (xpath = "/html/body/div[10]/ul/li[7]/a/span")
+	@FindBy (xpath = "//*[@id=\'x-menu-el-mnuSystemExtendedData\']")
 	public WebElement confExtData;
 	
 	// Configure -> Groups menu item 
-	@FindBy (xpath = "/html/body/div[10]/ul/li[8]/a/span")
+	@FindBy (xpath = "//*[@id=\'x-menu-el-mnuConfigureGroups\']")
 	public WebElement confGroups;
 	
 	// Configure -> Alert Engine Configuration menu item
-	@FindBy (xpath = "/html/body/div[10]/ul/li[9]/a/span")
+	@FindBy (xpath = "//*[@id=\'x-menu-el-mnuAlertingEngine\']")
 	public WebElement confAlertEngineConfig;
 	
 	

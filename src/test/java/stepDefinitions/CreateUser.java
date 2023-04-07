@@ -66,7 +66,6 @@ public class CreateUser extends CommonMethods {
 	public void click_OK_on_the_alert_and_windows_is_open(String string) throws Throwable {
 		Thread.sleep(3000);
 		CommonMethods.click(addUserWindowElements.okOnAlert);
-		//CommonMethods.sendKeys(addUserWindowElements.okOnAlert, Keys.RETURN);
 		
 	}
 	
