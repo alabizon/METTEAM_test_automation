@@ -327,12 +327,6 @@ public class CommonMethods extends PageInitializer {
 	 }
 	
 	/**
-	 * This Method write to Json File
-	 */
-	
-	
-	
-	/**
 	 * This Method read Json File
 	 */
 	static String jsonFile;
@@ -350,13 +344,15 @@ public class CommonMethods extends PageInitializer {
 	 * Use this method in need of parsing list of elements.
 	 * 
 	 */
-	public void parseWebElements(List<WebElement> elements) {
+	public static void parseWebElements(List<WebElement> elements) {
+		
 	    for (WebElement element : elements) {
+	    	
 	        // Do something with each element, such as getting its text or attribute values
-	        String text = element.getText();
-	        String href = element.getAttribute("");
-	        System.out.println("Element text: " + text);
-	        System.out.println("Element href: " + href);
+	       String text = element.getText();
+	       //String href = element.getAttribute("");
+	       System.out.println("Element text: " + text);
+	       //System.out.println("Element href: " + href);
 	    }
 	}
 	

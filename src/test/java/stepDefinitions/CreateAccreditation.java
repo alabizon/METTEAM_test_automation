@@ -7,8 +7,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.CommonMethods;
 import utils.JsCommonMethods;
+import utils.WriteToXML;
 
 public class CreateAccreditation extends CommonMethods {
+	
+	public static String AccreditationCode;
 	
 	@When("Click Maintenance and click Accreditations")
 	public void click_Maintenance_and_click_Accreditations() throws InterruptedException {
@@ -38,7 +41,11 @@ public class CreateAccreditation extends CommonMethods {
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame2);
 		CommonMethods.waitForVisib(addAccreditationWindowElements.accredCode);
-		CommonMethods.sendKeys(addAccreditationWindowElements.accredCode, "Accreditation_"+CommonMethods.getDateAsString());
+		AccreditationCode = "Accreditation_"+CommonMethods.getDateAsString();
+		CommonMethods.sendKeys(addAccreditationWindowElements.accredCode, AccreditationCode);
+		
+		
+		
 		CommonMethods.sendKeys(addAccreditationWindowElements.accredType, "22");
 		CommonMethods.sendKeys(addAccreditationWindowElements.accredDescription, "Auto");
 		

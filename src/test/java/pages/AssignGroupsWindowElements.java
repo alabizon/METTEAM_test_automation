@@ -51,8 +51,8 @@ public class AssignGroupsWindowElements extends BaseClass {
 	@FindBy (id = "/html/body/div[1]/div/div/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[10]/table/tbody/tr[2]/td[2]/em/button")
 	public WebElement buttonClose;
 	
-	@FindBy (xpath = "/html/body/div[1]/div[2]/div/div[2]/div/div[1]/div[2]/div")
-	public List<WebElement> groupsList;
+	@FindBy (xpath = "//*[@class = 'x-grid3-col x-grid3-cell x-grid3-td-1 x-grid3-cell-last ']/div")
+	public List<WebElement> groupsListName;
 	
 	/**
 	 * End Elements Assign Groups page

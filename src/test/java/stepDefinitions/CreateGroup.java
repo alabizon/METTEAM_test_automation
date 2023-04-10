@@ -10,6 +10,7 @@ import utils.CommonMethods;
 public class CreateGroup extends CommonMethods {
 	
 	public static String GroupName;
+	public static String MyGroup;
 	
 	@When("Click Configure and click Groups")
 	public void click_Configure_and_click_Groups() throws Throwable {
@@ -81,8 +82,29 @@ public class CreateGroup extends CommonMethods {
 	}
 	
 	@Then("Verify added group is assigned to the user and is selected")
-	public void verify_added_group_is_assigned_to_the_user_and_is_selected() {
+	public void verify_added_group_is_assigned_to_the_user_and_is_selected() throws Throwable {
 		
+		System.out.println("GroupName "+ GroupName + " !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		Thread.sleep(500);
+		
+		for (int i = 0; i < assignGroupsWindowElements.groupsListName.size(); i++) {
+			
+				WebElement element = assignGroupsWindowElements.groupsListName.get(i);
+	
+				MyGroup = element.getText();
+				//System.out.println("Checking element " + i + ": " + element.getText());
+				
+				if (MyGroup.trim() == GroupName.trim())
+				{
+					
+					System.out.println("+++++++++++++++++++++++++++++++++++++++++");
+					
+				}
+				
+				System.out.println("-------------------------------------");
+				
+		}
+
 		
 	}
 	
