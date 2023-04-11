@@ -1,7 +1,7 @@
 Feature: Create Part Steps
 
   @User @Alex
-  Scenario Outline: MetTeam Users
+  Scenario Outline: Create MET/TEAM User
     Given Login With valid credentials
     When Click Setup and click Users
     Then "Find User" window opens and click Add button

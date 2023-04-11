@@ -1,1 +1,0 @@
-file:src/test/resources/features/CreateGroup.feature:24

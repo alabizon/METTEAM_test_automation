@@ -22,7 +22,7 @@ public class FindScreenWindowElements extends BaseClass {
 	
 	
 	/**
-	 * Beginning Elements from FindScreen
+	 * Beginning Elements from Find Screen
 	 */
 	//this element switch to frame from main page to find screen
 		
@@ -46,7 +46,7 @@ public class FindScreenWindowElements extends BaseClass {
 	    PageFactory.initElements(driver, this);
 	    
 	    /**
-	     * End Elements from FindScreen
+	     * End Elements from Find Screen
 	     */ 
 		
 }

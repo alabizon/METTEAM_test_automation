@@ -12,7 +12,7 @@ public class AttachDataSheetElements extends BaseClass {
 	
 	
 	/**
-	 * Beginning Elements from Add Procedure page
+	 * Beginning Elements from Attach Datasheet page
 	 */
 	
 	@FindBy (className = "x-form-text x-form-field x-trigger-noedit x-form-focus")
@@ -32,7 +32,7 @@ public class AttachDataSheetElements extends BaseClass {
 
 	
 	/**
-	 * End Elements Add Procedure page
+	 * End Elements Attach Datasheet page
 	 */
 	
 public AttachDataSheetElements() {

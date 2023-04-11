@@ -31,7 +31,7 @@ public class AddAssetWindowElements extends BaseClass {
 	public WebElement buttonReceive;
 	
 	/**
-	 * End Elements Add asset page
+	 * End Elements Add Asset page
 	 */
 	
 public AddAssetWindowElements() {

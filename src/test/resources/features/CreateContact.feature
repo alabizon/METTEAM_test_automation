@@ -1,7 +1,7 @@
 Feature: Create Part Steps
 
   @Contact @Alex 
-  Scenario Outline: MetTeam Contacts
+  Scenario Outline: Create MET/TEAM Contact
     Given Login With valid credentials
     When Click Setup and click Contacts
     Then "Find Contact" window opens and click Add button

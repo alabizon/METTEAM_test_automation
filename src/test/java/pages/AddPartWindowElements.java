@@ -10,7 +10,7 @@ public class AddPartWindowElements extends BaseClass {
 	
 	
 	/**
-	 * Beginning Elements from Add Type page
+	 * Beginning Elements from Add Part page
 	 */
 	
 	@FindBy (id = "cDescription")
@@ -75,7 +75,7 @@ public class AddPartWindowElements extends BaseClass {
 	
 	
 	/**
-	 * End Elements Add Type page
+	 * End Elements Add Part page
 	 */
 	
 public AddPartWindowElements() {

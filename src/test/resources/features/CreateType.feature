@@ -1,7 +1,7 @@
 Feature: Create Type Steps
 
   @Type @Alex
-  Scenario Outline: MetTeam Type
+  Scenario Outline: Create MET/TEAM Type
     Given Login With valid credentials
     When Click Maintenance and click Type
     Then "Find Type" findType_window is open and click Add button

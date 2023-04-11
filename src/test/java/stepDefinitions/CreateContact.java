@@ -1,13 +1,8 @@
 package stepDefinitions;
 
-import org.openqa.selenium.Keys;
-
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.SetupSubMenuElements;
 import utils.CommonMethods;
-import utils.JsCommonMethods;
-import org.openqa.selenium.interactions.Actions;
 
 public class CreateContact extends CommonMethods {
 	

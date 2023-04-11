@@ -54,6 +54,9 @@ public class AssignGroupsWindowElements extends BaseClass {
 	@FindBy (xpath = "//*[@class = 'x-grid3-col x-grid3-cell x-grid3-td-1 x-grid3-cell-last ']/div")
 	public List<WebElement> groupsListName;
 	
+	@FindBy (xpath = "//*[@class = 'x-grid3-col x-grid3-cell x-grid3-td-checker x-grid3-cell-first ']")
+	public List<WebElement> groupListCheckbox;
+	
 	/**
 	 * End Elements Assign Groups page
 	 */

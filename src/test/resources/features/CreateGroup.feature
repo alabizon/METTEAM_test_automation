@@ -1,7 +1,7 @@
 Feature: Create Group Steps
 
   @Create_Group @Alex
-  Scenario Outline: MetTeam Group
+  Scenario Outline: Create MET/TEAM Group
     Given Login With valid credentials
     When Click Configure and click Groups 
     Then "Find Groups" window opens
@@ -10,7 +10,7 @@ Feature: Create Group Steps
     And Click Add New Member button and "Find User" window opens
     Then Enter "<Search_Value>" and click Find button
     And Click OK button
-    Then Click Close button
+    Then Click Close button  
     Then Click Setup and click Users
     And "Find User" window is open
     Then Fill Search_Value with "<Search_Value>" and click Find button 

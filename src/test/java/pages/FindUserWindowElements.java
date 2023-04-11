@@ -9,7 +9,7 @@ import testBase.BaseClass;
 public class FindUserWindowElements extends BaseClass {
 	
 	/**
-	 * Beginning Elements from Find Facility Screen
+	 * Beginning Elements from Find User Screen
 	 */
 		
 	@FindBy (xpath = "//*[@class = 'x-grid3-col x-grid3-cell x-grid3-td-cValue x-grid3-cell-last x-grid3-cell-selected']")
@@ -26,7 +26,7 @@ public class FindUserWindowElements extends BaseClass {
 	PageFactory.initElements(driver, this);
 	    
 	/**
-	* End Elements from FindScreen
+	* End Elements from Find User screen
 	*/ 
 		
 }

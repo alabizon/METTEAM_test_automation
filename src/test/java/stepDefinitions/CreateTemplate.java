@@ -1,7 +1,5 @@
 package stepDefinitions;
 
-import org.openqa.selenium.interactions.Actions;
-
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.CommonMethods;

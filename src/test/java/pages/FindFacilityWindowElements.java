@@ -1,7 +1,5 @@
 package pages;
 
-import java.util.List;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -31,7 +29,7 @@ public class FindFacilityWindowElements extends BaseClass {
 	PageFactory.initElements(driver, this);
 	    
 	/**
-	* End Elements from FindScreen
+	* End Elements from Find Facility screen
 	*/ 
 		
 }

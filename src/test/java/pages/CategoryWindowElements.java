@@ -12,7 +12,7 @@ public class CategoryWindowElements extends BaseClass {
 	
 	
 	/**
-	 * Beginning Elements from Add Procedure page
+	 * Beginning Elements from Add Category page
 	 */
 	
 	@FindBy (xpath = "//*[@class='x-grid3-body']/div")
@@ -22,7 +22,7 @@ public class CategoryWindowElements extends BaseClass {
 	public WebElement categoryOk;
 	
 	/**
-	 * End Elements Add Procedure page
+	 * End Elements Add Category page
 	 */
 	
 public CategoryWindowElements() {

@@ -9,35 +9,35 @@ import testBase.BaseClass;
 public class WorkflowSubMenuElements extends BaseClass {
 
 	// Workflow -> Receiving menu item 
-	@FindBy (xpath = "/html/body/div[5]/ul/li[1]/a/span")
+	@FindBy (xpath = "(//*[@class = 'x-menu-item-text'])[1]")
 	public WebElement wflowReceiving;
 	
 	// Workflow -> WorkOrders menu item 
-	@FindBy (xpath = "/html/body/div[5]/ul/li[2]/a/span")
+	@FindBy (xpath = "(//*[@class = 'x-menu-item-text'])[2]")
 	public WebElement wflowWorkOrders;
 		
 	// Workflow -> Returning menu item 
-	@FindBy (xpath = "/html/body/div[5]/ul/li[3]/a/span")
+	@FindBy (xpath = "(//*[@class = 'x-menu-item-text'])[3]")
 	public WebElement wflowReturning;
 		
 	// Workflow -> Shipping menu item 
-	@FindBy (xpath = "/html/body/div[5]/ul/li[5]/a/span")
+	@FindBy (xpath = "(//*[@class = 'x-menu-item-text'])[4]")
 	public WebElement wflowShipping;
 		
 	// Workflow -> BatchChange menu item 
-	@FindBy (xpath = "/html/body/div[5]/ul/li[6]/a/span")
+	@FindBy (xpath = "(//*[@class = 'x-menu-item-text'])[5]")
 	public WebElement wflowBatchChange;
 		
 	// Workflow -> ToolAssignments menu item 
-	@FindBy (xpath = "/html/body/div[5]/ul/li[7]/a/span")
+	@FindBy (xpath = "(//*[@class = 'x-menu-item-text'])[6]")
 	public WebElement wflowToolAssignments;
 	
 	// Workflow -> CombineWorkOrders menu item 
-	@FindBy (xpath = "/html/body/div[5]/ul/li[8]/a/span")
+	@FindBy (xpath = "(//*[@class = 'x-menu-item-text'])[7]")
 	public WebElement wflowCombineWorkOrders;
 	
 	// Workflow -> MyWork menu item 
-	@FindBy (xpath = "/html/body/div[5]/ul/li[10]/a/span")
+	@FindBy (xpath = "(//*[@class = 'x-menu-item-text'])[8]")
 	public WebElement wflowMuWork;
 	
 	
