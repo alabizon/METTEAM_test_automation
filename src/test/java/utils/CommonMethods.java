@@ -94,7 +94,7 @@ public class CommonMethods extends PageInitializer {
 		
 	/**
 	 * Use this over loaded method in need of selecting an element of dropDown by
-	 * VisbleText.
+	 * VisibleText.
 	 * 
 	 * @param dropDownElement Pass the WebElement of the desired dropDown.
 	 * @param ValueOfDropDown Pass the Visible text of DropDown to be selected.
@@ -356,5 +356,49 @@ public class CommonMethods extends PageInitializer {
 	    }
 	}
 	
+	/**
+	   * This Method print from the list of elements from the list
+	   * @param values
+	   */
+	public static void printFromTheList(List<WebElement> values) {
+		for (WebElement i : values) {
+			System.out.println(i.getText());
+	
+		}
+	 
+	}
+	
+	/**
+	   * This Method do click on the button associated with a drop-down to open it 
+	   * and then select value from the drop-down based on the parameter 
+	   * @param values
+	   */
+	public static void clickThenSelectOptionFromDropdownByText(WebElement valueClick, List<WebElement> values, String value) {
+		valueClick.click();
+			for (WebElement dropDownValues : values) {
+				if (dropDownValues.getText().equals(value)) {
+					dropDownValues.click();
+				break;
+				}
+				
+			}
+	}
+	
+	/**
+	   * This Method returns today's date in the "MM/dd/yyyy" format 
+	   */
+	public static String getTodayDate() {
+		Date date = new Date();
+		Timestamp ts = new Timestamp(date.getTime());
+		SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+		String dateAsString = formatter.format(ts).toString();
+		return dateAsString;
+		
+		
+    }
+			
+		
+		
 }
+
 	

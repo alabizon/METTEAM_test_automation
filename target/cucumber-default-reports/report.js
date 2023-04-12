@@ -1,16 +1,16 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/CreateUser.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/CreateShipping.feature");
 formatter.feature({
-  "name": "Create Part Steps",
+  "name": "Create Shipping Steps",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "Create MET/TEAM User",
+  "name": "Create MET/TEAM Shipping",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@User"
+      "name": "@Shipping"
     },
     {
       "name": "@Alex"
@@ -22,75 +22,23 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "name": "Click Setup and click Users",
+  "name": "Click Workflow and click Shipping",
   "keyword": "When "
 });
 formatter.step({
-  "name": "\"Find User\" window opens and click Add button",
+  "name": "\"Find Shipment\" window opens and click Add button",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "\"Add User\" window is open",
+  "name": "\"Add Shipment\" window is open",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Enter First_Name and enter Last_Name",
+  "name": "Click ellipsis button next to \"Ship To\" button and \"Find Facility Address\" window opens",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Enter Initials and enter Username",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Enter Password and enter Email1",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Enter Phone1 and enter Phone2",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Enter Stamp_Number and Employee_Number",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Enter Pay_Grade and click Save button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Click OK on the alert and \"Find New Lab\" windows is open",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Click Find button and double-click the first grid record",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Click OK button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Click Groups button and \"Assign Groups\" window is open",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Click all checkboxes and click Save button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Click Logoff button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Enter Username and enter Password",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Click Log-in button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Verify you login in as \"jdoe\"",
+  "name": "Enter \"\u003cSearch_Value\u003e\" and click Find button and click OK button",
   "keyword": "And "
 });
 formatter.examples({
@@ -100,25 +48,33 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "Login",
-        "Password"
+        "Search_Value",
+        "Shipment_Value",
+        "Nomenclature",
+        "Model_Number",
+        "Serial_Number",
+        "Barcode"
       ]
     },
     {
       "cells": [
-        "jdoe",
-        "jdoe"
+        "My First Customer",
+        "Sample-10",
+        "Test_Nom",
+        "Test_Model",
+        "Test_Serial",
+        "12345"
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Create MET/TEAM User",
+  "name": "Create MET/TEAM Shipping",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@User"
+      "name": "@Shipping"
     },
     {
       "name": "@Alex"
@@ -139,17 +95,17 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click Setup and click Users",
+  "name": "Click Workflow and click Shipping",
   "keyword": "When "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateUser.click_Setup_and_click_Userss()"
+  "location": "stepDefinitions.CreateShipping.click_Workflow_and_click_Shipping()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Find User\" window opens and click Add button",
+  "name": "\"Find Shipment\" window opens and click Add button",
   "keyword": "Then "
 });
 formatter.match({
@@ -159,7 +115,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Add User\" window is open",
+  "name": "\"Add Shipment\" window is open",
   "keyword": "And "
 });
 formatter.match({
@@ -169,156 +125,24 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter First_Name and enter Last_Name",
+  "name": "Click ellipsis button next to \"Ship To\" button and \"Find Facility Address\" window opens",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateUser.enter_First_Name_and_enter_Last_Name()"
+  "location": "stepDefinitions.CreateShipping.click_ellipsis_button_next_to_button_and_window_opens(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter Initials and enter Username",
+  "name": "Enter \"My First Customer\" and click Find button and click OK button",
   "keyword": "And "
 });
-formatter.match({
-  "location": "stepDefinitions.CreateUser.enter_Initials_and_enter_Username()"
-});
+formatter.match({});
 formatter.result({
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.step({
-  "name": "Enter Password and enter Email1",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateUser.enter_Password_and_enter_Email1()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter Phone1 and enter Phone2",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateUser.enter_Phone1_and_enter_Phone2()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter Stamp_Number and Employee_Number",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateUser.enter_Stamp_Number_and_Employee_Number()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter Pay_Grade and click Save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateUser.enter_Pay_Grade_and_click_Save_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click OK on the alert and \"Find New Lab\" windows is open",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateUser.click_OK_on_the_alert_and_windows_is_open(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click Find button and double-click the first grid record",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateUser.click_Find_button_and_double_click_the_first_grid_record()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click OK button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateContact.click_OK_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click Groups button and \"Assign Groups\" window is open",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateUser.click_Groups_button_and_window_is_open(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click all checkboxes and click Save button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateUser.click_all_checkboxes_and_click_Save_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click Logoff button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateUser.click_Logoff_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter Username and enter Password",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateUser.enter_Username_and_enter_Password()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click Log-in button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateUser.click_Log_in_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify you login in as \"jdoe\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.LoginValidCredentials.verify_you_login_in_as(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.embedding("image/png", "embedded0.png", "Create MET/TEAM User");
+formatter.embedding("image/png", "embedded0.png", "Create MET/TEAM Shipping");
 formatter.after({
   "status": "passed"
 });
