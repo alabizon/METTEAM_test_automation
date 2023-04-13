@@ -1,7 +1,7 @@
 Feature: Shipping Steps
 
   @Create_Shipping @Alex 
-  Scenario Outline: Create MET/TEAM Shipping
+  Scenario Outline: Create MET_TEAM Shipping
     Given Login With valid credentials
     When Click Workflow and click Shipping
     Then "Find Shipment" window opens and click Add button
@@ -23,8 +23,13 @@ Feature: Shipping Steps
     Then Enter "<Serial_Number>" and then enter "<Barcode>"
     And Click Save button and then click Close button
     
+    Examples: 
+      | Search_Value      | Shipper |Shipment_Value | Nomenclature | Model_Number | Serial_Number | Barcode |
+      | My First Customer | FedEx   |Sample-10      |   Test_Nom   | Test_Model   | Test_Serial   | 12345   |
+    
+    
   @Verify_Shipping @Alex 
-  Scenario Outline: Verify MET/TEAM Shipping
+  Scenario Outline: Verify MET_TEAM Shipping
     Then Click Workflow and click Shipping
     And "Find Shipment" window is open
     Then Enter search value for the Shipment Name and click Find button
@@ -52,6 +57,3 @@ Feature: Shipping Steps
       
     
     
-    Examples: 
-      | Search_Value      | Shipper |Shipment_Value | Nomenclature | Model_Number | Serial_Number | Barcode |
-      | My First Customer | FedEx   |Sample-10      |   Test_Nom   | Test_Model   | Test_Serial   | 12345   |

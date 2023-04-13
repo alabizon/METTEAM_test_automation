@@ -1,7 +1,7 @@
 Feature: Create Procedure Steps
 
   @Procedure @Alex
-  Scenario Outline: Create MET/TEAM Procedure
+  Scenario Outline: Create MET_TEAM Procedure
     Given Login With valid credentials
     When Click Maintenance and click Procedures
     Then "Find Procedure" window is open and click Add button

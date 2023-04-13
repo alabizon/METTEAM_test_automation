@@ -1,14 +1,14 @@
 Feature: Login
 
   @Login @Denys
-  Scenario: MetTeam user story with login Valid Credentials 
+  Scenario: Login with Valid Credentials 
   	
   	Given Login With valid credentials
   	When Verify you login in as "Admin"
   
   
   @Login @Denys
-  Scenario Outline: MetTeam user story with login Invalid Credentials
+  Scenario Outline: Login with Invalid Credentials
     Given Login With invalid login "<Login>" and valid password "<Password>"
     Then verify error message "<text from page>" from the page and header "<Header>"
 

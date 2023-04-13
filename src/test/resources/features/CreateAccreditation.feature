@@ -1,7 +1,7 @@
 Feature: Create Accreditation Steps
 
   @Create_Accreditation @Alex
-  Scenario Outline: Create MET/TEAM Accreditation
+  Scenario Outline: Create MET_TEAM Accreditation
     Given Login With valid credentials
     When Click Maintenance and click Accreditations 
     Then "Find Accreditation" window opens

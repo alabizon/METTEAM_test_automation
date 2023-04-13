@@ -1,7 +1,7 @@
 Feature: Create Template Steps
 
   @Template @Alex
-  Scenario Outline: Create MET/TEAM Template
+  Scenario Outline: Create MET_TEAM Template
     Given Login With valid credentials
     When Click Maintenance and click Manual Templates
     Then "Find Manual Template" window opens and click Add button

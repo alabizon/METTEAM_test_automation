@@ -1,7 +1,7 @@
 Feature: Create Part Steps
 
   @Part @Alex
-  Scenario Outline: Create MET/TEAM Part
+  Scenario Outline: Create MET_TEAM Part
     Given Login With valid credentials
     When Click Maintenance and click Parts
     Then "Find Part" window opens and click Add button

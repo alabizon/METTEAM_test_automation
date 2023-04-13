@@ -2,14 +2,16 @@ package stepDefinitions;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.FindFacilityWindowElements;
-import pages.FindUserWindowElements;
 import utils.CommonMethods;
+import utils.Constants;
+import utils.ExcelUtility;
 import utils.JsCommonMethods;
 
 import org.openqa.selenium.interactions.Actions;
 
 public class CreateShipping extends CommonMethods {
+	
+	public static String ShipmentName;
 	
 	@When("Click Workflow and click Shipping")
 	public void click_Workflow_and_click_Shipping() throws InterruptedException {
@@ -27,7 +29,6 @@ public class CreateShipping extends CommonMethods {
 		CommonMethods.swithToFrame(frames.Frame2);
 		CommonMethods.waitForVisib(addShippingWindowElements.elipsisButtonShipTo);
 		CommonMethods.click(addShippingWindowElements.elipsisButtonShipTo);
-		
 		JsCommonMethods.scrollDown(20);
 		Thread.sleep(1000);
 		
@@ -56,9 +57,15 @@ public class CreateShipping extends CommonMethods {
 	
 	@Then("Enter Shipment name and enter Location")
 	public void enter_Shipment_name_and_enter_Location() throws Throwable {
-		CommonMethods.sendKeys(addShippingWindowElements.shipShipmentName, "Shipment_"+CommonMethods.getDateAsString());
+		ShipmentName = "Shipment_"+CommonMethods.getDateAsString();
+		CommonMethods.sendKeys(addShippingWindowElements.shipShipmentName, ShipmentName);
 		CommonMethods.sendKeys(addShippingWindowElements.shipLocation, "TestLocation");
 		
+		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
+		ExcelUtility.getSheet("TestExel");
+		ExcelUtility.writeStringRow(ShipmentName, Constants.SHIPPING_CELL);
+		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+				
 	}
 	
 	@Then("Select {string} and enter Tracking_Number")

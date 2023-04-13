@@ -1,7 +1,7 @@
 Feature: Create Group Steps
 
   @Create_Group @Alex
-  Scenario Outline: Create MET/TEAM Group
+  Scenario Outline: Create MET_TEAM Group
     Given Login With valid credentials
     When Click Configure and click Groups 
     Then "Find Groups" window opens
