@@ -33,35 +33,102 @@ public class VerifyShipping extends CommonMethods {
 		
 	}
 	
-
-//	@Then("Verify {string} is {string}")
-//	public void verify_is(String string, String string2) throws Throwable {
-//		driver.switchTo().defaultContent();
-//		CommonMethods.swithToFrame(frames.Frame2);
-//		CommonMethods.click(addShippingWindowElements.shipFrom);
-//		Thread.sleep(500);
-//		FieldContent = CommonMethods.getText(addShippingWindowElements.shipFrom);
-//		
-//		System.out.println(string + " +++++++++++++++++!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-//		System.out.println(string2 + " ------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-//		System.out.println(FieldContent + " ////////////////////////////////////////////");
-//		
-//		Thread.sleep(500);
-//		Assert.assertEquals(string, CommonMethods.getText(addShippingWindowElements.shipFrom));
-//		
-//	}
-	
 	@Then("Verify Ship_From is {string}")
 	public void verify_Ship_From_is(String string) {
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame2);
-		FieldContent = CommonMethods.getText(addShippingWindowElements.shipFrom);
-		
-		System.out.println(string + " +++++++++++++++++!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-		System.out.println(FieldContent + " ////////////////////////////////////////////");
+		FieldContent = CommonMethods.getAttribute(addShippingWindowElements.shipFrom);
 		Assert.assertEquals(string, FieldContent);
 		
 	}
+	
+	@Then("Verify Ship_To is {string}")
+	public void verify_Ship_To_is(String string) {
+		FieldContent = CommonMethods.getAttribute(addShippingWindowElements.shipTo);
+		Assert.assertEquals(string, FieldContent);
+		
+	}
+	
+	@Then("Verify Shipment_Name is Shipment_Name")
+	public void verify_Shipment_Name_is_Shipment_Name() {
+		FieldContent = CommonMethods.getAttribute(addShippingWindowElements.shipShipmentName);
+		Assert.assertEquals(ShipmentName, FieldContent);
+		
+	}
+	
+	@Then("Verify Location is {string}")
+	public void verify_Location_is(String string) {
+		FieldContent = CommonMethods.getAttribute(addShippingWindowElements.shipLocation);
+		Assert.assertEquals(string, FieldContent);
+		
+	}
+	
+	@Then("Verify Shipper is {string}")
+	public void verify_Shipper_is(String string) {
+		FieldContent = CommonMethods.getAttribute(addShippingWindowElements.shipShipperValue);
+		Assert.assertEquals(string, FieldContent);
+		
+	}
+	
+	@Then("Verify Tracking_Number is {string}")
+	public void verify_Tracking_Number_is(String string) {
+		FieldContent = CommonMethods.getAttribute(addShippingWindowElements.shipTrackingNum);
+		Assert.assertEquals(string, FieldContent);
+		
+	}
+	
+	@Then("Verify Required_Date is Required_Date")
+	public void verify_Required_Date_is_Required_Date() {
+		FieldContent = CommonMethods.getAttribute(addShippingWindowElements.shipReqDate);
+		Assert.assertEquals(CommonMethods.getTodayDate(), FieldContent);
+		
+	}
+	
+	@Then("Verify Authority is {string}")
+	public void verify_Authority_is(String string) {
+		FieldContent = CommonMethods.getAttribute(addShippingWindowElements.shipAuthority);
+		Assert.assertEquals(string, FieldContent);
+		
+	}
+	
+	@Then("Verify Notes is {string}")
+	public void verify_Notes_is(String string) {
+		FieldContent = CommonMethods.getAttribute(addShippingWindowElements.shipNotes);
+		Assert.assertEquals(string, FieldContent);
+		
+	}
+	
+	@Then("Verify Additional_Info is {string}")
+	public void verify_Additional_Info_is(String string) {
+		FieldContent = CommonMethods.getAttribute(addShippingWindowElements.shipAddInfo);
+		Assert.assertEquals(string, FieldContent);
+		
+	}
+	
+	@Then("Verify Issued_By is {string}")
+	public void verify_Issued_By_is(String string) {
+		FieldContent = CommonMethods.getAttribute(addShippingWindowElements.shipIssuedBy);
+		Assert.assertEquals(string, FieldContent);
+		
+	}
+	
+	@Then("Click Shipping_Items tab")
+	public void click_Shipping_Items_tab() {
+		CommonMethods.click(addShippingWindowElements.shipItemsTab);
+		
+	}
+	
+	@Then("Verify first item's Barcode is {string}")
+	public void verify_first_item_s_Barcode_is(String string) {
+		FieldContent = CommonMethods.getAttribute(addShippingWindowElements.firstGridBarcode);
+		Assert.assertEquals(string, FieldContent);
+		
+	}
+	
+	
+	
+	
+	
 	
 	
 }

@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Keys;
@@ -84,11 +85,24 @@ public class CommonMethods extends PageInitializer {
 	 * Use this method in need of retrieving the text of an element through Selenium
 	 * WebDriver.
 	 * 
-	 * @param element Pass the element from which the text to be retrieved.
+	 * @param <element> Pass the element from which the text to be retrieved.
 	 * @return This method returns a string object.
 	 */
 	public static String getText(WebElement element) {
 		return element.getText();
+		
+	}
+	
+	/**
+	 * Use this method in need of retrieving the text from the text field through Selenium
+	 * WebDriver.
+	 * 
+	 * @param <element> Pass the element from which the text to be retrieved.
+	 * @return This method returns a content of the text field.
+	 */
+	public static String getAttribute(WebElement element) {
+		driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+		return element.getAttribute("value");
 		
 	}
 		

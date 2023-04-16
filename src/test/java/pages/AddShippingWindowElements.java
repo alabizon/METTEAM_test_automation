@@ -49,6 +49,9 @@ public class AddShippingWindowElements extends BaseClass {
 	@FindBy (xpath = "/html/body/div[3]/div/form/div/div[2]/div/div[1]/div/div/div[6]")
 	public WebElement shipShipper;
 	
+	@FindBy (id = "cShipMode")
+	public WebElement shipShipperValue;
+	
 	@FindBy (xpath = "//*[@class ='x-combo-list-inner']/div")
 	public List<WebElement> shipShipperList;
 	
@@ -81,6 +84,21 @@ public class AddShippingWindowElements extends BaseClass {
 	
 	@FindBy (xpath = "/html/body/div[10]/div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td[2]")
 	public WebElement alertYesButton;
+	
+	@FindBy (xpath = "/html/body/div[4]/div/form/div/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div[2]/div/div[1]/table/tbody/tr/td[5]/div")
+	public WebElement firstGridBarcode;
+	
+	@FindBy (xpath = "/html/body/div[4]/div/form/div/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div[2]/div/div[2]/table/tbody/tr/td[2]/div")
+	public WebElement secondGridNomenclature;
+	
+	@FindBy (xpath = "/html/body/div[4]/div/form/div/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div[2]/div/div[2]/table/tbody/tr/td[3]/div")
+	public WebElement secondGridModNumber;
+	
+	@FindBy (xpath = "/html/body/div[4]/div/form/div/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div[2]/div/div[2]/table/tbody/tr/td[4]/div")
+	public WebElement secondGridSerNumber;
+	
+	@FindBy (xpath = "/html/body/div[4]/div/form/div/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div[2]/div/div[2]/table/tbody/tr/td[5]/div")
+	public WebElement secondGridBarcode;
 	
 	@FindBy (id = "btnSave")
 	public WebElement buttonSave;

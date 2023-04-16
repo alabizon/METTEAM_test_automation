@@ -38,6 +38,58 @@ formatter.step({
   "name": "Verify Ship_From is \"\u003cShip_From\u003e\"",
   "keyword": "And "
 });
+formatter.step({
+  "name": "Verify Ship_To is \"\u003cShip_To\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Verify Shipment_Name is Shipment_Name",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "Verify Location is \"\u003cLocation\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Verify Shipper is \"\u003cShipper\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "Verify Tracking_Number is \"\u003cTracking_Number\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Verify Required_Date is Required_Date",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "Verify Authority is \"\u003cAuthority\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Verify Notes is \"\u003cNotes\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "Verify Additional_Info is \"\u003cAdd_Info\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Verify Issued_By is \"\u003cIssued_By\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "Click Shipping_Items tab",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Verify first item\u0027s Barcode is \"\u003cBarcode\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "Verify Nomenclature is \"\u003cNomenclature\u003e\"",
+  "keyword": "Then "
+});
 formatter.examples({
   "name": "",
   "description": "",
@@ -152,8 +204,136 @@ formatter.match({
   "location": "stepDefinitions.VerifyShipping.verify_Ship_From_is(java.lang.String)"
 });
 formatter.result({
-  "error_message": "org.junit.ComparisonFailure: expected:\u003c[My Lab]\u003e but was:\u003c[]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat stepDefinitions.VerifyShipping.verify_Ship_From_is(VerifyShipping.java:62)\r\n\tat ✽.Verify Ship_From is \"My Lab\"(file:///C:/Users/Test_User/eclipse-workspace/METTEAM_Test_Automation/src/test/resources/features/Shipping.feature:38)\r\n",
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify Ship_To is \"My First Customer\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyShipping.verify_Ship_To_is(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify Shipment_Name is Shipment_Name",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyShipping.verify_Shipment_Name_is_Shipment_Name()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify Location is \"TestLocation\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyShipping.verify_Location_is(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify Shipper is \"FedEx\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyShipping.verify_Shipper_is(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify Tracking_Number is \"DO NOT CHALLENGE\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyShipping.verify_Tracking_Number_is(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify Required_Date is Required_Date",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyShipping.verify_Required_Date_is_Required_Date()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify Authority is \"TestAuthority\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyShipping.verify_Authority_is(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify Notes is \"TestNotes\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyShipping.verify_Notes_is(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify Additional_Info is \"TestAdditionalInfo\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyShipping.verify_Additional_Info_is(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify Issued_By is \"TestUser\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyShipping.verify_Issued_By_is(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click Shipping_Items tab",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyShipping.click_Shipping_Items_tab()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify first item\u0027s Barcode is \"\u003cBarcode\u003e\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyShipping.verify_first_item_s_Barcode_is(java.lang.String)"
+});
+formatter.result({
+  "error_message": "java.lang.AssertionError: expected:\u003c\u003cBarcode\u003e\u003e but was:\u003cnull\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:120)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat stepDefinitions.VerifyShipping.verify_first_item_s_Barcode_is(VerifyShipping.java:124)\r\n\tat ✽.Verify first item\u0027s Barcode is \"\u003cBarcode\u003e\"(file:///C:/Users/Test_User/eclipse-workspace/METTEAM_Test_Automation/src/test/resources/features/Shipping.feature:50)\r\n",
   "status": "failed"
+});
+formatter.step({
+  "name": "Verify Nomenclature is \"Test_Nom\"",
+  "keyword": "Then "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
 });
 formatter.embedding("image/png", "embedded0.png", "Verify MET_TEAM Shipping");
 formatter.after({

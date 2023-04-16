@@ -36,21 +36,22 @@ Feature: Shipping Steps
     And Enter search value for the Shipment Name and click Find button
     Then Click OK button and "Edit Shipment" window opens
     And Verify Ship_From is "<Ship_From>"
-    #Then Verify "<Ship_To>" is "My First Customer"
-    #And Verify "Shipment Name" is Shipment_Name
-    #Then Verify "Location" is "Location"
-    #And Verify "Shipper" is "FedEx"
-    #Then Verify "Tracking Number" is "Tracking Number"
-    #And Verify "Required Date" is "Required Date"
-    #Then Verify "Authority" is "Authority"
-    #And Verify "Notes" is "Notes"
-    #Then Verify "Additional Info" is "Additional Info"
-    #And Verify "Issued By" is "Issued By"
-    #Then Click Shipping_Items tab
+    Then Verify Ship_To is "<Ship_To>"
+    And Verify Shipment_Name is Shipment_Name
+    Then Verify Location is "<Location>"
+    And Verify Shipper is "<Shipper>"
+    Then Verify Tracking_Number is "<Tracking_Number>"
+    And Verify Required_Date is Required_Date
+    Then Verify Authority is "<Authority>"
+    And Verify Notes is "<Notes>"
+    Then Verify Additional_Info is "<Add_Info>"
+    And Verify Issued_By is "<Issued_By>"
+    Then Click Shipping_Items tab
+    And Verify first item's Barcode is "<Barcode>"
     #Then Verify Nomenclature is "<Nomenclature>"
     #And Verify Model_Number is "<Model_Number>"
     #Then Verify Serial_Number is "<Serial_Number>"
-    #And Verify second item's Barcode is "<Barcode>"
+    
     
     Examples: 
     	| Ship_From | Ship_To           | Location     | Shipper | Tracking_Number  | Authority     | Notes     | Add_Info           | Issued_By | Nomenclature | Model_Number | Serial_Number | Barcode1 | Barcode2  |
