@@ -56,7 +56,7 @@ public class CommonMethods extends PageInitializer {
 	}
 		
 	/**
-	 * Use this method in need of entering value to a text box through Selenium
+	 * Use this method in need to enter value to a text box through Selenium
 	 * WebDriver.
 	 * 
 	 * @param element Pass the element to which the text needs to be entered.

@@ -15,7 +15,8 @@ public class AddShippingWindowElements extends BaseClass {
 	 * Beginning Elements from Add Shipping page
 	 */
 	
-	@FindBy (id = "nFromUID_display")
+	@FindBy (xpath = "//*[@id= 'nFromUID_display']")
+	//@FindBy (xpath = "//*[@class = 'x-form-text x-form-field x-form-focus']")
 	public WebElement shipFrom;
 	
 	@FindBy (xpath = "(//*[@class = 'x-form-trigger btn-trigger-search'])[1]")

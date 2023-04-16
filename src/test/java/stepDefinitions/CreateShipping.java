@@ -154,21 +154,7 @@ public class CreateShipping extends CommonMethods {
 		CommonMethods.click(addShippingWindowElements.buttonClose);
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 }
 
 
