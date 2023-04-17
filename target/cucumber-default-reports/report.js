@@ -83,12 +83,24 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Verify first item\u0027s Barcode is \"\u003cBarcode\u003e\"",
+  "name": "Verify Nomenclature is \"\u003cNomenclature\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Verify Nomenclature is \"\u003cNomenclature\u003e\"",
+  "name": "Verify Model_Number is \"\u003cModel_Number\u003e\"",
   "keyword": "Then "
+});
+formatter.step({
+  "name": "Verify Serial_Number is \"\u003cSerial_Number\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "Verify first item Barcode is \"\u003cBarcode1\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Verify second item Barcode is \"\u003cBarcode2\u003e\"",
+  "keyword": "And "
 });
 formatter.examples({
   "name": "",
@@ -317,23 +329,54 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify first item\u0027s Barcode is \"\u003cBarcode\u003e\"",
+  "name": "Verify Nomenclature is \"Test_Nom\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyShipping.verify_first_item_s_Barcode_is(java.lang.String)"
+  "location": "stepDefinitions.VerifyShipping.verify_Nomenclature_is(java.lang.String)"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: expected:\u003c\u003cBarcode\u003e\u003e but was:\u003cnull\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:120)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat stepDefinitions.VerifyShipping.verify_first_item_s_Barcode_is(VerifyShipping.java:124)\r\n\tat ✽.Verify first item\u0027s Barcode is \"\u003cBarcode\u003e\"(file:///C:/Users/Test_User/eclipse-workspace/METTEAM_Test_Automation/src/test/resources/features/Shipping.feature:50)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
-  "name": "Verify Nomenclature is \"Test_Nom\"",
+  "name": "Verify Model_Number is \"Test_Model\"",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "stepDefinitions.VerifyShipping.verify_Model_Number_is(java.lang.String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify Serial_Number is \"Test_Serial\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyShipping.verify_Serial_Number_is(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify first item Barcode is \"12345\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyShipping.verify_first_item_Barcode_is(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify second item Barcode is \"SAMPLE-10\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyShipping.verify_second_item_Barcode_is(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
 });
 formatter.embedding("image/png", "embedded0.png", "Verify MET_TEAM Shipping");
 formatter.after({

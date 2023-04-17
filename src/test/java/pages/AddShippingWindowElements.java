@@ -85,6 +85,15 @@ public class AddShippingWindowElements extends BaseClass {
 	@FindBy (xpath = "/html/body/div[10]/div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[1]/table/tbody/tr/td[2]")
 	public WebElement alertYesButton;
 	
+	@FindBy (xpath = "/html/body/div[4]/div/form/div/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div[2]/div/div[1]/table/tbody/tr/td[2]/div")
+	public WebElement firstGridNomenclature;
+	
+	@FindBy (xpath = "/html/body/div[4]/div/form/div/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div[2]/div/div[1]/table/tbody/tr/td[3]/div")
+	public WebElement firstGridModNumber;
+	
+	@FindBy (xpath = "/html/body/div[4]/div/form/div/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div[2]/div/div[1]/table/tbody/tr/td[4]/div")
+	public WebElement firstGridSerNumber;
+	
 	@FindBy (xpath = "/html/body/div[4]/div/form/div/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div[2]/div/div[1]/table/tbody/tr/td[5]/div")
 	public WebElement firstGridBarcode;
 	
@@ -99,6 +108,7 @@ public class AddShippingWindowElements extends BaseClass {
 	
 	@FindBy (xpath = "/html/body/div[4]/div/form/div/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div[2]/div/div[2]/table/tbody/tr/td[5]/div")
 	public WebElement secondGridBarcode;
+
 	
 	@FindBy (id = "btnSave")
 	public WebElement buttonSave;
