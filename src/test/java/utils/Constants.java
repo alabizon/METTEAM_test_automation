@@ -12,7 +12,7 @@ public class Constants {
 	
 	public static final String SCREENSHOT_FILEPATH=System.getProperty("user.dir")+"/target/screenshots/";
 
-	public static final String TESTDATA_FILEPATH=System.getProperty("user.dir")+ "/src/test/resources/TestDataExcel/TestWorksheet.xlsx";
+	public static final String TESTDATA_FILEPATH=System.getProperty("user.dir")+ "/src/test/resources/Data/TestWorksheet.xlsx";
 	
 	public static final int PROCEDURE_CELL=1;
 	public static final int TYPE_CELL=2;

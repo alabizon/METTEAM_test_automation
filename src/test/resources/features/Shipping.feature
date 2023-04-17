@@ -28,7 +28,7 @@ Feature: Shipping Steps
       | My First Customer | FedEx   | Sample-10      |   Test_Nom   | Test_Model   | Test_Serial   | 12345   |
     
     
-  @Verify_Shipping 
+  @Verify_Shipping @Create_Shipping
   Scenario Outline: Verify MET_TEAM Shipping
     Given Login With valid credentials
     When Click Workflow and click Shipping

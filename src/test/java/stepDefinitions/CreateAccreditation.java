@@ -3,6 +3,8 @@ package stepDefinitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.CommonMethods;
+import utils.Constants;
+import utils.ExcelUtility;
 
 public class CreateAccreditation extends CommonMethods {
 	
@@ -39,7 +41,10 @@ public class CreateAccreditation extends CommonMethods {
 		AccreditationCode = "Accreditation_"+CommonMethods.getDateAsString();
 		CommonMethods.sendKeys(addAccreditationWindowElements.accredCode, AccreditationCode);
 		
-		
+		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
+		ExcelUtility.getSheet("TestExel");
+		ExcelUtility.writeStringRow(AccreditationCode, Constants.ACCREDITATION_CELL);
+		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
 		
 		CommonMethods.sendKeys(addAccreditationWindowElements.accredType, "22");
 		CommonMethods.sendKeys(addAccreditationWindowElements.accredDescription, "Auto");
