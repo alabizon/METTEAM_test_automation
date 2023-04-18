@@ -1,6 +1,6 @@
 Feature: Create Part Steps
 
-  @Part @Alex
+  @Create_Part
   Scenario Outline: Create MET_TEAM Part
     Given Login With valid credentials
     When Click Maintenance and click Parts
@@ -20,3 +20,34 @@ Feature: Create Part Steps
     Examples: 
       | Search_Value_Manufacturer | Search_Value_Last    |
       |        Fluke              |    Administrator     |
+
+      
+  @Verify_Part 
+  Scenario Outline: Verify MET_TEAM Part
+    Given Login With valid credentials
+    #When Click Maintenance and click Parts 
+    #Then "Find Part" window opens
+    #And Enter search value for the Part Number and click Find button
+    #Then Click OK button and "Edit Part" window opens
+    #And Verify Description is Description
+    #Then Verify Part_Number is "<Part_Number>"
+    #And Verify Manufacturer is "<Manufacturer>"
+    #Then Verify Class is "<Class>"
+    #And Verify Stock_Number is "<Stock_Num>"
+    #And Verify Group is "<Group>"
+    #Then Verify Location is "<Location>"
+    #And Verify On_Hand is "<On_Hand>"
+    #And Verify Re_Order is "<Re_Order>"
+    #Then Verify Last_Qty is "<Last_Qty>"
+    #And Verify Purchase_Unit is "<Purch_Unit>"
+    #And Verify Price is "<Price>"
+    #Then Verify Inventoried_By is "<Inventoried_By>"
+    #And Verify Date_Inventoried is "<Date_Inv>"
+    #Then Verify Cost is "<Cost>"
+    #And Verify Supplier is "<Supplier>"
+    #And Verify Last_Ordered is "<Last_Ord>"
+    #Then Verify Last_Cost is "<Last_Cost>"
+
+    Examples: 
+      | Part_Number | Manufacturer | Class     | Stock_Num | Group     | Location     | On_Hand | Re_Order | Last_Qty | Purch_Unit | Price | Inventoried_By       | Date_Inv   | Cost | Supplier     | Last_Ord   | Last_Cost |
+      | 456         | Fluke        | TestClass | 123       | testGroup | TestLocation | 10      | 7        | 6        | EA         | 3.00  | System Administrator | 05/27/2005 | 5.00 | TestSupplier | 05/27/2005 | 3.50      | 

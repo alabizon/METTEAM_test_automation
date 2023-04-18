@@ -3,9 +3,15 @@ package stepDefinitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.CommonMethods;
+import utils.Constants;
+import utils.ExcelUtility;
+import utils.JsCommonMethods;
+
 import org.openqa.selenium.interactions.Actions;
 
 public class CreatePart extends CommonMethods {
+	
+	public static String PartDescription;
 	
 	@When("Click Maintenance and click Parts")
 	public void click_Maintenance_and_click_Parts() throws InterruptedException {
@@ -30,7 +36,13 @@ public class CreatePart extends CommonMethods {
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame2);
 		CommonMethods.waitForVisib(addPartWindowElements.partDescription);
-		CommonMethods.sendKeys(addPartWindowElements.partDescription, "TestPart_"+CommonMethods.getDateAsString());
+		PartDescription = "Part_"+CommonMethods.getDateAsString();
+		CommonMethods.sendKeys(addPartWindowElements.partDescription, PartDescription);
+		
+		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
+		ExcelUtility.getSheet("TestExel");
+		ExcelUtility.writeStringRow(PartDescription, Constants.PART_CELL);
+		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
 		
 	}
 	
@@ -67,6 +79,7 @@ public class CreatePart extends CommonMethods {
 		CommonMethods.swithToFrame(frames.Frame2);
 		CommonMethods.sendKeys(addPartWindowElements.partClass, "TestClass");
 		CommonMethods.sendKeys(addPartWindowElements.typePurchaseUnit, "EA");
+		JsCommonMethods.clearByJS(addPartWindowElements.partPrice);
 		CommonMethods.sendKeys(addPartWindowElements.partPrice, "3.00");
 		
 	}
@@ -102,6 +115,7 @@ public class CreatePart extends CommonMethods {
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame2);
 		CommonMethods.sendKeys(addPartWindowElements.partDateInventoried, "05/27/2005");
+		JsCommonMethods.clearByJS(addPartWindowElements.partCost);
 		CommonMethods.sendKeys(addPartWindowElements.partCost, "5.00");
 		
 	}
@@ -111,6 +125,7 @@ public class CreatePart extends CommonMethods {
 		CommonMethods.sendKeys(addPartWindowElements.partLocation, "TestLocation");
 		CommonMethods.sendKeys(addPartWindowElements.partSupplier, "TestSupplier");
 		CommonMethods.sendKeys(addPartWindowElements.partLastOrdered, "05/27/2005");
+		JsCommonMethods.clearByJS(addPartWindowElements.partLastCost);
 		CommonMethods.sendKeys(addPartWindowElements.partLastCost, "3.50");
 		
 	}
@@ -122,27 +137,6 @@ public class CreatePart extends CommonMethods {
 		CommonMethods.click(addPartWindowElements.partClose);
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }
 
