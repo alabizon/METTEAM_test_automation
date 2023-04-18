@@ -47,11 +47,12 @@ Feature: Shipping Steps
     Then Verify Additional_Info is "<Add_Info>"
     And Verify Issued_By is "<Issued_By>"
     Then Click Shipping_Items tab
-    And Verify Nomenclature is "<Nomenclature>"
-    Then Verify Model_Number is "<Model_Number>"
-    And Verify Serial_Number is "<Serial_Number>"
-    Then Verify first item Barcode is "<Barcode1>"
-    And Verify second item Barcode is "<Barcode2>"
+    And Verify first item Barcode is "<Barcode2>"
+    Then Verify Nomenclature is "<Nomenclature>"
+    And Verify Model_Number is "<Model_Number>"
+    Then Verify Serial_Number is "<Serial_Number>"
+    And Verify second item Barcode is "<Barcode1>"
+    
 
     
     
