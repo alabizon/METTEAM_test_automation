@@ -22,6 +22,6 @@ import io.cucumber.junit.CucumberOptions;
 )
 
 
-public class User {
+public class ShouldBeRunOnce {
 
 }

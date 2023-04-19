@@ -28,7 +28,7 @@ public class CreateGroup extends CommonMethods {
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame2);
 		
-		GroupName = "ZZZZZ_"+CommonMethods.getDateAsString();
+		GroupName = "Group_"+CommonMethods.getDateAsString();
 		CommonMethods.sendKeys(addGroupWindowElements.groupName, GroupName);
 				
 		CommonMethods.click(addGroupWindowElements.groupBtnSave);
