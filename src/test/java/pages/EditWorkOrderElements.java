@@ -8,14 +8,8 @@ import testBase.BaseClass;
 
 public class EditWorkOrderElements extends BaseClass {
 
-	@FindBy (xpath ="//*[@id=\"frame_5\"]")
-	public WebElement FrameWorkOrder;
-	
-	
 	@FindBy (id = "btn-tbAddResult")
 	public WebElement buttonAddResult;
-	
-	
 	
 	
 public EditWorkOrderElements() {

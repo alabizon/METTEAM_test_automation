@@ -6,6 +6,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -236,6 +238,49 @@ public class CommonMethods extends PageInitializer {
 	}
 	
 	/**
+	 * Use this method to pass date as a string. You can concatenate with any String
+	 * and get unique name
+	 */
+	public static String getDateAsString() {
+		Date date = new Date();
+		Timestamp ts = new Timestamp(date.getTime());
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String dateAsString = formatter.format(ts).toString();
+		dateAsString = dateAsString.replaceAll("[^A-Za-z0-9]", "");
+		return dateAsString;
+		
+	}
+	
+	/**
+	   * This Method returns today's date in the "MM/dd/yyyy" format 
+	   */
+	public static String getTodayDate() {
+		Date date = new Date();
+		Timestamp ts = new Timestamp(date.getTime());
+		SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+		String dateAsString = formatter.format(ts).toString();
+		return dateAsString;
+		
+   }
+	
+	/**
+	   * This Method returns date which is 12-months from today's date in the "MM/dd/yyyy" format 
+	   */
+	public static String getDateYearFromToday() {
+		// Get today's date
+        LocalDate today = LocalDate.now();
+
+        // Add 12 months to today's date
+        LocalDate datePlus12Months = today.plusMonths(12);
+
+        // Format the date using "MM/dd/yyyy" pattern
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        String formattedDate = datePlus12Months.format(formatter);
+        return formattedDate;
+		
+  }
+	
+	/**
 	 * Use this method to select a checkbox value
 	 */
 	public static void selectCheckbox(List<WebElement> checkboxList, String attribute, String value) {
@@ -249,20 +294,6 @@ public class CommonMethods extends PageInitializer {
 				}
 			}
 		}
-		
-	}
-	
-	/**
-	 * Use this method to pass date as a string. You can concatenate with any String
-	 * and get unique name
-	 */
-	public static String getDateAsString() {
-		Date date = new Date();
-		Timestamp ts = new Timestamp(date.getTime());
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		String dateAsString = formatter.format(ts).toString();
-		dateAsString = dateAsString.replaceAll("[^A-Za-z0-9]", "");
-		return dateAsString;
 		
 	}
 	
@@ -398,21 +429,6 @@ public class CommonMethods extends PageInitializer {
 			}
 	}
 	
-	/**
-	   * This Method returns today's date in the "MM/dd/yyyy" format 
-	   */
-	public static String getTodayDate() {
-		Date date = new Date();
-		Timestamp ts = new Timestamp(date.getTime());
-		SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
-		String dateAsString = formatter.format(ts).toString();
-		return dateAsString;
-		
-		
-    }
-			
-		
-		
 }
 
 	
