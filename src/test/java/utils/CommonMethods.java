@@ -230,9 +230,7 @@ public class CommonMethods extends PageInitializer {
 	public static String getTimeStamp() {
 		
 		Date date=new Date();
-		
 		SimpleDateFormat sdf= new SimpleDateFormat("yyyy-MM-dd_HH_mm_ss");
-		
 		return sdf.format(date);
 		
 	}
@@ -289,7 +287,6 @@ public class CommonMethods extends PageInitializer {
 				String checkboxText = checkbox.getAttribute(attribute);
 				if (checkboxText.equals(value)) {
 					checkbox.click();
-					
 					break;
 				}
 			}
