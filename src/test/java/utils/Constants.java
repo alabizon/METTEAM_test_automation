@@ -31,5 +31,6 @@ public class Constants {
 	public static final int JOB_NUMBER_CELL=15;
 	public static final int MANUAL_TEMPLATE_CELL=16;
 	public static final int PROBLEM_REPORT_CELL=17;
+	public static final int BILLING_CELL=18;
 	
 }

@@ -426,6 +426,16 @@ public class CommonMethods extends PageInitializer {
 			}
 	}
 	
+	/**
+	 * This method will do assert
+	 * @param expected
+	 * @param actual
+	 */
+	public static void assertEquals(String expected, String actual) {
+		assert expected.equals(actual) : "Expected string: " + expected + ", but found: " + actual;
+		
+	}
+	
 }
 
 	
