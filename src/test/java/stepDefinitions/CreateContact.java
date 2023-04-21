@@ -69,10 +69,11 @@ public class CreateContact extends CommonMethods {
 	}
 	
 	@Then("Click OK button")
-	public void click_OK_button() {
-		driver.switchTo().defaultContent();
-		CommonMethods.swithToFrame(frames.Frame3);
-		CommonMethods.click(findFacilityWindowElements.OkButton);
+	public void click_OK_button() throws Throwable {
+		Thread.sleep(500);
+		//driver.switchTo().defaultContent();
+		//CommonMethods.swithToFrame(frames.Frame3);
+		CommonMethods.click(findScreenWindowElements.OkButton);
 		
 	}
 	

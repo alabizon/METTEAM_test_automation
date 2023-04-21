@@ -24,18 +24,16 @@ public class FindScreenWindowElements extends BaseClass {
 	/**
 	 * Beginning Elements from Find Screen
 	 */
-	//this element switch to frame from main page to find screen
-		
-	@FindBy (className = " x-btn-text tb-find")
+	@FindBy (id = "btnFind")
 	public WebElement FindButton;
 	
-	@FindBy (className = "x-grid3-cell-inner x-grid3-col-cFacilityName")
-	public WebElement topGridTopRecord;
+	@FindBy (xpath = "//*[@class = 'x-grid3-col x-grid3-cell x-grid3-td-cValue x-grid3-cell-last x-grid3-cell-selected']/div")
+	public WebElement findFacilityFacilityNameSearchValue;
 	
 	@FindBy (xpath = "//*[@type='button' and contains(text(),'Add')]")
 	public WebElement addButton;
 	
-	@FindBy (className = " x-btn-text tb-ok")
+	@FindBy (id = "btnOk")
 	public WebElement OkButton;
 	
 	@FindBy (xpath = "//*[@class=\"x-grid3-body\"]/div/table/tbody/tr/td/div")

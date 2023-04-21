@@ -46,7 +46,6 @@ public class PageInitializer extends BaseClass {
 	protected static AddTypeWindowElements addTypeWindowElements;
 	protected static FindFacilityWindowElements findFacilityWindowElements;
 	protected static AddPartWindowElements addPartWindowElements;
-	protected static FindUserWindowElements findUserWindowElements;
 	protected static AddAccreditationWindowElements addAccreditationWindowElements;
 	protected static AddTemplateWindowElements addTemplateWindowElements;
 	protected static SetupSubMenuElements setupSubMenuElements;
@@ -57,7 +56,6 @@ public class PageInitializer extends BaseClass {
 	protected static ConfigureSubMenuElements configureSubMenuElements;
 	protected static WorkflowSubMenuElements workflowSubMenuElements;
 	protected static AddShippingWindowElements addShippingWindowElements;
-	protected static FindFacilityAddressWindowElements findFacilityAddressWindowElements;
 	protected static AddShipItemWindowElements addShipItemWindowElements;
 	protected static SelectShipItemsWindowElements selectShipItemsWindowElements;
 	public static void initializePageObjects() {
@@ -75,7 +73,6 @@ public class PageInitializer extends BaseClass {
 		addTypeWindowElements = new AddTypeWindowElements();
 		findFacilityWindowElements = new FindFacilityWindowElements();
 		addPartWindowElements = new AddPartWindowElements();
-		findUserWindowElements = new FindUserWindowElements();
 		addAccreditationWindowElements = new AddAccreditationWindowElements();
 		addTemplateWindowElements = new AddTemplateWindowElements();
 		setupSubMenuElements = new SetupSubMenuElements();
@@ -86,7 +83,6 @@ public class PageInitializer extends BaseClass {
 		configureSubMenuElements = new ConfigureSubMenuElements();
 		workflowSubMenuElements = new WorkflowSubMenuElements();
 		addShippingWindowElements = new AddShippingWindowElements();
-		findFacilityAddressWindowElements = new FindFacilityAddressWindowElements();
 		addShipItemWindowElements = new AddShipItemWindowElements();
 		selectShipItemsWindowElements = new SelectShipItemsWindowElements();
 			

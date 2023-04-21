@@ -53,16 +53,16 @@ public class CreateType extends CommonMethods {
 	public void enter_and_click_Find_button(String string) throws Throwable {
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame3);
-		CommonMethods.waitForVisib(findFacilityWindowElements.findFacilityFacilityNameSearchValue);
+		CommonMethods.waitForVisib(findScreenWindowElements.findFacilityFacilityNameSearchValue);
 		Actions actions = new Actions(driver);
-		actions.moveToElement(findFacilityWindowElements.findFacilityFacilityNameSearchValue).click().sendKeys(string).build().perform();
-		CommonMethods.click(findFacilityWindowElements.FindButton);
+		actions.moveToElement(findScreenWindowElements.findFacilityFacilityNameSearchValue).click().sendKeys(string).build().perform();
+		CommonMethods.click(findScreenWindowElements.FindButton);
 		
 	}
 	
 	@Then("Click OK button and enter Model_Number")
 	public void click_OK_button_and_enter_Model_Number() {
-		CommonMethods.click(findFacilityWindowElements.OkButton);
+		CommonMethods.click(findScreenWindowElements.OkButton);
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame2);
 		CommonMethods.sendKeys(addTypeWindowElements.typeModelNumber, "2468");

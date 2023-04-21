@@ -38,11 +38,11 @@ public class CreateShipping extends CommonMethods {
 	public void enter_and_click_Find_button_and_click_OK_button(String string) {
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame3);
-		CommonMethods.waitForVisib(findFacilityAddressWindowElements.findFacilityAddressFacilityNameSearchValue);
+		CommonMethods.waitForVisib(findScreenWindowElements.findFacilityFacilityNameSearchValue);
 		Actions actions = new Actions(driver);
-		actions.moveToElement(findFacilityAddressWindowElements.findFacilityAddressFacilityNameSearchValue).click().sendKeys(string).build().perform();
-		CommonMethods.click(findFacilityAddressWindowElements.findFacilityAddressFindButton);
-		CommonMethods.click(findFacilityAddressWindowElements.findFacilityAddressOkButton);
+		actions.moveToElement(findScreenWindowElements.findFacilityFacilityNameSearchValue).click().sendKeys(string).build().perform();
+		CommonMethods.click(findScreenWindowElements.FindButton);
+		CommonMethods.click(findScreenWindowElements.OkButton);
 		
 	}
 	

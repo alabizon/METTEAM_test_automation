@@ -65,16 +65,16 @@ public class CreatePart extends CommonMethods {
 	public void enter_and_click_Find_buttn(String string) throws Throwable {
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame3);
-		CommonMethods.waitForVisib(findFacilityWindowElements.findFacilityFacilityNameSearchValue);
+		CommonMethods.waitForVisib(findScreenWindowElements.findFacilityFacilityNameSearchValue);
 		Actions actions = new Actions(driver);
-		actions.moveToElement(findFacilityWindowElements.findFacilityFacilityNameSearchValue).click().sendKeys(string).build().perform();
-		CommonMethods.click(findFacilityWindowElements.FindButton);
+		actions.moveToElement(findScreenWindowElements.findFacilityFacilityNameSearchValue).click().sendKeys(string).build().perform();
+		CommonMethods.click(findScreenWindowElements.FindButton);
 		
 	}
 	
 	@Then("Click OK button and enter Class and enter Purchase_Units and enter Price")
 	public void click_OK_button_and_enter_Class_and_enter_Purchase_Units_and_enter_Price() {
-		CommonMethods.click(findFacilityWindowElements.OkButton);
+		CommonMethods.click(findScreenWindowElements.OkButton);
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame2);
 		CommonMethods.sendKeys(addPartWindowElements.partClass, "TestClass");
@@ -101,17 +101,17 @@ public class CreatePart extends CommonMethods {
 	public void enter_and_click_Find_btn(String string) throws Throwable {
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame4);
-		CommonMethods.waitForVisib(findUserWindowElements.findUserLastNameSearchValue);
+		CommonMethods.waitForVisib(findScreenWindowElements.findFacilityFacilityNameSearchValue);
 		Actions actions = new Actions(driver);
-		actions.moveToElement(findUserWindowElements.findUserLastNameSearchValue).click().sendKeys(string).build().perform();
+		actions.moveToElement(findScreenWindowElements.findFacilityFacilityNameSearchValue).click().sendKeys(string).build().perform();
 		Thread.sleep(1000);
-		CommonMethods.click(findUserWindowElements.FindButton);
+		CommonMethods.click(findScreenWindowElements.FindButton);
 	
 	}
 		
 	@Then("Click OK button and enter Date_Inventoried and enter Cost")
 	public void click_OK_button_and_enter_Date_Inventoried_and_enter_Cost() {
-		CommonMethods.click(findUserWindowElements.OkButton);
+		CommonMethods.click(findScreenWindowElements.OkButton);
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame2);
 		CommonMethods.sendKeys(addPartWindowElements.partDateInventoried, "05/27/2005");

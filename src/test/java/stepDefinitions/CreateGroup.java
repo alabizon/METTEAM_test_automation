@@ -57,14 +57,14 @@ public class CreateGroup extends CommonMethods {
 		CommonMethods.swithToFrame(frames.Frame4);
 		Thread.sleep(500);
 		Actions actions = new Actions(driver);
-		actions.moveToElement(findUserWindowElements.findUserLastNameSearchValue).click().sendKeys(string).build().perform();
-		CommonMethods.click(findUserWindowElements.FindButton);
+		actions.moveToElement(findScreenWindowElements.findFacilityFacilityNameSearchValue).click().sendKeys(string).build().perform();
+		CommonMethods.click(findScreenWindowElements.FindButton);
 		
 	}
 	
 	@Then("Click OK button from {string} screen")
 	public void click_OK_button_from_screen(String string) {
-		CommonMethods.click(findUserWindowElements.OkButton);
+		CommonMethods.click(findScreenWindowElements.OkButton);
 		
 	}
 	

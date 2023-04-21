@@ -49,13 +49,13 @@ public class AddContactWindowElements extends BaseClass {
 	@FindBy (id = "mNotes")
 	public WebElement contactNotes;
 	
-	@FindBy (xpath = "/html/body/div[1]/div/div/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[6]/table/tbody/tr[2]/td[2]/em/button")
+	@FindBy (xpath = "//*[@id ='btnSave' and  @class = 'x-btn x-btn-icon-text x-btn-text-icon']")
 	public WebElement buttonSave;
 	
-	@FindBy (xpath = "/html/body/div[2]/div/div/div/div/table[1]/tbody/tr[2]/td[2]/em/button")
+	@FindBy (xpath = "//*[@class = ' x-btn-text tb-add-small' and @type = 'button']")
 	public WebElement buttonAddFacility;
 	
-	@FindBy (xpath = "/html/body/div[1]/div/div/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[9]/table/tbody/tr[2]/td[2]/em/button")
+	@FindBy (id = "btnClose")
 	public WebElement buttonClose;
 	
 	/**

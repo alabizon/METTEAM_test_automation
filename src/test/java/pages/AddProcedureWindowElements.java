@@ -25,7 +25,7 @@ public class AddProcedureWindowElements extends BaseClass {
 	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field'])[1]")
 	public WebElement procDate;
 	
-	@FindBy (xpath = "/html/body/div[4]/div/form/div/div[1]/div/div/div[3]/div/div/img")
+	@FindBy (xpath = "(//*[@class = 'x-form-trigger btn-trigger-search'])[1]")
 	public WebElement elipsisButtonDataSheet;
 	
 	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[3]")
@@ -34,7 +34,7 @@ public class AddProcedureWindowElements extends BaseClass {
 	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field'])[2]")
 	public WebElement procRevisionDate;
 	
-	@FindBy (xpath = "/html/body/div[4]/div/form/div/div[1]/div/div/div[9]/div/div/img")
+	@FindBy (xpath = "(//*[@class = 'x-form-trigger btn-trigger-search'])[4]")
 	public WebElement elipsisButtonCategory;
 	
 	@FindBy (id = "ext-gen291")

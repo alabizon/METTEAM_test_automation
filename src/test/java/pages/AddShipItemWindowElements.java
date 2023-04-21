@@ -25,7 +25,7 @@ public class AddShipItemWindowElements extends BaseClass {
 	@FindBy (id = "cBarcode")
 	public WebElement ship_itemBarcode;
 	
-	@FindBy (xpath = "/html/body/div[3]/div/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table")
+	@FindBy (id = "btnSave")
 	public WebElement ship_itemSave;
 	
 	/**

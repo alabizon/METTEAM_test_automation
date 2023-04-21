@@ -118,30 +118,30 @@ public class VerifyShipping extends CommonMethods {
 		
 	}
 	
-	@Then("Verify first item Barcode is {string}")
-	public void verify_first_item_Barcode_is(String string) {
-		FieldContent = CommonMethods.getText(addShippingWindowElements.firstGridBarcode);
-		Assert.assertEquals(string, FieldContent);
-		
-	}
-	
 	@Then("Verify Nomenclature is {string}")
 	public void verify_Nomenclature_is(String string) {
-		FieldContent = CommonMethods.getText(addShippingWindowElements.secondGridNomenclature);
+		FieldContent = CommonMethods.getText(addShippingWindowElements.firstGridNomenclature);
 		Assert.assertEquals(string, FieldContent);
 		
 	}
 	
 	@Then("Verify Model_Number is {string}")
 	public void verify_Model_Number_is(String string) {
-		FieldContent = CommonMethods.getText(addShippingWindowElements.secondGridModNumber);
+		FieldContent = CommonMethods.getText(addShippingWindowElements.firstGridModNumber);
 		Assert.assertEquals(string, FieldContent);
 		
 	}
 	
 	@Then("Verify Serial_Number is {string}")
 	public void verify_Serial_Number_is(String string) {
-		FieldContent = CommonMethods.getText(addShippingWindowElements.secondGridSerNumber);
+		FieldContent = CommonMethods.getText(addShippingWindowElements.firstGridSerNumber);
+		Assert.assertEquals(string, FieldContent);
+		
+	}
+	
+	@Then("Verify first item Barcode is {string}")
+	public void verify_first_item_Barcode_is(String string) {
+		FieldContent = CommonMethods.getText(addShippingWindowElements.firstGridBarcode);
 		Assert.assertEquals(string, FieldContent);
 		
 	}
@@ -152,15 +152,6 @@ public class VerifyShipping extends CommonMethods {
 		Assert.assertEquals(string, FieldContent);
 		
 	}
-	
-	
-
-	
-	
-	
-	
-	
-	
 	
 }
 

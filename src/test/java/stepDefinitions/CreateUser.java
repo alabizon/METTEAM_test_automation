@@ -70,7 +70,7 @@ public class CreateUser extends CommonMethods {
 	public void click_Find_button_and_double_click_the_first_grid_record() {
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame3);
-		CommonMethods.click(findFacilityWindowElements.FindButton);
+		CommonMethods.click(findScreenWindowElements.FindButton);
 		CommonMethods.waitForVisib(findFacilityWindowElements.topFacilityFromTopGrid);
 		CommonMethods.doubleClick(findFacilityWindowElements.topFacilityFromTopGrid);
 		

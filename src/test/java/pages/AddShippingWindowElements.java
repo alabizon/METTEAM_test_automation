@@ -46,7 +46,7 @@ public class AddShippingWindowElements extends BaseClass {
 	@FindBy (id = "cLocation")
 	public WebElement shipLocation;
 		
-	@FindBy (xpath = "/html/body/div[3]/div/form/div/div[2]/div/div[1]/div/div/div[6]")
+	@FindBy (xpath = "//*[@id ='cShipMode' and @name = 'cShipMode']")
 	public WebElement shipShipper;
 	
 	@FindBy (id = "cShipMode")
