@@ -48,7 +48,7 @@ public class CreatePart extends CommonMethods {
 	
 	@Then("Enter Part_Number and enter On_Hand and enter Re_Order and enter Last_Qty")
 	public void enter_Part_Number_and_enter_On_Hand_and_enter_Re_Order_and_enter_Last_Qty() {
-		CommonMethods.sendKeys(addPartWindowElements.partPartNumber, "456");
+		CommonMethods.sendKeys(addPartWindowElements.partPartNumber, PartDescription);
 		CommonMethods.sendKeys(addPartWindowElements.partOnHand, "10");
 		CommonMethods.sendKeys(addPartWindowElements.partReOrder, "7");
 		CommonMethods.sendKeys(addPartWindowElements.partLastQty, "6");

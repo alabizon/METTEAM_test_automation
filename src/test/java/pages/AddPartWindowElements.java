@@ -31,6 +31,9 @@ public class AddPartWindowElements extends BaseClass {
 	@FindBy (xpath = "(//*[@class = 'x-form-trigger btn-trigger-search'])[1]")
 	public WebElement elipsisButtonManufacturer;
 	
+	@FindBy (id = "nManufacturerUID_display")
+	public WebElement partManufacturer;
+	
 	@FindBy (id = "cClass")
 	public WebElement partClass;
 	
@@ -48,6 +51,9 @@ public class AddPartWindowElements extends BaseClass {
 	
 	@FindBy (xpath = "(//*[@class = 'x-form-trigger btn-trigger-search'])[3]")
 	public WebElement elipsisButtonInventoriedBy;
+	
+	@FindBy (id = "nInventoryByUID_display")
+	public WebElement partInventoriedBy;
 	
 	@FindBy (id = "tInventoryDate")
 	public WebElement partDateInventoried;
