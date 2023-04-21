@@ -30,3 +30,7 @@ Feature: Create Accreditation Steps
     Examples: 
       | Type   | Description | Start_Date | End_Date   |
       | 22     | Auto        | 07/15/2022 | 11/21/2022 |
+      
+      
+      
+      
