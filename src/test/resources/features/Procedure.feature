@@ -1,6 +1,6 @@
-Feature: Create Procedure Steps
+Feature: Procedure Steps
 
-  @Procedure @Alex
+  @Create_Procedure @Alex
   Scenario Outline: Create MET_TEAM Procedure
     Given Login With valid credentials
     When Click Maintenance and click Procedures

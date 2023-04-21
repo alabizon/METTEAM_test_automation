@@ -1,6 +1,6 @@
-Feature: Create Part Steps
+Feature: Part Steps
 
-  @User @Alex
+  @Create_User @Alex
   Scenario Outline: Create MET_TEAM User
     Given Login With valid credentials
     When Click Setup and click Users

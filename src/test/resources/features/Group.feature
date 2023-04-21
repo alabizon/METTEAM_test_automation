@@ -1,4 +1,4 @@
-Feature: Create Group Steps
+Feature: Group Steps
 
   @Create_Group @Alex
   Scenario Outline: Create MET_TEAM Group

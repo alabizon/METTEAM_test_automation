@@ -1,4 +1,4 @@
-Feature: Create Accreditation Steps
+Feature: Accreditation Steps
 
   @Create_Accreditation 
   Scenario Outline: Create MET_TEAM Accreditation
@@ -14,18 +14,18 @@ Feature: Create Accreditation Steps
       |    |
       |    |
       
-  @Verify_Accreditation 
+  @Verify_Accreditation @Create_Accreditation 
   Scenario Outline: Verify MET_TEAM Accreditation
-    #Given Login With valid credentials
-    #When Click Maintenance and click Accreditations 
-    #Then "Find Accreditation" window opens
-    #And Enter search value for the Accreditation Code and click Find button
-    #Then Click OK button and "Edit Accreditation" window opens
-    #And Verify Code is Code
-    #Then Verify Type is "<Type>"
-    #And Verify Description is "<Description>"
-    #Then Verify Start_Date is "<Start_Date>"
-    #And Verify End_Date is "<End_Date>"
+    Given Login With valid credentials
+    When Click Maintenance and click Accreditations 
+    Then "Find Accreditation" window opens
+    And Find "Number" by entering Accreditation Code and click Find button
+    Then Click OK button and "Edit Accreditation" window opens
+    And Verify Code is Code
+    Then Verify Type is "<Type>"
+    And Verify Description is "<Description>"
+    Then Verify Start_Date is "<Start_Date>"
+    And Verify End_Date is "<End_Date>"
 
     Examples: 
       | Type   | Description | Start_Date | End_Date   |

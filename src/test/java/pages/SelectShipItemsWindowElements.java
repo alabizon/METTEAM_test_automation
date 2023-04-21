@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -20,6 +22,9 @@ public class SelectShipItemsWindowElements extends BaseClass {
 	
 	@FindBy (xpath = "/html/body/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[13]/table/tbody/tr[2]/td[2]/em/button")
 	public WebElement OkButton;
+	
+	@FindBy (xpath = "//*[@class ='x-grid3-row-table']/tbody/tr/td/div")
+	public List<WebElement> listElementsFromTheFindScreen;
 	
 	public SelectShipItemsWindowElements() {
 		

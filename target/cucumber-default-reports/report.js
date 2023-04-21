@@ -1,16 +1,16 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Shipping.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Accreditation.feature");
 formatter.feature({
-  "name": "Shipping Steps",
+  "name": "Create Accreditation Steps",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "Create MET_TEAM Shipping",
+  "name": "Create MET_TEAM Accreditation",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@Create_Shipping"
+      "name": "@Create_Accreditation"
     }
   ]
 });
@@ -19,80 +19,28 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "name": "Click Workflow and click Shipping",
+  "name": "Click Maintenance and click Accreditations",
   "keyword": "When "
 });
 formatter.step({
-  "name": "\"Find Shipment\" window opens and click Add button",
+  "name": "\"Find Accreditation\" window opens",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "\"Add Shipment\" window is open",
+  "name": "Click Add button and \"Add Accreditation\" window is open",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Click ellipsis button next to \"Ship To\" button and \"Find Facility Address\" window opens",
+  "name": "Enter Code and enter Type and enter Description",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Enter \"\u003cSearch_Value\u003e\" and click Find button and click OK button",
+  "name": "Enter Start_Date and enter End_Date",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Click Yes on the Attention window",
+  "name": "Click Save buttn and click Close button",
   "keyword": "Then "
-});
-formatter.step({
-  "name": "Enter Shipment name and enter Location",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Select \"\u003cShipper\u003e\" and enter Tracking_Number",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Enter Required_Date and enter Authority",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Enter Notes and enter Additional_Info and enter Issued_By",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Click Save button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Click Shipping_Items tab and click Add_Asset button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "\"Select Shipment Items\" window is open",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Enter \"\u003cShipment_Value\u003e\" and then click Find button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Double-click search result and click OK button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Click Add_Non_Asset button and \"Add Shipment Item\" window is open",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Enter \"\u003cNomenclature\u003e\" and enter \"\u003cModel_Number\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Enter \"\u003cSerial_Number\u003e\" and then enter \"\u003cBarcode\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Click Save button and then click Close button",
-  "keyword": "And "
 });
 formatter.examples({
   "name": "",
@@ -101,35 +49,23 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "Search_Value",
-        "Shipper",
-        "Shipment_Value",
-        "Nomenclature",
-        "Model_Number",
-        "Serial_Number",
-        "Barcode"
+        ""
       ]
     },
     {
       "cells": [
-        "My First Customer",
-        "FedEx",
-        "Sample-10",
-        "Test_Nom",
-        "Test_Model",
-        "Test_Serial",
-        "12345"
+        ""
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Create MET_TEAM Shipping",
+  "name": "Create MET_TEAM Accreditation",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@Create_Shipping"
+      "name": "@Create_Accreditation"
     }
   ]
 });
@@ -147,209 +83,79 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click Workflow and click Shipping",
+  "name": "Click Maintenance and click Accreditations",
   "keyword": "When "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateShipping.click_Workflow_and_click_Shipping()"
+  "location": "stepDefinitions.CreateAccreditation.click_Maintenance_and_click_Accreditations()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Find Shipment\" window opens and click Add button",
+  "name": "\"Find Accreditation\" window opens",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreatePart.window_opens_and_click_Add_button(java.lang.String)"
+  "location": "stepDefinitions.CreateAccreditation.window_opens(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Add Shipment\" window is open",
+  "name": "Click Add button and \"Add Accreditation\" window is open",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateContact.window_is_open(java.lang.String)"
+  "location": "stepDefinitions.CreateAccreditation.click_Add_button_and_window_is_open(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click ellipsis button next to \"Ship To\" button and \"Find Facility Address\" window opens",
+  "name": "Enter Code and enter Type and enter Description",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateShipping.click_ellipsis_button_next_to_button_and_window_opens(java.lang.String,java.lang.String)"
+  "location": "stepDefinitions.CreateAccreditation.enter_Code_and_enter_Type_and_enter_Description()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter \"My First Customer\" and click Find button and click OK button",
+  "name": "Enter Start_Date and enter End_Date",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateShipping.enter_and_click_Find_button_and_click_OK_button(java.lang.String)"
+  "location": "stepDefinitions.CreateAccreditation.enter_Start_Date_and_enter_End_Date()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click Yes on the Attention window",
+  "name": "Click Save buttn and click Close button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateShipping.click_Yes_on_the_Attention_window()"
+  "location": "stepDefinitions.CreateType.click_save_buttn_and_click_close_button()"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.step({
-  "name": "Enter Shipment name and enter Location",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateShipping.enter_Shipment_name_and_enter_Location()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Select \"FedEx\" and enter Tracking_Number",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateShipping.select_and_enter_Tracking_Number(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter Required_Date and enter Authority",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateShipping.enter_Required_Date_and_enter_Authority()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter Notes and enter Additional_Info and enter Issued_By",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateShipping.enter_Notes_and_enter_Additional_Info_and_enter_Issued_By()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click Save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateShipping.click_Save_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click Shipping_Items tab and click Add_Asset button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateShipping.click_Shipping_Items_tab_and_click_Add_Asset_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "\"Select Shipment Items\" window is open",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateContact.window_is_open(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter \"Sample-10\" and then click Find button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateShipping.enter_and_then_click_Find_button(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Double-click search result and click OK button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateShipping.double_click_search_result_and_click_OK_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click Add_Non_Asset button and \"Add Shipment Item\" window is open",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateShipping.click_Add_Non_Asset_button_and_window_is_open(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter \"Test_Nom\" and enter \"Test_Model\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateShipping.enter_and_enter(java.lang.String,java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter \"Test_Serial\" and then enter \"12345\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateShipping.enter_and_then_enter(java.lang.String,java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click Save button and then click Close button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateShipping.click_Save_button_and_then_click_Close_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.embedding("image/png", "embedded0.png", "Create MET_TEAM Shipping");
+formatter.embedding("image/png", "embedded0.png", "Create MET_TEAM Accreditation");
 formatter.after({
   "status": "passed"
 });
 formatter.scenarioOutline({
-  "name": "Verify MET_TEAM Shipping",
+  "name": "Verify MET_TEAM Accreditation",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@Verify_Shipping"
+      "name": "@Verify_Accreditation"
     },
     {
-      "name": "@Create_Shipping"
+      "name": "@Create_Accreditation"
     }
   ]
 });
@@ -358,87 +164,39 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "name": "Click Workflow and click Shipping",
+  "name": "Click Maintenance and click Accreditations",
   "keyword": "When "
 });
 formatter.step({
-  "name": "\"Find Shipment\" window is open",
+  "name": "\"Find Accreditation\" window opens",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Enter search value for the Shipment Name and click Find button",
+  "name": "Find \"Number\" by entering Accreditation Code and click Find button",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Click OK button and \"Edit Shipment\" window opens",
+  "name": "Click OK button and \"Edit Accreditation\" window opens",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Verify Ship_From is \"\u003cShip_From\u003e\"",
+  "name": "Verify Code is Code",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Verify Ship_To is \"\u003cShip_To\u003e\"",
+  "name": "Verify Type is \"\u003cType\u003e\"",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Verify Shipment_Name is Shipment_Name",
+  "name": "Verify Description is \"\u003cDescription\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Verify Location is \"\u003cLocation\u003e\"",
+  "name": "Verify Start_Date is \"\u003cStart_Date\u003e\"",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Verify Shipper is \"\u003cShipper\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Verify Tracking_Number is \"\u003cTracking_Number\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Verify Required_Date is Required_Date",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Verify Authority is \"\u003cAuthority\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Verify Notes is \"\u003cNotes\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Verify Additional_Info is \"\u003cAdd_Info\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Verify Issued_By is \"\u003cIssued_By\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Click Shipping_Items tab",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Verify Nomenclature is \"\u003cNomenclature\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Verify Model_Number is \"\u003cModel_Number\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Verify Serial_Number is \"\u003cSerial_Number\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Verify first item Barcode is \"\u003cBarcode1\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Verify second item Barcode is \"\u003cBarcode2\u003e\"",
+  "name": "Verify End_Date is \"\u003cEnd_Date\u003e\"",
   "keyword": "And "
 });
 formatter.examples({
@@ -448,52 +206,32 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "Ship_From",
-        "Ship_To",
-        "Location",
-        "Shipper",
-        "Tracking_Number",
-        "Authority",
-        "Notes",
-        "Add_Info",
-        "Issued_By",
-        "Nomenclature",
-        "Model_Number",
-        "Serial_Number",
-        "Barcode1",
-        "Barcode2"
+        "Type",
+        "Description",
+        "Start_Date",
+        "End_Date"
       ]
     },
     {
       "cells": [
-        "My Lab",
-        "My First Customer",
-        "TestLocation",
-        "FedEx",
-        "DO NOT CHALLENGE",
-        "TestAuthority",
-        "TestNotes",
-        "TestAdditionalInfo",
-        "TestUser",
-        "Test_Nom",
-        "Test_Model",
-        "Test_Serial",
-        "12345",
-        "SAMPLE-10"
+        "22",
+        "Auto",
+        "07/15/2022",
+        "11/21/2022"
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Verify MET_TEAM Shipping",
+  "name": "Verify MET_TEAM Accreditation",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@Verify_Shipping"
+      "name": "@Verify_Accreditation"
     },
     {
-      "name": "@Create_Shipping"
+      "name": "@Create_Accreditation"
     }
   ]
 });
@@ -511,37 +249,37 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click Workflow and click Shipping",
+  "name": "Click Maintenance and click Accreditations",
   "keyword": "When "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateShipping.click_Workflow_and_click_Shipping()"
+  "location": "stepDefinitions.CreateAccreditation.click_Maintenance_and_click_Accreditations()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Find Shipment\" window is open",
+  "name": "\"Find Accreditation\" window opens",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateContact.window_is_open(java.lang.String)"
+  "location": "stepDefinitions.CreateAccreditation.window_opens(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter search value for the Shipment Name and click Find button",
+  "name": "Find \"Number\" by entering Accreditation Code and click Find button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyShipping.enter_search_value_for_the_Shipment_Name_and_click_Find_button()"
+  "location": "stepDefinitions.VerifyAccreditation.find_by_entering_Accreditation_Code_and_click_Find_button(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click OK button and \"Edit Shipment\" window opens",
+  "name": "Click OK button and \"Edit Accreditation\" window opens",
   "keyword": "Then "
 });
 formatter.match({
@@ -551,176 +289,56 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Ship_From is \"My Lab\"",
+  "name": "Verify Code is Code",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyShipping.verify_Ship_From_is(java.lang.String)"
+  "location": "stepDefinitions.VerifyAccreditation.verify_Code_is_Code()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Ship_To is \"My First Customer\"",
+  "name": "Verify Type is \"22\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyShipping.verify_Ship_To_is(java.lang.String)"
+  "location": "stepDefinitions.VerifyAccreditation.verify_Type_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Shipment_Name is Shipment_Name",
+  "name": "Verify Description is \"Auto\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyShipping.verify_Shipment_Name_is_Shipment_Name()"
+  "location": "stepDefinitions.VerifyAccreditation.verify_Description_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Location is \"TestLocation\"",
+  "name": "Verify Start_Date is \"07/15/2022\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyShipping.verify_Location_is(java.lang.String)"
+  "location": "stepDefinitions.VerifyAccreditation.verify_Start_Date_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Shipper is \"FedEx\"",
+  "name": "Verify End_Date is \"11/21/2022\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyShipping.verify_Shipper_is(java.lang.String)"
+  "location": "stepDefinitions.VerifyAccreditation.verify_End_Date_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.step({
-  "name": "Verify Tracking_Number is \"DO NOT CHALLENGE\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyShipping.verify_Tracking_Number_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify Required_Date is Required_Date",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyShipping.verify_Required_Date_is_Required_Date()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify Authority is \"TestAuthority\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyShipping.verify_Authority_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify Notes is \"TestNotes\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyShipping.verify_Notes_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify Additional_Info is \"TestAdditionalInfo\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyShipping.verify_Additional_Info_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify Issued_By is \"TestUser\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyShipping.verify_Issued_By_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click Shipping_Items tab",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyShipping.click_Shipping_Items_tab()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify Nomenclature is \"Test_Nom\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyShipping.verify_Nomenclature_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify Model_Number is \"Test_Model\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyShipping.verify_Model_Number_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify Serial_Number is \"Test_Serial\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyShipping.verify_Serial_Number_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify first item Barcode is \"12345\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyShipping.verify_first_item_Barcode_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify second item Barcode is \"SAMPLE-10\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyShipping.verify_second_item_Barcode_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.embedding("image/png", "embedded1.png", "Verify MET_TEAM Shipping");
+formatter.embedding("image/png", "embedded1.png", "Verify MET_TEAM Accreditation");
 formatter.after({
   "status": "passed"
 });

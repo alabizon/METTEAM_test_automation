@@ -1,4 +1,4 @@
-Feature: Create Part Steps
+Feature: Part Steps
 
   @Create_Part
   Scenario Outline: Create MET_TEAM Part

@@ -1,6 +1,6 @@
-Feature: Create Template Steps
+Feature: Template Steps
 
-  @Template @Alex
+  @Create_Template @Alex
   Scenario Outline: Create MET_TEAM Template
     Given Login With valid credentials
     When Click Maintenance and click Manual Templates

@@ -1,6 +1,6 @@
-Feature: Create Type Steps
+Feature: Type Steps
 
-  @Type @Alex
+  @Create_Type
   Scenario Outline: Create MET_TEAM Type
     Given Login With valid credentials
     When Click Maintenance and click Type

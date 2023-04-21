@@ -1,4 +1,4 @@
-Feature: Create Part Steps
+Feature: Contact Steps
 
   @Contact @Alex 
   Scenario Outline: Create MET_TEAM Contact
