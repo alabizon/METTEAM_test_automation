@@ -18,7 +18,7 @@ public class CategoryWindowElements extends BaseClass {
 	@FindBy (xpath = "//*[@class='x-grid3-body']/div")
 	public List<WebElement> categoryList;
 	
-	@FindBy (xpath = "/html/body/div[3]/div/div/div/table/tbody/tr/td[1]/table/tbody/tr/td[7]/table/tbody/tr[2]/td[2]/em/button")
+	@FindBy (id = "tb-ok")
 	public WebElement categoryOk;
 	
 	/**

@@ -3,10 +3,14 @@ package stepDefinitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.CommonMethods;
+import utils.Constants;
+import utils.ExcelUtility;
 import utils.JsCommonMethods;
 import org.openqa.selenium.interactions.Actions;
 
 public class CreateType extends CommonMethods {
+	
+	public static String TypeDescription;
 	
 	@When("Click Maintenance and click Type")
 	public void click_Maintenance_and_click_Type() throws InterruptedException {
@@ -29,8 +33,14 @@ public class CreateType extends CommonMethods {
 	@Then("{string} window is open and enter Description")
 	public void window_is_open_and_enter_Description(String string) throws Throwable {
 		CommonMethods.swithToFrame(frames.Frame2);
+		TypeDescription = "Type_"+CommonMethods.getDateAsString();
 		CommonMethods.waitForVisib(addTypeWindowElements.typeDescription);
-		CommonMethods.sendKeys(addTypeWindowElements.typeDescription, "Type_"+CommonMethods.getDateAsString());
+		CommonMethods.sendKeys(addTypeWindowElements.typeDescription, TypeDescription);
+		
+		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
+		ExcelUtility.getSheet("TestExel");
+		ExcelUtility.writeStringRow(TypeDescription, Constants.TYPE_CELL);
+		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
 				
 	}
 	

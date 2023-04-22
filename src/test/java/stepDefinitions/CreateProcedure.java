@@ -3,8 +3,12 @@ package stepDefinitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.CommonMethods;
+import utils.Constants;
+import utils.ExcelUtility;
 
 public class CreateProcedure extends CommonMethods {
+	
+	public static String ProcedureName;
 	
 	@When("Click Maintenance and click Procedures")
 	public void click_Maintenance_and_click_Procedures() throws InterruptedException {
@@ -28,8 +32,14 @@ public class CreateProcedure extends CommonMethods {
 	@Then("{string} window is open and enter Procedure Name")
 	public void window_is_open_and_enter_Procedure_Name(String string) throws Throwable {
 		CommonMethods.swithToFrame(frames.Frame2);
+		ProcedureName = "Procedure_"+CommonMethods.getDateAsString();
 		CommonMethods.waitForVisib(addProcedureWindowElements.procName);
-		CommonMethods.sendKeys(addProcedureWindowElements.procName, "Procedure_"+CommonMethods.getDateAsString());
+		CommonMethods.sendKeys(addProcedureWindowElements.procName, ProcedureName);
+		
+		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
+		ExcelUtility.getSheet("TestExel");
+		ExcelUtility.writeStringRow(ProcedureName, Constants.PROCEDURE_CELL);
+		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
 				
 	}
 	
