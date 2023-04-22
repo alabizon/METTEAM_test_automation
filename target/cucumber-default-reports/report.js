@@ -1,16 +1,16 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Part.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Contact.feature");
 formatter.feature({
-  "name": "Part Steps",
+  "name": "Contact Steps",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "Create MET_TEAM Part",
+  "name": "Create MET_TEAM Contact",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@Create_Part"
+      "name": "@Create_Contact"
     }
   ]
 });
@@ -19,55 +19,55 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "name": "Click Maintenance and click Parts",
+  "name": "Click Setup and click Contacts",
   "keyword": "When "
 });
 formatter.step({
-  "name": "\"Find Part\" window opens and click Add button",
+  "name": "\"Find Contact\" window opens and click Add button",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "\"Add Part\" wnd is open and enter Description",
+  "name": "\"Add Contact\" window is open",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Enter Part_Number and enter On_Hand and enter Re_Order and enter Last_Qty",
+  "name": "Enter Contact_Id and enter First_Name and enter Middle_Name",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Click ellipsis button nxt to the Manufacturer \"Find Manufacturer\" window is open",
+  "name": "Enter Last_Name and Enter Suffix and enter Description",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Enter \"\u003cSearch_Value_Manufacturer\u003e\" and click Find buttn",
+  "name": "Enter Fax and enter Phone1",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Click OK button and enter Class and enter Purchase_Units and enter Price",
+  "name": "Enter Phone2 and enter Cell_Phone",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Enter Stock_Number and enter Group",
+  "name": "Enter Email1 and enter Notes",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Click ellipsis button next to the InventoriedBy \"Find Inventoried By\" window is open",
+  "name": "Click Save button and click Add button next to Facilities grid",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Enter \"\u003cSearch_Value_Last\u003e\" and click Find btn",
+  "name": "\"Find Facility\" window is open",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Click OK button and enter Date_Inventoried and enter Cost",
+  "name": "Enter \"\u003cSearch_Value\u003e\" and click Find button",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Enter Location and enter Supplier and enter Last_Ordered and enter Last_Cost",
+  "name": "Click OK button",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Click Save btn and click Close button",
+  "name": "Click OK button on the Contacts screen",
   "keyword": "And "
 });
 formatter.examples({
@@ -77,25 +77,23 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "Search_Value_Manufacturer",
-        "Search_Value_Last"
+        "Search_Value"
       ]
     },
     {
       "cells": [
-        "Fluke",
-        "Administrator"
+        "My Lab"
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Create MET_TEAM Part",
+  "name": "Create MET_TEAM Contact",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@Create_Part"
+      "name": "@Create_Contact"
     }
   ]
 });
@@ -113,17 +111,17 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click Maintenance and click Parts",
+  "name": "Click Setup and click Contacts",
   "keyword": "When "
 });
 formatter.match({
-  "location": "stepDefinitions.CreatePart.click_Maintenance_and_click_Parts()"
+  "location": "stepDefinitions.CreateContact.click_Setup_and_click_Contacts()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Find Part\" window opens and click Add button",
+  "name": "\"Find Contact\" window opens and click Add button",
   "keyword": "Then "
 });
 formatter.match({
@@ -133,129 +131,129 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Add Part\" wnd is open and enter Description",
+  "name": "\"Add Contact\" window is open",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreatePart.wnd_is_open_and_enter_Description(java.lang.String)"
+  "location": "stepDefinitions.CreateContact.window_is_open(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter Part_Number and enter On_Hand and enter Re_Order and enter Last_Qty",
+  "name": "Enter Contact_Id and enter First_Name and enter Middle_Name",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreatePart.enter_Part_Number_and_enter_On_Hand_and_enter_Re_Order_and_enter_Last_Qty()"
+  "location": "stepDefinitions.CreateContact.enter_Contact_Id_and_enter_First_Name_and_enter_Middle_Name()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click ellipsis button nxt to the Manufacturer \"Find Manufacturer\" window is open",
+  "name": "Enter Last_Name and Enter Suffix and enter Description",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreatePart.click_ellipsis_button_nxt_to_the_Manufacturer_window_is_open(java.lang.String)"
+  "location": "stepDefinitions.CreateContact.enter_Last_Name_and_Enter_Suffix_and_enter_Description()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter \"Fluke\" and click Find buttn",
+  "name": "Enter Fax and enter Phone1",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreatePart.enter_and_click_Find_buttn(java.lang.String)"
+  "location": "stepDefinitions.CreateContact.enter_Fax_and_enter_Phone1()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click OK button and enter Class and enter Purchase_Units and enter Price",
+  "name": "Enter Phone2 and enter Cell_Phone",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreatePart.click_OK_button_and_enter_Class_and_enter_Purchase_Units_and_enter_Price()"
+  "location": "stepDefinitions.CreateContact.enter_Phone2_and_enter_Cell_Phone()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter Stock_Number and enter Group",
+  "name": "Enter Email1 and enter Notes",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreatePart.enter_Stock_Number_and_enter_Group()"
+  "location": "stepDefinitions.CreateContact.enter_Email1_and_enter_Notes()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click ellipsis button next to the InventoriedBy \"Find Inventoried By\" window is open",
+  "name": "Click Save button and click Add button next to Facilities grid",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreatePart.click_ellipsis_button_next_to_the_InventoriedBy_window_is_open(java.lang.String)"
+  "location": "stepDefinitions.CreateContact.click_Save_button_and_click_Add_button_next_to_Facilities_grid()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter \"Administrator\" and click Find btn",
+  "name": "\"Find Facility\" window is open",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreatePart.enter_and_click_Find_btn(java.lang.String)"
+  "location": "stepDefinitions.CreateContact.window_is_open(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click OK button and enter Date_Inventoried and enter Cost",
+  "name": "Enter \"My Lab\" and click Find button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreatePart.click_OK_button_and_enter_Date_Inventoried_and_enter_Cost()"
+  "location": "stepDefinitions.CreateType.enter_and_click_Find_button(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter Location and enter Supplier and enter Last_Ordered and enter Last_Cost",
+  "name": "Click OK button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreatePart.enter_Location_and_enter_Supplier_and_enter_Last_Ordered_and_enter_Last_Cost()"
+  "location": "stepDefinitions.CreateContact.click_OK_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click Save btn and click Close button",
+  "name": "Click OK button on the Contacts screen",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreatePart.click_Save_btn_and_click_Close_button()"
+  "location": "stepDefinitions.CreateContact.click_OK_button_on_the_Contacts_screen()"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png", "Create MET_TEAM Part");
+formatter.embedding("image/png", "embedded0.png", "Create MET_TEAM Contact");
 formatter.after({
   "status": "passed"
 });
 formatter.scenarioOutline({
-  "name": "Verify MET_TEAM Part",
+  "name": "Verify MET_TEAM Contact",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@Verify_Part"
+      "name": "@Verify_Contact"
     },
     {
-      "name": "@Create_Part"
+      "name": "@Create_Contact"
     }
   ]
 });
@@ -264,91 +262,67 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "name": "Click Maintenance and click Parts",
+  "name": "Click Setup and click Contacts",
   "keyword": "When "
 });
 formatter.step({
-  "name": "\"Find Part\" window opens",
+  "name": "\"Find Contact\" window opens",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Find \"Part Number\" by entering Part Number and click Find button",
+  "name": "Find \"Last Name\" by entering Last Name and click Find button",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Click OK button and \"Edit Part\" window opens",
+  "name": "Click OK button and \"Edit Contact\" window opens",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Verify Description is Description",
+  "name": "Verify Contact_ID is Contact_ID",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Verify Part_Number is Part_Number",
+  "name": "Verify First_Name is \"\u003cFirst_Name\u003e\"",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Verify Manufacturer is \"\u003cManufacturer\u003e\"",
+  "name": "Verify Middle_Name is \"\u003cMid_Name\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Verify Class is \"\u003cClass\u003e\"",
+  "name": "Verify Last_Name is Last_Name",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Verify Stock_Number is \"\u003cStock_Num\u003e\"",
+  "name": "Verify Suffix is \"\u003cSuffix\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Verify Group is \"\u003cGroup\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Verify Location is like \"\u003cLocation\u003e\"",
+  "name": "Verify Description is \"\u003cDescription\u003e\"",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Verify On_Hand is \"\u003cOn_Hand\u003e\"",
+  "name": "Verify Fax is \"\u003cFax\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Verify Re_Order is \"\u003cRe_Order\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Verify Last_Qty is \"\u003cLast_Qty\u003e\"",
+  "name": "Verify Phone_1 is \"\u003cPhone1\u003e\"",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Verify Purchase_Unit is \"\u003cPurch_Unit\u003e\"",
+  "name": "Verify Phone_Two is \"\u003cPhone_Two\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Verify Price is \"\u003cPrice\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Verify Inventoried_By is \"\u003cInventoried_By\u003e\"",
+  "name": "Verify Cell_Phone is \"\u003cCell_Phone\u003e\"",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Verify Date_Inventoried is \"\u003cDate_Inv\u003e\"",
+  "name": "Verify Email is \"\u003cEmail\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Verify Cost is \"\u003cCost\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Verify Supplier is \"\u003cSupplier\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Verify Last_Ordered is \"\u003cLast_Ord\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Verify Last_Cost is \"\u003cLast_Cost\u003e\"",
+  "name": "Verify Notes is \"\u003cNotes\u003e\"",
   "keyword": "Then "
 });
 formatter.examples({
@@ -358,58 +332,44 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "Part_Number",
-        "Manufacturer",
-        "Class",
-        "Stock_Num",
-        "Group",
-        "Location",
-        "On_Hand",
-        "Re_Order",
-        "Last_Qty",
-        "Purch_Unit",
-        "Price",
-        "Inventoried_By",
-        "Date_Inv",
-        "Cost",
-        "Supplier",
-        "Last_Ord",
-        "Last_Cost"
+        "First_Name",
+        "Mid_Name",
+        "Suffix",
+        "Description",
+        "Fax",
+        "Phone1",
+        "Phone_Two",
+        "Cell_Phone",
+        "Email",
+        "Notes"
       ]
     },
     {
       "cells": [
-        "456",
-        "Fluke",
-        "TestClass",
-        "123",
-        "TestGroup",
-        "TestLocation",
-        "10",
-        "7",
-        "6",
-        "EA",
-        "3.00",
-        "System Administrator",
-        "05/27/2005",
-        "5.00",
-        "TestSupplier",
-        "05/27/2005",
-        "3.50"
+        "John",
+        "Bill",
+        "Jr.",
+        "Employee",
+        "1234",
+        "9298875430",
+        "9287763287",
+        "9292287645",
+        "email1@test.com",
+        "Test_Notes"
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Verify MET_TEAM Part",
+  "name": "Verify MET_TEAM Contact",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@Verify_Part"
+      "name": "@Verify_Contact"
     },
     {
-      "name": "@Create_Part"
+      "name": "@Create_Contact"
     }
   ]
 });
@@ -427,17 +387,17 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click Maintenance and click Parts",
+  "name": "Click Setup and click Contacts",
   "keyword": "When "
 });
 formatter.match({
-  "location": "stepDefinitions.CreatePart.click_Maintenance_and_click_Parts()"
+  "location": "stepDefinitions.CreateContact.click_Setup_and_click_Contacts()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Find Part\" window opens",
+  "name": "\"Find Contact\" window opens",
   "keyword": "Then "
 });
 formatter.match({
@@ -447,17 +407,17 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Find \"Part Number\" by entering Part Number and click Find button",
+  "name": "Find \"Last Name\" by entering Last Name and click Find button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyPart.find_by_entering_Part_Number_and_click_Find_button(java.lang.String)"
+  "location": "stepDefinitions.VerifyContact.find_by_entering_Last_Name_and_click_Find_button(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click OK button and \"Edit Part\" window opens",
+  "name": "Click OK button and \"Edit Contact\" window opens",
   "keyword": "Then "
 });
 formatter.match({
@@ -467,187 +427,126 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Description is Description",
+  "name": "Verify Contact_ID is Contact_ID",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_Description_is_Description()"
+  "location": "stepDefinitions.VerifyContact.verify_Contact_ID_is_Contact_ID()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Part_Number is Part_Number",
+  "name": "Verify First_Name is \"John\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_Part_Number_is_Part_Number()"
+  "location": "stepDefinitions.VerifyContact.verify_First_Name_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Manufacturer is \"Fluke\"",
+  "name": "Verify Middle_Name is \"Bill\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_Manufacturer_is(java.lang.String)"
+  "location": "stepDefinitions.VerifyContact.verify_Middle_Name_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Class is \"TestClass\"",
+  "name": "Verify Last_Name is Last_Name",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_Class_is(java.lang.String)"
+  "location": "stepDefinitions.VerifyContact.verify_Last_Name_is_Last_Name()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Stock_Number is \"123\"",
+  "name": "Verify Suffix is \"Jr.\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_Stock_Number_is(java.lang.String)"
+  "location": "stepDefinitions.VerifyContact.verify_Suffix_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Group is \"TestGroup\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_Group_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify Location is like \"TestLocation\"",
+  "name": "Verify Description is \"Employee\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_Location_is_like(java.lang.String)"
+  "location": "stepDefinitions.VerifyAccreditation.verify_Description_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify On_Hand is \"10\"",
+  "name": "Verify Fax is \"1234\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_On_Hand_is(java.lang.String)"
+  "location": "stepDefinitions.VerifyContact.verify_Fax_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Re_Order is \"7\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_Re_Order_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify Last_Qty is \"6\"",
+  "name": "Verify Phone_1 is \"9298875430\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_Last_Qty_is(java.lang.String)"
+  "location": "stepDefinitions.VerifyContact.verify_Phone__is(java.lang.Integer,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Purchase_Unit is \"EA\"",
+  "name": "Verify Phone_Two is \"9287763287\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_Purchase_Unit_is(java.lang.String)"
+  "location": "stepDefinitions.VerifyContact.verify_Phone_Two_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Price is \"3.00\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_Price_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify Inventoried_By is \"System Administrator\"",
+  "name": "Verify Cell_Phone is \"9292287645\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_Inventoried_By_is(java.lang.String)"
+  "location": "stepDefinitions.VerifyContact.verify_Cell_Phone_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Date_Inventoried is \"05/27/2005\"",
+  "name": "Verify Email is \"email1@test.com\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_Date_Inventoried_is(java.lang.String)"
+  "location": "stepDefinitions.VerifyContact.verify_Email_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Cost is \"5.00\"",
+  "name": "Verify Notes is \"Test_Notes\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_Cost_is(java.lang.String)"
+  "location": "stepDefinitions.VerifyShipping.verify_Notes_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.step({
-  "name": "Verify Supplier is \"TestSupplier\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_Supplier_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify Last_Ordered is \"05/27/2005\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_Last_Ordered_is(java.lang.String)"
-});
-formatter.result({
-  "error_message": "org.junit.ComparisonFailure: expected:\u003c05/2[7]/2005\u003e but was:\u003c05/2[6]/2005\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat stepDefinitions.VerifyPart.verify_Last_Ordered_is(VerifyPart.java:158)\r\n\tat ✽.Verify Last_Ordered is \"05/27/2005\"(file:///C:/Users/Test_User/git/METTEAM_test_automation/src/test/resources/features/Part.feature:48)\r\n",
-  "status": "failed"
-});
-formatter.step({
-  "name": "Verify Last_Cost is \"3.50\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyPart.verify_Last_Cost_is(java.lang.String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.embedding("image/png", "embedded1.png", "Verify MET_TEAM Part");
+formatter.embedding("image/png", "embedded1.png", "Verify MET_TEAM Contact");
 formatter.after({
   "status": "passed"
 });

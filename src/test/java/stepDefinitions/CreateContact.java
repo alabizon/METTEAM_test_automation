@@ -3,8 +3,12 @@ package stepDefinitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.CommonMethods;
+import utils.Constants;
+import utils.ExcelUtility;
 
 public class CreateContact extends CommonMethods {
+	
+	public static String ContactId;
 	
 	@When("Click Setup and click Contacts")
 	public void click_Setup_and_click_Contacts() throws InterruptedException {
@@ -25,15 +29,21 @@ public class CreateContact extends CommonMethods {
 	public void enter_Contact_Id_and_enter_First_Name_and_enter_Middle_Name() {
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame2);
-		CommonMethods.sendKeys(addContactWindowElements.contactId, "Contact_"+CommonMethods.getDateAsString());
+		ContactId = "Contact_"+CommonMethods.getDateAsString();
+		CommonMethods.sendKeys(addContactWindowElements.contactId, ContactId);
 		CommonMethods.sendKeys(addContactWindowElements.contactFirstName, "John");
 		CommonMethods.sendKeys(addContactWindowElements.contactMiddleName, "Bill");
+		
+		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
+		ExcelUtility.getSheet("TestExel");
+		ExcelUtility.writeStringRow(ContactId, Constants.CONTACT_CELL);
+		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
 		
 	}
 	
 	@Then("Enter Last_Name and Enter Suffix and enter Description")
 	public void enter_Last_Name_and_Enter_Suffix_and_enter_Description() {
-		CommonMethods.sendKeys(addContactWindowElements.contactLastName, "Doe");
+		CommonMethods.sendKeys(addContactWindowElements.contactLastName, ContactId);
 		CommonMethods.sendKeys(addContactWindowElements.contactSuffix, "Jr.");
 		CommonMethods.sendKeys(addContactWindowElements.contactDescription, "Employee");
 		
@@ -71,8 +81,6 @@ public class CreateContact extends CommonMethods {
 	@Then("Click OK button")
 	public void click_OK_button() throws Throwable {
 		Thread.sleep(500);
-		//driver.switchTo().defaultContent();
-		//CommonMethods.swithToFrame(frames.Frame3);
 		CommonMethods.click(findScreenWindowElements.OkButton);
 		
 	}
