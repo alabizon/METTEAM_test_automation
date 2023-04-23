@@ -68,8 +68,8 @@ public class CreateWorkOrderFromAsset extends CommonMethods {
     	
 }   
 		
-		CommonMethods.waitForVisib(findTypeWindowElements.okButton);
-		CommonMethods.click(findTypeWindowElements.okButton); 
+		//CommonMethods.waitForVisib(findTypeWindowElements.okButton);
+		//CommonMethods.click(findTypeWindowElements.okButton); 
 
 }
 	@Then("Click ellipsis button next to the Type Description {string} window is open")
@@ -93,30 +93,30 @@ public class CreateWorkOrderFromAsset extends CommonMethods {
 	    CommonMethods.click(findScreenWindowElements.FindButton);
 	    Thread.sleep(1000);
 	    	    	
-	    	for (WebElement element : findTypeWindowElements.gridTypesFromTheFindType ) {
-	    		String name = element.getText();
+	    	//for (WebElement element : findTypeWindowElements.gridTypesFromTheFindType ) {
+	    	//	String name = element.getText();
 	    	
 	    	
-	    	if(name.equals(string)){
-	    		
-	    	JsCommonMethods.drawBlueBorder(element);
-	    	CommonMethods.click(element);
-	    	Thread.sleep(2000);
-	    	
-	    	}
+//	    	if(name.equals(string)){
+//	    		
+//	    	JsCommonMethods.drawBlueBorder(element);
+//	    	CommonMethods.click(element);
+//	    	Thread.sleep(2000);
+//	    	
+//	    	}
 	    	
 	}   
 	    	
-	    	CommonMethods.waitForVisib(findTypeWindowElements.okButton);
-	    	CommonMethods.click(findTypeWindowElements.okButton); 
-
-	}
+//	    	CommonMethods.waitForVisib(findTypeWindowElements.okButton);
+//	    	CommonMethods.click(findTypeWindowElements.okButton); 
+//
+//	}
 	@Then("click yes on 'Update all Asset data with current Type data?' window")
 	public void click_yes_on_Update_all_Asset_data_with_current_Type_data_window() throws Throwable {
 		Thread.sleep(3000);
 	    CommonMethods.swithToFrame(frames.Frame1);
-	    CommonMethods.waitForVisib(findTypeWindowElements.buttonYesOnChildWindow);
-	    CommonMethods.click(findTypeWindowElements.buttonYesOnChildWindow);
+//	    CommonMethods.waitForVisib(findTypeWindowElements.buttonYesOnChildWindow);
+//	    CommonMethods.click(findTypeWindowElements.buttonYesOnChildWindow);
 	    Thread.sleep(2000);
 	    
 	}

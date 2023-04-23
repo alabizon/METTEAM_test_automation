@@ -24,8 +24,14 @@ public class FindScreenWindowElements extends BaseClass {
 	/**
 	 * Beginning Elements from Find Screen
 	 */
+	@FindBy (id = "ID_Remember")
+	public WebElement RememberButton;
+	
 	@FindBy (id = "btnFind")
 	public WebElement FindButton;
+	
+	@FindBy (xpath = "//*[@class=\" x-btn-text tb-reset-all\"]")
+	public WebElement ResetAllButton;
 	
 	@FindBy (xpath = "//*[@class = 'x-grid3-col x-grid3-cell x-grid3-td-cValue x-grid3-cell-last x-grid3-cell-selected']/div")
 	public WebElement findFacilityFacilityNameSearchValue;

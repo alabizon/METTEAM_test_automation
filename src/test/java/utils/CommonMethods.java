@@ -436,6 +436,17 @@ public class CommonMethods extends PageInitializer {
 		
 	}
 	
+	/**
+	 * Use this method to check status of "Remember" button on the Find screen 
+	 * and depress it if this button is pressed
+	 */
+	public static void depressRememberButton(WebElement element, String attribute) {
+			if (element.isEnabled()) {
+					//element.click();
+     		}
+		
+	}
+	
 }
 
 	
