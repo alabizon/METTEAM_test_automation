@@ -422,7 +422,6 @@ public class CommonMethods extends PageInitializer {
 					dropDownValues.click();
 				break;
 				}
-				
 			}
 	}
 	
@@ -433,17 +432,6 @@ public class CommonMethods extends PageInitializer {
 	 */
 	public static void assertEquals(String expected, String actual) {
 		assert expected.equals(actual) : "Expected string: " + expected + ", but found: " + actual;
-		
-	}
-	
-	/**
-	 * Use this method to check status of "Remember" button on the Find screen 
-	 * and depress it if this button is pressed
-	 */
-	public static void depressRememberButton(WebElement element, String attribute) {
-			if (element.isEnabled()) {
-					//element.click();
-     		}
 		
 	}
 	

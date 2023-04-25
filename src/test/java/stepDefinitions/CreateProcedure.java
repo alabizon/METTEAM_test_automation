@@ -60,7 +60,7 @@ public class CreateProcedure extends CommonMethods {
 	@Then("Enter Procedure_Date and enter Revision_Date")
 	public void enter_Procedure_Date_and_enter_Revision_Date() throws Throwable {
 		CommonMethods.sendKeys(addProcedureWindowElements.procDate, "03/27/2023");
-		CommonMethods.sendKeys(addProcedureWindowElements.procRevisionDate, "03/27/2023");
+		CommonMethods.sendKeys(addProcedureWindowElements.procRevisionDate, "03/30/2023");
 		
 	}
 	
@@ -84,22 +84,22 @@ public class CreateProcedure extends CommonMethods {
 	public void select_procedure_and_click_Ok_button(String string) throws Throwable {
 		CommonMethods.selectValueFromBootStrapDropDown(attachDataSheetElements.attachDataSheetResults, string);
 		CommonMethods.click(attachDataSheetElements.attachDataSheetOk);
-		//Thread.sleep(2000);
-		driver.switchTo().defaultContent();
 		
 	}
 		
 	@Then("Click ellipsis button next to the Category {string} window is open")
 	public void click_ellipsis_button_next_to_the_Category_window_is_open(String string) throws Throwable {
+		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame2);
 		CommonMethods.click(addProcedureWindowElements.elipsisButtonCategory);
-		driver.switchTo().defaultContent();	
 		
 	}
 	
 	@Then("Select {string} from the grid and click OK button")
 	public void select_category_and_click_Ok_button(String string) throws Throwable {
+		driver.switchTo().defaultContent();	
 		CommonMethods.swithToFrame(frames.Frame4);
+		Thread.sleep(1000);
 		CommonMethods.selectValueFromBootStrapDropDown(categoryWindowElements.categoryList, string);
 		CommonMethods.waitForVisib(categoryWindowElements.categoryOk);
 		CommonMethods.click(categoryWindowElements.categoryOk);

@@ -15,7 +15,7 @@ public class CategoryWindowElements extends BaseClass {
 	 * Beginning Elements from Add Category page
 	 */
 	
-	@FindBy (xpath = "//*[@class='x-grid3-body']/div")
+	@FindBy (xpath = "//*[@class = 'x-grid3-cell-inner x-grid3-col-cDescription']")
 	public List<WebElement> categoryList;
 	
 	@FindBy (id = "tb-ok")

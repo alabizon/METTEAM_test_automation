@@ -5,12 +5,12 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "Create MET_TEAM Type",
+  "name": "Verify MET_TEAM Type",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@Create_Type"
+      "name": "@Verify_Type"
     }
   ]
 });
@@ -23,44 +23,16 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "name": "\"Find Type\" findType_window is open and click Add button",
+  "name": "\"Find Type\" window is open",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "\"Add Type\" window is open and enter Description",
+  "name": "Find \"Description\" by entering Description and click Find button",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Enter Item_Cost and enter Replace_Cost",
+  "name": "Click OK button and \"Edit Type\" window opens",
   "keyword": "Then "
-});
-formatter.step({
-  "name": "Click ellipsis button next to the Manufacturer \"Find Facility\" window is open",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Enter \"\u003cSearch_Value\u003e\" and click Find button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Click OK button and enter Model_Number",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Enter Weight and enter Dimensions",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Enter Size and enter Stock_Number",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Enter Class and enter Family",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Click Save buttn and click Close button",
-  "keyword": "And "
 });
 formatter.examples({
   "name": "",
@@ -69,23 +41,45 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "Search_Value"
+        "Item_Cost",
+        "Replace_Cost",
+        "Manufacturer",
+        "Model_Number",
+        "Weight",
+        "Weight_UOM",
+        "Size",
+        "Stock_Num",
+        "Dimensions",
+        "Class",
+        "Family",
+        "Authority"
       ]
     },
     {
       "cells": [
-        "Fluke"
+        "5.00",
+        "7.00",
+        "Fluke",
+        "2468",
+        "10",
+        "lbs",
+        "2x2",
+        "369",
+        "5x5",
+        "TestClass",
+        "TestFamily",
+        "Default"
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Create MET_TEAM Type",
+  "name": "Verify MET_TEAM Type",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@Create_Type"
+      "name": "@Verify_Type"
     }
   ]
 });
@@ -113,106 +107,36 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Find Type\" findType_window is open and click Add button",
+  "name": "\"Find Type\" window is open",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateType.findType_window_is_open_and_click_Add_button(java.lang.String)"
+  "location": "stepDefinitions.CreateContact.window_is_open(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Add Type\" window is open and enter Description",
+  "name": "Find \"Description\" by entering Description and click Find button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateType.window_is_open_and_enter_Description(java.lang.String)"
+  "location": "stepDefinitions.VerifyType.find_by_entering_Description_and_click_Find_button(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter Item_Cost and enter Replace_Cost",
+  "name": "Click OK button and \"Edit Type\" window opens",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateType.enter_Item_Cost_and_enter_Replace_Cost()"
+  "location": "stepDefinitions.VerifyShipping.click_OK_button_and_window_opens(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.step({
-  "name": "Click ellipsis button next to the Manufacturer \"Find Facility\" window is open",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateType.click_ellipsis_button_next_to_the_Manufacturer_window_is_open(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter \"Fluke\" and click Find button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateType.enter_and_click_Find_button(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click OK button and enter Model_Number",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateType.click_OK_button_and_enter_Model_Number()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter Weight and enter Dimensions",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateType.enter_Weight_and_enter_Dimensions()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter Size and enter Stock_Number",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateType.enter_Size_and_enter_Stock_Number()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter Class and enter Family",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateType.enter_Class_and_enter_Family()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click Save buttn and click Close button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateType.click_save_buttn_and_click_close_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.embedding("image/png", "embedded0.png", "Create MET_TEAM Type");
+formatter.embedding("image/png", "embedded0.png", "Verify MET_TEAM Type");
 formatter.after({
   "status": "passed"
 });

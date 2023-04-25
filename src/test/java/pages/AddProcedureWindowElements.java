@@ -28,14 +28,23 @@ public class AddProcedureWindowElements extends BaseClass {
 	@FindBy (xpath = "(//*[@class = 'x-form-trigger btn-trigger-search'])[1]")
 	public WebElement elipsisButtonDataSheet;
 	
+	@FindBy (xpath = "//*[@id ='nAttTemplateUID_display' and  @class = 'x-form-text x-form-field']")
+	public WebElement procDataSheet;
+	
 	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[3]")
 	public WebElement procRevision;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field'])[2]")
+	@FindBy (xpath = "//*[@id ='tRevisionDate' and  @class = 'x-form-text x-form-field']")
 	public WebElement procRevisionDate;
+	
+	@FindBy (xpath = "//*[@id ='cProcedureType' and  @class = 'x-form-text x-form-field x-trigger-noedit']")
+	public WebElement procServiceType;
 	
 	@FindBy (xpath = "(//*[@class = 'x-form-trigger btn-trigger-search'])[4]")
 	public WebElement elipsisButtonCategory;
+	
+	@FindBy (xpath = "//*[@id ='nCategoryUID_display' and  @class = 'x-form-text x-form-field autoLookUpDisable']")
+	public WebElement procCategory;
 	
 	@FindBy (id = "ext-gen291")
 	public WebElement buttonSave;
