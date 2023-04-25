@@ -25,11 +25,17 @@ public class AddTypeWindowElements extends BaseClass {
 	@FindBy (xpath = "(//*[@class = 'x-form-trigger btn-trigger-search'])[1]")
 	public WebElement elipsisButtonManufacturer;
 	
+	@FindBy (xpath = "//*[@id ='nManufacturerUID_display' and  @class = 'x-form-text x-form-field']")
+	public WebElement typeManufacturer;
+	
 	@FindBy (id = "cModelNumber")
 	public WebElement typeModelNumber;
 	
 	@FindBy (id = "cWeight")
 	public WebElement typeWeight;
+	
+	@FindBy (xpath = "//*[@id ='cWeightUOM' and  @class = 'x-form-text x-form-field x-trigger-noedit']")
+	public WebElement typeWeightUOM;
 	
 	@FindBy (id = "cPartNumber")
 	public WebElement typeSize;
@@ -45,6 +51,9 @@ public class AddTypeWindowElements extends BaseClass {
 	
 	@FindBy (id = "cFamily")
 	public WebElement typeFamily;
+	
+	@FindBy (xpath = "//*[@id ='cAuthority' and  @class = 'x-form-text x-form-field x-trigger-noedit']")
+	public WebElement typeAuthority;
 	
 	@FindBy (id = "tbSave")
 	public WebElement typeSave;

@@ -20,26 +20,26 @@ Feature: Type Steps
       |  Fluke       |
       
       
-  @Verify_Type
+  @Verify_Type @Create_Type
   Scenario Outline: Verify MET_TEAM Type
     Given Login With valid credentials
     When Click Maintenance and click Type
     Then "Find Type" window is open
     And Find "Description" by entering Description and click Find button
     Then Click OK button and "Edit Type" window opens
-    #And Verify Description is Description
-    #Then Verify Item_Cost is "<Item_Cost>"
-    #And Verify Replace_Cost is "<Replace_Cost>"
-    #Then Verify Manufacturer is "<Manufacturer>"
-    #And Verify Model_Number is "<Model_Number>"
-    #Then Verify Weight is "<Weight>"
-    #And Verify Weight_UOM is "<Weight_UOM>"
-    #Then Verify Size is "<Size>"
-    #And Verify Stock_Number is "<Stock_Num>"
-    #Then Verify Dimensions is "<Dimensions>"
-    #And Verify Class is "<Class>"
-    #Then Verify Family is "<Family>"
-    #And Verify Authoirty is "<Authority>"
+    And Verify Type_Description is Type_Description
+    Then Verify Item_Cost is "<Item_Cost>"
+    And Verify Replace_Cost is "<Replace_Cost>"
+    Then Verify Type_Manufacturer is "<Manufacturer>"
+    And Verify Type_Model_Number is "<Model_Number>"
+    Then Verify Type_Weight is "<Weight>"
+    And Verify Type_Weight_UOM is "<Weight_UOM>"
+    Then Verify Type_Size is "<Size>"
+    And Verify Type_Stock_Number is "<Stock_Num>"
+    Then Verify Type_Dimensions is "<Dimensions>"
+    And Verify Type_Class is "<Class>"
+    Then Verify Type_Family is "<Family>"
+    And Verify Type_Authoirty is "<Authority>"
 
     Examples: 
       | Item_Cost | Replace_Cost | Manufacturer | Model_Number | Weight | Weight_UOM | Size | Stock_Num | Dimensions | Class     | Family     | Authority |
