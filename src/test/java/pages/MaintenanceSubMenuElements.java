@@ -9,7 +9,7 @@ import testBase.BaseClass;
 public class MaintenanceSubMenuElements extends BaseClass {
 
 	// Maintenance -> Asset menu item 
-	@FindBy (xpath = "/html/body/div[4]/ul/li[1]/a/span")
+	@FindBy (xpath = "//*[@class='x-menu-item-text' and contains(text(),'Assets')]")
 	public WebElement maintAssets;
 	
 	// Maintenance -> Types menu item 

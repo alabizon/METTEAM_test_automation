@@ -16,12 +16,12 @@ public class CreateAccreditation extends CommonMethods {
 		CommonMethods.click(concoleMenuMetTeamElements.btnMaintenance);
 		Thread.sleep(1000);
 		maintenanceSubMenuElements.maintAccreditations.click();
-		CommonMethods.waitForVisib(frames.Frame1);
 
 	}
 
 	@Then("{string} window opens")
 	public void window_opens(String string) {
+		CommonMethods.waitForVisib(frames.Frame1);
 		CommonMethods.swithToFrame(frames.Frame1);
 		
 	}

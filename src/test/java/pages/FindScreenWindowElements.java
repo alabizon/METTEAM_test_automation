@@ -33,6 +33,9 @@ public class FindScreenWindowElements extends BaseClass {
 	@FindBy (xpath = "//*[@class=\" x-btn-text tb-reset-all\"]")
 	public WebElement ResetAllButton;
 	
+	@FindBy (xpath = "//*[@class=' x-btn-text' and contains(text(),'Yes')]")
+	public WebElement ResetAllAlertYesButton;
+	
 	@FindBy (xpath = "//*[@class = 'x-grid3-col x-grid3-cell x-grid3-td-cValue x-grid3-cell-last x-grid3-cell-selected']/div")
 	public WebElement findFacilityFacilityNameSearchValue;
 	

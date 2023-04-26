@@ -426,12 +426,19 @@ public class CommonMethods extends PageInitializer {
 	}
 	
 	/**
-	 * This method will do assert
-	 * @param expected
-	 * @param actual
-	 */
-	public static void assertEquals(String expected, String actual) {
-		assert expected.equals(actual) : "Expected string: " + expected + ", but found: " + actual;
+	 * This method will de-press menu button if it is pressed.
+	 * @param element -- Pass the desired buttons WebElement to be de-pressed.
+	 * @throws Throwable 
+	 * 	 */
+	
+	public static void depressButton(WebElement element) throws Throwable {
+		if (element.getClass().equals("x-btn x-btn-icon-text x-btn-text-icon x-btn-pressed")) {
+			element.click();
+			Thread.sleep(500);
+			findScreenWindowElements.ResetAllButton.click();
+			Thread.sleep(500);
+			findScreenWindowElements.ResetAllAlertYesButton.click();
+		}
 		
 	}
 	

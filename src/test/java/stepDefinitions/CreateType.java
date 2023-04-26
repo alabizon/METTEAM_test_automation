@@ -25,8 +25,7 @@ public class CreateType extends CommonMethods {
 	@Then("{string} findType_window is open and click Add button")
 	public void findType_window_is_open_and_click_Add_button(String string) throws Throwable {
 		CommonMethods.swithToFrame(frames.Frame1);
-		//CommonMethods.depressRememberButton(findScreenWindowElements.RememberButton, string);
-		//System.out.println(findScreenWindowElements.RememberButton.isSelected()+" !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		CommonMethods.depressButton(findScreenWindowElements.RememberButton);
 		CommonMethods.waitForVisib(findScreenWindowElements.addButton);
 		CommonMethods.click(findScreenWindowElements.addButton);
 		
