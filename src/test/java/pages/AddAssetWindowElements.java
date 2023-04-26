@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -40,40 +42,49 @@ public class AddAssetWindowElements extends BaseClass {
 	@FindBy (id = "nParentUID_display")
 	public WebElement assetParent;
 	
-	@FindBy (xpath = "//*[@id ='lRecallMaintenanceType' and  @class = ' x-form-checkbox x-form-field']")
+	@FindBy (id = "lRecallMaintenanceType")
 	public WebElement assetRecalledCheckbox;
 	
-	@FindBy (xpath = "//*[@id ='lOnSite' and  @class = ' x-form-checkbox x-form-field']")
+	@FindBy (id = "lOnSite")
 	public WebElement assetOnSiteCheckbox;
 	
-	@FindBy (xpath = "//*[@id ='lNonTracked' and  @class = ' x-form-checkbox x-form-field']")
+	@FindBy (id = "lNonTracked")
 	public WebElement assetNotTrackedCheckbox;
 	
-	@FindBy (xpath = "//*[@id ='lOptional' and  @class = ' x-form-checkbox x-form-field']")
+	@FindBy (id = "lOptional")
 	public WebElement assetOptionalCheckbox;
 	
-	@FindBy (xpath = "//*[@id ='lStandard' and  @class = ' x-form-checkbox x-form-field']")
+	@FindBy (id = "lStandard")
 	public WebElement assetStandardCheckbox;
 	
 	@FindBy (xpath = "(//*[@class = 'x-form-trigger x-form-arrow-trigger'])[1]")
 	public WebElement assetStandardTypeButton;
 	
-	@FindBy (xpath = "//*[@id ='cStandardType' and  @class = 'x-form-text x-form-field x-trigger-noedit x-form-focus']")
+	@FindBy (xpath = "//*[@class='x-combo-list-inner']/div")
+	public List<WebElement> assetStandardTypeList;
+	
+	@FindBy (xpath = "//*[@name = 'cStandardType' and @id = 'cStandardType']")
 	public WebElement assetStandardType;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[4]")
+	@FindBy (xpath = "//*[@class = 'x-window-header-text' and contains(text(),'Attention')]")
+	public WebElement assetAlertWindow;
+	
+	@FindBy (xpath = "//*[@type= 'button' and contains(text(),'OK')]")
+	public WebElement assetOkButtonOnAlert;
+	
+	@FindBy (id = "cPhysicalLocation")
 	public WebElement assetPhysicalLocation;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field'])[3]")
+	@FindBy (id = "tPurchaseDate")
 	public WebElement assetPurchaseDate;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field'])[4]")
+	@FindBy (id = "tInServiceDate")
 	public WebElement assetInServiceDate;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field'])[5]")
-	public WebElement assetWarrabtyDate;
+	@FindBy (id = "tWarrantyDate")
+	public WebElement assetWarrantyDate;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field'])[6]")
+	@FindBy (id = "tInventoryDate")
 	public WebElement assetDateInventoried;
 	
 	@FindBy (xpath = "(//*[@class = 'x-form-trigger btn-trigger-search'])[4]")
@@ -93,6 +104,9 @@ public class AddAssetWindowElements extends BaseClass {
 	
 	@FindBy (xpath = "(//*[@class = 'x-form-trigger btn-trigger-search'])[6]")
 	public WebElement elipsisButtonTypeDescription;
+	
+	@FindBy (xpath = "//*[@type='button' and contains(text(),'Yes')]")
+	public WebElement assetTypeUpdateAlert;
 	
 	@FindBy (id = "nTypeUID_display")
 	public WebElement assetTypeDescription;
@@ -124,28 +138,28 @@ public class AddAssetWindowElements extends BaseClass {
 	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field'])[11]")
 	public WebElement assetAuthorizingFacility;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[7]")
+	@FindBy (id = "cGroup")
 	public WebElement assetGroup;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[8]")
+	@FindBy (id = "cAssignedContact")
 	public WebElement assetAssignedContact;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[9]")
+	@FindBy (id = "cAssignedGroup")
 	public WebElement assetAssignedNumber;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field'])[12]")
+	@FindBy (id = "tAssignedGroupDate")
 	public WebElement assetAssignedDate;
 	
 	@FindBy (id = "cmdAssignment")
 	public WebElement assetAssignmentButton;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[10]")
+	@FindBy (id = "cOptional1")
 	public WebElement assetOptional1;
 	
-	@FindBy (id = "btn-tbSave")
+	@FindBy (xpath = "//*[@type='button' and contains(text(),'Save')]")
 	public WebElement buttonSave;
 	
-	@FindBy (id = "btn-tbReceive")
+	@FindBy (id = "tbReceive")
 	public WebElement buttonReceive;
 	
 	/**

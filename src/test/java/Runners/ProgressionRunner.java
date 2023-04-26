@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 		dryRun = false, // when set as true, will run over the feature steps and identify the missing
 						// implementation
 		monochrome = true, // when set as true, will format the console outcome
-		tags = "@Verify_Type", 
+		tags = "@Verify_Asset", 
 		strict = false, // when set as true, will fail the execution when undefined step is
 												// found
 		plugin = { "pretty", // will print the steps inside the console

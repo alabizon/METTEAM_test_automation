@@ -14,6 +14,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.OutputType;
@@ -296,8 +297,9 @@ public class CommonMethods extends PageInitializer {
 	
 	/**
 	 * Use this method to select a drop down value from a ServiceNow drop down menu
-	 * when Select class will not work NOTE: Before using, first you must click on
-	 * the drop down, then store elements in a list
+	 * when Select class will not work. 
+	 *     NOTE: Before using, first you must click on the drop down, 
+	 *     then store elements in a list
 	 */
 	public static void selectValueFromBootStrapDropDown(List<WebElement> values, String value) {
 
@@ -432,7 +434,7 @@ public class CommonMethods extends PageInitializer {
 	 * 	 */
 	
 	public static void depressButton(WebElement element) throws Throwable {
-		if (element.getClass().equals("x-btn x-btn-icon-text x-btn-text-icon x-btn-pressed")) {
+		if (element.getAttribute("Class").equals("x-btn x-btn-icon-text x-btn-text-icon x-btn-pressed")) {
 			element.click();
 			Thread.sleep(500);
 			findScreenWindowElements.ResetAllButton.click();
@@ -440,6 +442,21 @@ public class CommonMethods extends PageInitializer {
 			findScreenWindowElements.ResetAllAlertYesButton.click();
 		}
 		
+	}
+	
+	/**
+	 * This method will do assertion whether field is enabled or disabled. 
+	 * 	 */
+		
+	public static void verifyElementEnabledAssertTrue(WebElement element, String text) {
+		boolean a = true;
+		if(element.getAttribute("Class").equals(text)) {
+			Assert.assertTrue(a);
+			}
+		else {
+			a = false;
+			Assert.assertFalse(a);
+		}
 	}
 	
 }

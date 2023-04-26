@@ -17,35 +17,33 @@ Feature: Asset Steps
     Then "Select Department" window is open
     And Enter "<Department>" to search criteria and click Find button
     Then Click OK button  
-    #And Click ellipsis button next to Parent field
-    #Then "Find Asset" window opens
-    #And find "Barcode" by entering Barcode and click Find button
-    #Then Click OK button 
-    #And Click On_Site checkbox and click Not_Tracked checkbox and click Optional checkbox
-    #Then Verify Standard_Type is disabled
-    #And Click Standard checkbox and verify Standard_Type is enabled
-    #Then Click Save button and verify Attention is displayed
-    #And Click OK button on the Attention window 
-    #Then Select "<Standard_Type>"
-    #And Enter "<Physical_Location>" and enter "<Purchase_Date>"
-    #Then Enter "<In_Service_Date>" and enter "<Warranty_Date>"
-    #And Enter "<Date_Inventoried>"
-    #Then Click ellipsis button next to Inventoried_By field
-    #And "Find User" window opens
-    #Then find "Last" by entering Last Name and click Find button
-    #And Click OK button  
-    #Then Click ellipsis button next to Type_Description field
-    #And "Find Type" window opens
-    #Then find "Description" by entering Type_Description and click Find button
-    #And Click OK button
-    #Then Click Yes button on the alert window
-    #And Enter "<Group>" and enter "<Assigned_Contact>"
-    #Then Enter "<Assigned_Number>" and enter "<Assigned_Date>" and enter "<Optional_1>"
-    #Then Click Save buttn and click Close button
+    And Click ellipsis button next to Parent field
+    Then "Find Asset" window is open
+    And Enter "<Barcode>" to the search criteria and click Find button
+    Then Click On_Site checkbox and click Not_Tracked checkbox and click Optional checkbox
+    And Verify Standard_Type is disabled
+    Then Click Standard checkbox and verify Standard_Type is enabled
+    And Click ellipsis button next to Type_Description field
+    Then "Find Type" window is open
+    And Find "Description" by entering Type_Description and click Find button
+    Then Click OK button
+    And Click Yes button on the alert window
+    Then Click Save button and verify Attention is displayed
+    And Click OK button on the Attention window 
+    Then Select "<Standard_Type>"    
+    And Enter "<Physical_Location>" and enter "<Purchase_Date>" and enter "<In_Service_Date>" 
+    Then Enter "<Warranty_Date>" date and enter "<Date_Inventoried>" date
+    And Click ellipsis button next to Inventoried_By field
+    Then "Find User" window is open
+    And Find "Administrator" by entering Last Name and then click Find button
+    Then Click OK button  
+    And Enter group "<Group>" and enter "<Assigned_Contact>"
+    Then Enter Assigned Number "<Assigned_Number>" and enter "<Assigned_Date>" and enter "<Optional_1>"
+    And Click Save buttn and click Close button
 
     Examples: 
-      | Customer          | Department         | Standard_Type | Physical_Location    | Purchase_Date | In_Service_Date | Warranty_Date | Date_Inventoried | Group     | Assigned_Contact | Assigned_Number | Assigned_Date | Optional_1 |
-      | My First Customer | Quality Department | Primary       | TestPhysicalLocation | 04/24/2023    | 04/26/2023      | 04/24/2024    | 04/25/2023       | TestGroup | TestAssignedCont | 00001           | 004/26/2023   | Test_Opt   |
+      | Customer          | Department         | Barcode   | Standard_Type | Physical_Location    | Purchase_Date | In_Service_Date | Warranty_Date | Date_Inventoried | Group     | Assigned_Contact | Assigned_Number | Assigned_Date | Optional_1 |
+      | My First Customer | Quality Department | SAMPLE-10 | Primary       | TestPhysicalLocation | 04/24/2023    | 04/26/2023      | 04/24/2024    | 04/25/2023       | TestGroup | TestAssignedCont | 00001           | 04/26/2023   | Test_Opt   |
       
   @Verify_Asset 
   Scenario Outline: Verify MET_TEAM Asset
