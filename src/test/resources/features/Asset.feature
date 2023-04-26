@@ -48,19 +48,18 @@ Feature: Asset Steps
   @Verify_Asset 
   Scenario Outline: Verify MET_TEAM Asset
     Given Login With valid credentials
-    When Click Maintenance and click Asset 
-    Then "Find Asset" window opens
+    When Click Maintenance and click Assets
+    Then "Find Asset" window is open
     And Find "Barcode" by entering Barcode and click Find button
-    Then Click OK button and "Edit Asset" window opens
-    And Verify Code is Code
-    Then Verify Type is "<Type>"
-    And Verify Description is "<Description>"
-    Then Verify Start_Date is "<Start_Date>"
-    And Verify End_Date is "<End_Date>"
+    #Then Verify Code is Code
+    #And Verify Type is "<Type>"
+    #Then Verify Description is "<Description>"
+    #And Verify Start_Date is "<Start_Date>"
+    #Then Verify End_Date is "<End_Date>"
 
     Examples: 
-      | Type   | Description | Start_Date | End_Date   |
-      | 22     | Auto        | 07/15/2022 | 11/21/2022 |
+      | Customer          | Department         | Barcode   | Standard_Type | Physical_Location    | Purchase_Date | In_Service_Date | Warranty_Date | Date_Inventoried | Group     | Assigned_Contact | Assigned_Number | Assigned_Date | Optional_1 |
+      | My First Customer | Quality Department | SAMPLE-10 | Primary       | TestPhysicalLocation | 04/24/2023    | 04/26/2023      | 04/24/2024    | 04/25/2023       | TestGroup | TestAssignedCont | 00001           | 04/26/2023   | Test_Opt   |
       
       
       

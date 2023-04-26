@@ -42,7 +42,7 @@ public class FindScreenWindowElements extends BaseClass {
 	@FindBy (xpath = "//*[@type='button' and contains(text(),'Add')]")
 	public WebElement addButton;
 	
-	@FindBy (id = "btnOk")
+	@FindBy (xpath = "//*[@id ='btnOk' and  @class = 'x-btn x-btn-icon-text x-btn-text-icon']")
 	public WebElement OkButton;
 	
 	@FindBy (xpath = "//*[@class=\"x-grid3-body\"]/div/table/tbody/tr/td/div")
