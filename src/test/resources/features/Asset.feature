@@ -31,20 +31,24 @@ Feature: Asset Steps
     Then Click Save button and verify Attention is displayed
     And Click OK button on the Attention window 
     Then Select "<Standard_Type>"    
-    And Enter "<Physical_Location>" and enter "<Purchase_Date>" and enter "<In_Service_Date>" 
-    Then Enter "<Warranty_Date>" date and enter "<Date_Inventoried>" date
-    And Click ellipsis button next to Inventoried_By field
-    Then "Find User" window is open
-    And Find "Administrator" by entering Last Name and then click Find button
-    Then Click OK button  
-    And Enter group "<Group>" and enter "<Assigned_Contact>"
-    Then Enter Assigned Number "<Assigned_Number>" and enter "<Assigned_Date>" and enter "<Optional_1>"
-    And Click Save button on the Asset screen
-    #Then Click Close button
+    And Enter location "<Physical_Location>" and enter "<Purchase_Date>" 
+    Then Click Save button on the Asset screen
+    And Enter "<In_Service_Date>" 
+    Then Click Save button on the Asset screen
+    And Enter "<Warranty_Date>" date and enter "<Date_Inventoried>" date
+    Then Click ellipsis button next to Inventoried_By field
+    And "Find User" window is open
+    Then Find "Administrator" by entering Last Name and then click Find button
+    And Click OK button  
+    Then Enter group "<Group>" and enter "<Assigned_Contact>"
+    And Enter Assigned Number "<Assigned_Number>" and enter "<Assigned_Date>" and enter "<Optional_1>"
+    Then Click Save button on the Asset screen
+    And Click Close button
 
     Examples: 
       | Customer          | Department         | Barcode   | Standard_Type | Physical_Location    | Purchase_Date | In_Service_Date | Warranty_Date | Date_Inventoried | Group     | Assigned_Contact | Assigned_Number | Assigned_Date | Optional_1 |
-      | My First Customer | Quality Department | SAMPLE-10 | Primary       | TestPhysicalLocation | 04/25/2023    | 04/25/2023      | 04/25/2024    | 04/25/2023       | TestGroup | TestAssignedCont | 00001           | 04/26/2023   | Test_Opt   |
+      | My First Customer | Quality Department | SAMPLE-10 | Primary       | TestPhysicalLocation | 04/25/2023    | 04/25/2023      | 04/25/2023    | 04/25/2023       | TestGroup | TestAssignedCont | 00001           | 04/25/2023   | Test_Opt   |
+      
       
   @Verify_Asset @Create_Asset
   Scenario Outline: Verify MET_TEAM Asset
@@ -76,7 +80,7 @@ Feature: Asset Steps
 
     Examples: 
       | Serial_Number    | Customer          | Department         | Barcode   | Standard_Type | Physical_Location    | Disposition | Purchase_Date | In_Service_Date | Warranty_Date | Date_Inventoried | Inventoried_By       | Group     | Assigned_Contact | Assigned_Number | Assigned_Date | Optional_1 |
-      | TestSerialNumber | My First Customer | Quality Department | SAMPLE-10 | Primary       | TestPhysicalLocation | In Service  | 04/25/2023    | 04/25/2023      | 04/25/2024    | 04/25/2023       | System Administrator | TestGroup | TestAssignedCont | 00001           | 04/26/2023   | Test_Opt   |
+      | TestSerialNumber | My First Customer | Quality Department | SAMPLE-10 | Primary       | TestPhysicalLocation | In Service  | 04/25/2023    | 04/25/2023      | 04/25/2023    | 04/25/2023       | System Administrator | TestGroup | TestAssignedCont | 00001           | 04/24/2023   | Test_Opt   |
       
       
       

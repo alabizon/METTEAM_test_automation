@@ -13,13 +13,13 @@ public class AddTypeProcedureDefaultWindowElements extends BaseClass {
 	 * Beginning Elements from Add Type Procedure Default page
 	 */
 	
-	@FindBy (xpath = "/html/body/div[3]/div/form/div[1]/div/div/img")
+	@FindBy (xpath = "//*[@id ='nProcedureUID_display']/following-sibling::img")
 	public WebElement elipsisButtonProcName;
 	
 	@FindBy (id = "nProcedureUID_display")
 	public WebElement defprocProcedureName;
 	
-	@FindBy (xpath = "/html/body/div[3]/div/form/div[6]/div/div/img")
+	@FindBy (xpath = "//*[@id ='nAttTemplateUID_display']/following-sibling::img")
 	public WebElement elipsisButtonDataSheet;
 	
 	@FindBy (id = "nAttTemplateUID_display")

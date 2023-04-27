@@ -50,4 +50,4 @@ Feature: Part Steps
 
     Examples: 
       | Part_Number | Manufacturer | Class     | Stock_Num | Group     | Location     | On_Hand | Re_Order | Last_Qty | Purch_Unit | Price | Inventoried_By       | Date_Inv   | Cost | Supplier     | Last_Ord   | Last_Cost |
-      | 456         | Fluke        | TestClass | 123       | TestGroup | TestLocation | 10      | 7        | 6        | EA         | 3.00  | System Administrator | 05/27/2005 | 5.00 | TestSupplier | 05/27/2005 | 3.50      | 
+      | 456         | Fluke        | TestClass | 123       | TestGroup | TestLocation | 10      | 7        | 6        | EA         | 3.00  | System Administrator | 05/27/2005 | 5.00 | TestSupplier | 05/26/2005 | 3.50      | 

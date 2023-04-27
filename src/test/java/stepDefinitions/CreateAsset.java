@@ -185,11 +185,23 @@ public class CreateAsset extends CommonMethods {
 		
 	}
 	
-	@Then("Enter {string} and enter {string} and enter {string}")
-	public void enter_and_enter_and_enter_and_enter(String string, String string2, String string3) {
+	@Then("Enter location {string} and enter {string}")
+	public void enter_location_and_enter_(String string, String string2) {
 		CommonMethods.sendKeys(addAssetWindowElements.assetPhysicalLocation, string);
 		CommonMethods.sendKeys(addAssetWindowElements.assetPurchaseDate, string2);
-		CommonMethods.sendKeys(addAssetWindowElements.assetInServiceDate, string3);
+		
+	}
+	
+	@Then("Click Save button on the Asset screen")
+	public void click_Save_button_on_the_Asset_screen() throws Throwable {
+		CommonMethods.click(addAssetWindowElements.buttonSave);
+		Thread.sleep(1000);
+		
+	}
+	
+	@Then("Enter {string}")
+	public void enter(String string) throws Throwable {
+		CommonMethods.sendKeys(addAssetWindowElements.assetInServiceDate, string);
 		
 	}
 	
@@ -227,31 +239,12 @@ public class CreateAsset extends CommonMethods {
 	}
 	
 	@Then("Enter Assigned Number {string} and enter {string} and enter {string}")
-	public void enter_Assigned_Number_and_enter_and_enter(String string, String string2, String string3) {
+	public void enter_Assigned_Number_and_enter_and_enter(String string, String string2, String string3){
 		CommonMethods.sendKeys(addAssetWindowElements.assetAssignedNumber, string);
 		CommonMethods.sendKeys(addAssetWindowElements.assetAssignedDate, string2);
 		CommonMethods.sendKeys(addAssetWindowElements.assetOptional1, string3);
 		
 	}
-	
-	@Then("Click Save button on the Asset screen")
-	public void click_Save_button_on_the_Asset_screen() {
-		CommonMethods.click(addAssetWindowElements.buttonSave);
-		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }
 
