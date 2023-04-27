@@ -137,7 +137,7 @@ public class CreateAsset extends CommonMethods {
 		CommonMethods.depressButton(findScreenWindowElements.RememberButton);
 		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
 		ExcelUtility.getSheet("TestExel");
-		TypeDescription=ExcelUtility.getCellData(Constants.TYPE_CELL, 0);
+		TypeDescription=ExcelUtility.getCellData(Constants.TYPE_CELL, 1);
 		Thread.sleep(1000);
 		for (int i = 0; i < selectShipItemsWindowElements.listElementsFromTheFindScreen.size(); i++) {
 	        if (selectShipItemsWindowElements.listElementsFromTheFindScreen.get(i).getText().equals(string)) {

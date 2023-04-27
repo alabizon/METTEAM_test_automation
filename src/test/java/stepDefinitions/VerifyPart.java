@@ -20,7 +20,7 @@ public class VerifyPart extends CommonMethods {
 	public void find_by_entering_Part_Number_and_click_Find_button(String string) throws Throwable {
 		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
 		ExcelUtility.getSheet("TestExel");
-		PartNumber=ExcelUtility.getCellData(Constants.PART_CELL, 0);
+		PartNumber=ExcelUtility.getCellData(Constants.PART_CELL, 1);
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame1);
 		Thread.sleep(1000);

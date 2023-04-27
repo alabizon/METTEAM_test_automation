@@ -21,7 +21,7 @@ public class VerifyAsset extends CommonMethods {
 	public void find_by_entering_Barcode_and_click_Find_button(String string) throws Throwable {
 		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
 		ExcelUtility.getSheet("TestExel");
-		Barcode=ExcelUtility.getCellData(Constants.ASSET_CELL, 0);
+		Barcode=ExcelUtility.getCellData(Constants.ASSET_CELL, 1);
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame1);
 		Thread.sleep(1000);
@@ -144,7 +144,7 @@ public class VerifyAsset extends CommonMethods {
 	public void verify_Type_Description_is_Type_Description() {
 		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
 		ExcelUtility.getSheet("TestExel");
-		TypeDescription=ExcelUtility.getCellData(Constants.TYPE_CELL, 0);
+		TypeDescription=ExcelUtility.getCellData(Constants.TYPE_CELL, 1);
 		FieldContent = CommonMethods.getAttribute(addAssetWindowElements.assetTypeDescription);
 		Assert.assertEquals(TypeDescription, FieldContent);
 		

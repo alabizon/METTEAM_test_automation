@@ -19,7 +19,7 @@ public class VerifyShipping extends CommonMethods {
 	public void enter_search_value_for_the_Shipment_Name_and_click_Find_button() {
 		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
 		ExcelUtility.getSheet("TestExel");
-		ShipmentName=ExcelUtility.getCellData(Constants.SHIPPING_CELL, 0);
+		ShipmentName=ExcelUtility.getCellData(Constants.SHIPPING_CELL, 1);
 		CommonMethods.swithToFrame(frames.Frame1);
 		Actions actions = new Actions(driver);
 		actions.moveToElement(selectShipItemsWindowElements.findShipItemBarcodeSearchValue).click().sendKeys(ShipmentName).build().perform();

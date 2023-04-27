@@ -19,7 +19,7 @@ public class VerifyContact extends CommonMethods {
 	public void find_by_entering_Last_Name_and_click_Find_button(String string) throws Throwable {
 		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
 		ExcelUtility.getSheet("TestExel");
-		ContactId=ExcelUtility.getCellData(Constants.CONTACT_CELL, 0);
+		ContactId=ExcelUtility.getCellData(Constants.CONTACT_CELL, 1);
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame1);
 		Thread.sleep(1000);

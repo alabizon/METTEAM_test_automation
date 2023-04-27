@@ -20,7 +20,7 @@ public class VerifyProcedure extends CommonMethods {
 	public void find_by_entering_Procedure_Name_and_click_Find_button(String string) throws Throwable {
 		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
 		ExcelUtility.getSheet("TestExel");
-		ProcedureName=ExcelUtility.getCellData(Constants.PROCEDURE_CELL, 0);
+		ProcedureName=ExcelUtility.getCellData(Constants.PROCEDURE_CELL, 1);
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame1);
 		Thread.sleep(1000);

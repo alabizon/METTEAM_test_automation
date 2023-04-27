@@ -96,7 +96,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 		 */
 		public static void writeStringRow(String value, int rowIndex) {
 		    row = sheet.createRow(rowIndex);
-		    cell = row.createCell(0);
+		    cell = row.createCell(1);
 		    cell.setCellValue(value);
 		}
 		
@@ -127,7 +127,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
 		/**
-		 * This method get colon count
+		 * This method get column count
 		 */
 		public static int getColsCount(int rowNum) {
 			return sheet.getRow(rowNum).getPhysicalNumberOfCells();

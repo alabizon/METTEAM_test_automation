@@ -27,10 +27,17 @@ public class Constants {
 	public static final int ASSET_CELL=11;
 	public static final int WORK_ORDER_CELL=12;
 	public static final int TOOL_ASSIGNMENT_CELL=13;
-	public static final int FACILITY_CELL=14;
-	public static final int JOB_NUMBER_CELL=15;
-	public static final int MANUAL_TEMPLATE_CELL=16;
-	public static final int PROBLEM_REPORT_CELL=17;
-	public static final int BILLING_CELL=18;
+	public static final int FACILITY_CUST1_CELL=14;
+	public static final int FACILITY_CUST2_CELL=15;
+	public static final int FACILITY_CUST3_CELL=16;
+	public static final int FACILITY_MANUFACTURER_CELL=17;
+	public static final int FACILITY_SUBCONTRACTOR_CELL=18;
+	public static final int FACILITY_LAB1_CELL=19;
+	public static final int FACILITY_LAB2_CELL=20;
+	public static final int FACILITY_LAB3_CELL=21;
+	public static final int JOB_NUMBER_CELL=22;
+	public static final int MANUAL_TEMPLATE_CELL=23;
+	public static final int PROBLEM_REPORT_CELL=24;
+	public static final int BILLING_CELL=25;
 	
 }
