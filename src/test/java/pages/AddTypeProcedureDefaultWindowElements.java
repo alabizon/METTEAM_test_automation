@@ -25,13 +25,16 @@ public class AddTypeProcedureDefaultWindowElements extends BaseClass {
 	@FindBy (id = "nAttTemplateUID_display")
 	public WebElement defprocDataSheet;
 	
-	@FindBy (xpath = "//*[@id='cInterval' and @class = 'x-form-text x-form-field x-abs-layout-item']")
+	@FindBy (xpath = "//*[@type= 'text' and @id='cInterval']")
 	public WebElement defprocInterval;
+	
+	@FindBy (xpath = "//*[@type='button' and contains(text(),'Yes')]")
+	public WebElement defprocAttnYes;
 	
 	@FindBy (id = "btnSave")
 	public WebElement defprocSave;
 	
-	@FindBy (id = "btnClose")
+	@FindBy (id = "tbClose")
 	public WebElement defprocClose;
 	
 	/**

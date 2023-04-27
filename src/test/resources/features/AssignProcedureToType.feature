@@ -6,14 +6,16 @@ Feature: Assign Procedure to a Type Steps
     When Click Maintenance and click Type
     Then "Find Type" window is open
     And Find "Description" by entering Description and click Find button
-    Then Click Add Procedure Link button and "Add Type Default Procedure" window opens
-    And Click ellipsis button next to Procedure Name field
-    Then "Find Procedure" window is open
-    And Find "Procedure Name" by entering Procedure Name and click Find button
-    Then Click OK button
-    And Enter "<Interval>"
-    Then Click Save button
-    And Click Close button on the Edit Types screen
+    Then click OK button 
+    And Click Add Procedure Link button and "Add Type Default Procedure" window opens
+    Then Click ellipsis button next to Procedure Name field
+    And "Find Procedure" window is open
+    Then Find "Procedure Name" by entering Procedure Name into search criteria and click Find button
+    And Click OK button
+    Then Enter intrval "<Interval>"
+    And Click Save button
+    #Then Click "Yes" on the attention message
+    Then Click Close button on the Edit Types screen
     
 
     Examples: 
