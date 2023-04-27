@@ -234,7 +234,11 @@ public class CreateAsset extends CommonMethods {
 		
 	}
 	
-	
+	@Then("Click Save button on the Asset screen")
+	public void click_Save_button_on_the_Asset_screen() {
+		CommonMethods.click(addAssetWindowElements.buttonSave);
+		
+	}
 	
 	
 	

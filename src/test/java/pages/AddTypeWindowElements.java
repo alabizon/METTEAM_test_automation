@@ -55,6 +55,9 @@ public class AddTypeWindowElements extends BaseClass {
 	@FindBy (xpath = "//*[@id ='cAuthority' and  @class = 'x-form-text x-form-field x-trigger-noedit']")
 	public WebElement typeAuthority;
 	
+	@FindBy (xpath = "(//*[@type ='button' and  @class = ' x-btn-text btn-add-sm'])[1]")
+	public WebElement typeAddProcedureLink;
+	
 	@FindBy (id = "tbSave")
 	public WebElement typeSave;
 	

@@ -1,4 +1,4 @@
-Feature: Part Steps
+Feature: User Steps
 
   @Create_User @Alex
   Scenario Outline: Create MET_TEAM User

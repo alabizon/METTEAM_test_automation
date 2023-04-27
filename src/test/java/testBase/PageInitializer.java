@@ -9,6 +9,7 @@ import pages.AddProcedureWindowElements;
 import pages.AddShipItemWindowElements;
 import pages.AddShippingWindowElements;
 import pages.AddTemplateWindowElements;
+import pages.AddTypeProcedureDefaultWindowElements;
 import pages.AddTypeWindowElements;
 import pages.AddUserWindowElements;
 import pages.AssignGroupsWindowElements;
@@ -36,7 +37,7 @@ public class PageInitializer extends BaseClass {
 	protected static MaintenanceSubMenuElements maintenanceSubMenuElements;
 	protected static FindScreenWindowElements findScreenWindowElements;
 	protected static AddAssetWindowElements addAssetWindowElements;
-	//protected static FindTypeWindowElements findTypeWindowElements;
+	protected static AddTypeProcedureDefaultWindowElements addTypeProcedureDefaultWindowElements;
 	protected static EditWorkOrderElements editWorkOrderElements;
 	protected static AddProcedureWindowElements addProcedureWindowElements;
 	protected static AttachDataSheetElements attachDataSheetElements;
@@ -63,7 +64,7 @@ public class PageInitializer extends BaseClass {
 		concoleMenuMetTeamElements = new ConsoleMenuMetTeamElements();
 		maintenanceSubMenuElements = new MaintenanceSubMenuElements();
 		addAssetWindowElements = new AddAssetWindowElements();
-		//findTypeWindowElements = new FindTypeWindowElements();
+		addTypeProcedureDefaultWindowElements = new AddTypeProcedureDefaultWindowElements();
 		editWorkOrderElements = new EditWorkOrderElements();
 		addProcedureWindowElements = new AddProcedureWindowElements();
 		attachDataSheetElements = new AttachDataSheetElements();

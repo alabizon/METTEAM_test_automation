@@ -75,6 +75,9 @@ public class AddAssetWindowElements extends BaseClass {
 	@FindBy (id = "cPhysicalLocation")
 	public WebElement assetPhysicalLocation;
 	
+	@FindBy (id = "cDisposition")
+	public WebElement assetDisposition;
+	
 	@FindBy (id = "tPurchaseDate")
 	public WebElement assetPurchaseDate;
 	
@@ -90,7 +93,7 @@ public class AddAssetWindowElements extends BaseClass {
 	@FindBy (xpath = "(//*[@class = 'x-form-trigger btn-trigger-search'])[4]")
 	public WebElement elipsisButtonInventoriedBy;
 	
-	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field'])[7]")
+	@FindBy (id = "nInventoryByUID_display")
 	public WebElement assetInventoriedBy;
 	
 	@FindBy (xpath = "(//*[@class = 'x-form-text x-form-field x-abs-layout-item'])[5]")
@@ -161,6 +164,9 @@ public class AddAssetWindowElements extends BaseClass {
 	
 	@FindBy (id = "tbReceive")
 	public WebElement buttonReceive;
+	
+	@FindBy (xpath = "//*[@type='button' and contains(text(),'Close')]")
+	public WebElement buttonClose;
 	
 	/**
 	 * End Elements Add Asset page

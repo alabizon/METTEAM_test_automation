@@ -39,27 +39,44 @@ Feature: Asset Steps
     Then Click OK button  
     And Enter group "<Group>" and enter "<Assigned_Contact>"
     Then Enter Assigned Number "<Assigned_Number>" and enter "<Assigned_Date>" and enter "<Optional_1>"
-    And Click Save buttn and click Close button
+    And Click Save button on the Asset screen
+    #Then Click Close button
 
     Examples: 
       | Customer          | Department         | Barcode   | Standard_Type | Physical_Location    | Purchase_Date | In_Service_Date | Warranty_Date | Date_Inventoried | Group     | Assigned_Contact | Assigned_Number | Assigned_Date | Optional_1 |
-      | My First Customer | Quality Department | SAMPLE-10 | Primary       | TestPhysicalLocation | 04/24/2023    | 04/26/2023      | 04/24/2024    | 04/25/2023       | TestGroup | TestAssignedCont | 00001           | 04/26/2023   | Test_Opt   |
+      | My First Customer | Quality Department | SAMPLE-10 | Primary       | TestPhysicalLocation | 04/25/2023    | 04/25/2023      | 04/25/2024    | 04/25/2023       | TestGroup | TestAssignedCont | 00001           | 04/26/2023   | Test_Opt   |
       
-  @Verify_Asset 
+  @Verify_Asset @Create_Asset
   Scenario Outline: Verify MET_TEAM Asset
     Given Login With valid credentials
     When Click Maintenance and click Assets
     Then "Find Asset" window is open
     And Find "Barcode" by entering Barcode and click Find button
-    #Then Verify Code is Code
-    #And Verify Type is "<Type>"
-    #Then Verify Description is "<Description>"
-    #And Verify Start_Date is "<Start_Date>"
-    #Then Verify End_Date is "<End_Date>"
+    Then Verify ID is ID
+    And Verify Barcode is Barcode
+    Then Verify Serial Number is "<Serial_Number>"
+    And Verify Customer is  is "<Customer>"
+    Then Verify Department is "<Department>"
+    And Verify Parent is  is "<Barcode>"
+    Then Verify Standard Type is "<Standard_Type>"
+    And Verify Physical Location is  is "<Physical_Location>"
+    Then Verify Disposition is "<Disposition>"
+    And Verify Purchase Date is  is "<Purchase_Date>"
+    Then Verify In Service Date is "<In_Service_Date>"
+    And Verify Warranty Date is  is "<Warranty_Date>"
+    Then Verify Date Inventoried is "<Date_Inventoried>"
+    And Verify Inventoried By is  is "<Inventoried_By>"
+    Then Verify Type Description is Type_Description
+    And Verify Group is  is "<Group>"
+    Then Verify Assigned Contact is "<Assigned_Contact>"
+    And Verify Assigned Number is  is "<Assigned_Number>"
+    Then Verify Assigned Date is "<Assigned_Date>"
+    And Verify Optional_1 is  is "<Optional_1>"
+    
 
     Examples: 
-      | Customer          | Department         | Barcode   | Standard_Type | Physical_Location    | Purchase_Date | In_Service_Date | Warranty_Date | Date_Inventoried | Group     | Assigned_Contact | Assigned_Number | Assigned_Date | Optional_1 |
-      | My First Customer | Quality Department | SAMPLE-10 | Primary       | TestPhysicalLocation | 04/24/2023    | 04/26/2023      | 04/24/2024    | 04/25/2023       | TestGroup | TestAssignedCont | 00001           | 04/26/2023   | Test_Opt   |
+      | Serial_Number    | Customer          | Department         | Barcode   | Standard_Type | Physical_Location    | Disposition | Purchase_Date | In_Service_Date | Warranty_Date | Date_Inventoried | Inventoried_By       | Group     | Assigned_Contact | Assigned_Number | Assigned_Date | Optional_1 |
+      | TestSerialNumber | My First Customer | Quality Department | SAMPLE-10 | Primary       | TestPhysicalLocation | In Service  | 04/25/2023    | 04/25/2023      | 04/25/2024    | 04/25/2023       | System Administrator | TestGroup | TestAssignedCont | 00001           | 04/26/2023   | Test_Opt   |
       
       
       
