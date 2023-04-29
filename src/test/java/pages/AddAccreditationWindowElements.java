@@ -31,7 +31,7 @@ public class AddAccreditationWindowElements extends BaseClass {
 	@FindBy (id = "tEndDate")
 	public WebElement accredEndDate;
 	
-	@FindBy (className = " x-btn-text tb-save")
+	@FindBy (xpath = "//*[@class=' x-btn-text tb-save']")
 	public WebElement buttonSave;
 	
 	@FindBy (id = "tbClose")

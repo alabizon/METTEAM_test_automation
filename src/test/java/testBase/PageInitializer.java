@@ -3,6 +3,7 @@ package testBase;
 import pages.AddAccreditationWindowElements;
 import pages.AddAssetWindowElements;
 import pages.AddContactWindowElements;
+import pages.AddFacilityWindowElements;
 import pages.AddGroupWindowElements;
 import pages.AddPartWindowElements;
 import pages.AddProcedureWindowElements;
@@ -57,6 +58,7 @@ public class PageInitializer extends BaseClass {
 	protected static AddShippingWindowElements addShippingWindowElements;
 	protected static AddShipItemWindowElements addShipItemWindowElements;
 	protected static SelectShipItemsWindowElements selectShipItemsWindowElements;
+	protected static AddFacilityWindowElements addFacilityWindowElements;
 	public static void initializePageObjects() {
 		findScreenWindowElements = new FindScreenWindowElements();
 		loginPageElements = new LoginPageElements();
@@ -84,6 +86,7 @@ public class PageInitializer extends BaseClass {
 		addShippingWindowElements = new AddShippingWindowElements();
 		addShipItemWindowElements = new AddShipItemWindowElements();
 		selectShipItemsWindowElements = new SelectShipItemsWindowElements();
+		addFacilityWindowElements = new AddFacilityWindowElements();
 			
 	}
 }
