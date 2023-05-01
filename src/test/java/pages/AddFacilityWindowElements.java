@@ -93,6 +93,9 @@ public class AddFacilityWindowElements extends BaseClass {
 	@FindBy (id = "nRate3")
 	public WebElement facilityExpediteFee;
 	
+	@FindBy (xpath = "//*[@class=' x-btn-text tb-add']")
+	public WebElement buttonAdd;
+	
 	@FindBy (xpath = "//*[@class=' x-btn-text tb-save']")
 	public WebElement buttonSave;
 	

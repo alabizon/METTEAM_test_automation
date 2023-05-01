@@ -64,5 +64,31 @@ Feature: Facility Steps
       | 33333        | 12345        | 44444   | 66666         | 77777   | 88888        | FedEx       | www.MyFacility.com | End of Month | 9.8      | 50.50       | 5        | 75.00        |
       
       
-      
+   @Create_Many_Facilities 
+  Scenario: Create MET_TEAM Facility
+    Given Login With valid credentials
+    When Click Maintenance and click Facilities 
+    Then "Find Facility" window is open and click Add button
+    Then Enter Customer2 Facility Name and check Customer checkbox
+    And Click Save facility button
+    Then Click Add button
+    Then Enter Customer3 Facility Name and check Customer checkbox
+    And Click Save facility button
+    Then Click Add button
+    Then Enter Manufacturer Facility Name and check Manufacturer checkbox
+    And Click Save facility button
+    Then Click Add button
+    Then Enter Sub Contractor Facility Name and check Sub Contractor checkbox
+    And Click Save facility button
+    Then Click Add button
+    Then Enter Lab1 Facility Name and check Customer checkbox
+    And Click Save facility button
+    Then Click Add button
+    Then Enter Lab2 Facility Name and check Customer checkbox
+    And Click Save facility button
+    Then Click Add button
+    Then Enter Lab3 Facility Name and check Customer checkbox
+    And Click Save facility button
+    And Click Close button
+    
       
