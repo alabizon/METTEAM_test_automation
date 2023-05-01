@@ -31,22 +31,37 @@ Feature: Facility Steps
       | Shipping_Method | Recall_Rule  | Tax_Rate | Hourly_Rate | Discount | Expedite_Fee |
       | FedEx           | End of Month | 9.8      | 50.50       | 5        | 75.00        |
       
-  @Verify_Facility
+  @Verify_Facility @Create_Facility
   Scenario Outline: Verify MET_TEAM Facility
     Given Login With valid credentials
     When Click Maintenance and click Facilities 
     Then "Find Facility" window opens
-    And Find "Number" by entering Accreditation Code and click Find button
+    And Find "Facility Name" by entering Facility Name and click Find button
     Then Click OK button and "Edit Facility" window opens
-    And Verify Code is Code
-    Then Verify Type is "<Type>"
-    And Verify Description is "<Description>"
-    Then Verify Start_Date is "<Start_Date>"
-    And Verify End_Date is "<End_Date>"
+    And Verify Facility_Name is Facility Name
+    Then Verify Tax Number is "<Tax_Number>"
+    And Verify Facility Number is "<Facility_Num>"
+    Then Verify Fed Number is "<Fed_Num>"
+    And Verify Industry Code is "<Industry_Code>"
+    Then Verify Account Number is "<Acc_Num>"
+    And Verify Company Code is "<Company_Code>"
+    Then Verify Shipping Method is "<Ship_Method>"
+    And Verify Facility Web Site is "<Web_Site>"
+    Then Verify Recall Rule is "<Recall_Rule>"
+    And Verify Tax Rate is "<Tax_Rate>"
+    Then Verify Hourly Rate is "<Hourly_Rate>"
+    And Verify Discount is "<Discount>"
+    Then Verify Expedite Fee is "<Expedite_Fee>"
+    And Verify Customet checkbox is checked
+    Then Verify Inspect All checkbox is checked
+    And Verify Manufacturer checkbox is checked
+    Then Verify Sub Contractor checkbox is checked
+    And Verify Lab checkbox is checked
+    Then Verify Optional 1 checkbox is checked
 
     Examples: 
-      | Type   | Description | Start_Date | End_Date   |
-      | 22     | Auto        | 07/15/2022 | 11/21/2022 |
+      | Tax_Number   | Facility_Num | Fed_Num | Industry_Code | Acc_Num | Company_Code | Ship_Method | Web_Site           | Recall_Rule  | Tax_Rate | Hourly_Rate | Discount | Expedite_Fee |
+      | 33333        | 12345        | 44444   | 66666         | 77777   | 88888        | FedEx       | www.MyFacility.com | End of Month | 9.8      | 50.50       | 5        | 75.00        |
       
       
       

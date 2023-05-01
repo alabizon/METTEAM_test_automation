@@ -5,12 +5,12 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "Create MET_TEAM Facility",
+  "name": "Verify MET_TEAM Facility",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@Create_Facility"
+      "name": "@Verify_Facility"
     }
   ]
 });
@@ -23,83 +23,95 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "name": "\"Find Facility\" window is open and click Add button",
+  "name": "\"Find Facility\" window opens",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Enter Facility Name and enter Tax Number and enter Facility Number and enter Fed Number",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Enter Industry Code and enter Account Number and enter Company Code and enter Web Site",
+  "name": "Find \"Facility Name\" by entering Facility Name and click Find button",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Select \"\u003cShipping_Method\u003e\" for the Shipping Method and select \"\u003cRecall_Rule\u003e\" Recall Rule",
+  "name": "Click OK button and \"Edit Facility\" window opens",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Check Manufacturer checkbox and check Sub Contractor checkbox",
+  "name": "Verify Facility_Name is Facility Name",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Verify \"Inspect All\" checkbox is disabled",
+  "name": "Verify Tax Number is \"\u003cTax_Number\u003e\"",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Click Lab checkbox",
+  "name": "Verify Facility Number is \"\u003cFacility_Num\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Verify \"Inspect All\" checkbox is enabled",
+  "name": "Verify Fed Number is \"\u003cFed_Num\u003e\"",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Verify \"No Tax\" checkbox is disabled",
+  "name": "Verify Industry Code is \"\u003cIndustry_Code\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Verify \"Tax Rate\" field is disabled",
+  "name": "Verify Account Number is \"\u003cAcc_Num\u003e\"",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Click Customer checkbox",
+  "name": "Verify Company Code is \"\u003cCompany_Code\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Verify \"No Tax\" checkbox is enabled",
+  "name": "Verify Shipping Method is \"\u003cShip_Method\u003e\"",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Verify \"Tax Rate\" field is enabled",
+  "name": "Verify Facility Web Site is \"\u003cWeb_Site\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Check Optional1 checkbox and check Inspect All checkbox and check No Tax checkbox",
+  "name": "Verify Recall Rule is \"\u003cRecall_Rule\u003e\"",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Verify \"Tax Rate\" field is disabled",
+  "name": "Verify Tax Rate is \"\u003cTax_Rate\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Uncheck No Tax checkbox",
+  "name": "Verify Hourly Rate is \"\u003cHourly_Rate\u003e\"",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Enter Tax Rate \"\u003cTax_Rate\u003e\"",
+  "name": "Verify Discount is \"\u003cDiscount\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Enter Hourly Rate \"\u003cHourly_Rate\u003e\"",
+  "name": "Verify Expedite Fee is \"\u003cExpedite_Fee\u003e\"",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Enter Discount \"\u003cDiscount\u003e\"",
+  "name": "Verify Customet checkbox is checked",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Enter Expedite Fee \"\u003cExpedite_Fee\u003e\"",
+  "name": "Verify Inspect All checkbox is checked",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Verify Manufacturer checkbox is checked",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "Verify Sub Contractor checkbox is checked",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Verify Lab checkbox is checked",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "Verify Optional 1 checkbox is checked",
   "keyword": "Then "
 });
 formatter.examples({
@@ -109,7 +121,14 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "Shipping_Method",
+        "Tax_Number",
+        "Facility_Num",
+        "Fed_Num",
+        "Industry_Code",
+        "Acc_Num",
+        "Company_Code",
+        "Ship_Method",
+        "Web_Site",
         "Recall_Rule",
         "Tax_Rate",
         "Hourly_Rate",
@@ -119,7 +138,14 @@ formatter.examples({
     },
     {
       "cells": [
+        "33333",
+        "12345",
+        "44444",
+        "66666",
+        "77777",
+        "88888",
         "FedEx",
+        "www.MyFacility.com",
         "End of Month",
         "9.8",
         "50.50",
@@ -130,12 +156,12 @@ formatter.examples({
   ]
 });
 formatter.scenario({
-  "name": "Create MET_TEAM Facility",
+  "name": "Verify MET_TEAM Facility",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@Create_Facility"
+      "name": "@Verify_Facility"
     }
   ]
 });
@@ -163,206 +189,236 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Find Facility\" window is open and click Add button",
+  "name": "\"Find Facility\" window opens",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateProcedure.window_is_open_and_click_Add_button(java.lang.String)"
+  "location": "stepDefinitions.CreateAccreditation.window_opens(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter Facility Name and enter Tax Number and enter Facility Number and enter Fed Number",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateFacility.enter_Facility_Name_and_enter_Tax_Number_and_enter_Facility_Number_and_enter_Fed_Number()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter Industry Code and enter Account Number and enter Company Code and enter Web Site",
+  "name": "Find \"Facility Name\" by entering Facility Name and click Find button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.enter_Industry_Code_and_enter_Account_Number_and_enter_Company_Code_and_enter_Web_Site()"
+  "location": "stepDefinitions.VerifyFacility.find_by_entering_Facility_Name_and_click_Find_button(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Select \"FedEx\" for the Shipping Method and select \"End of Month\" Recall Rule",
+  "name": "Click OK button and \"Edit Facility\" window opens",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.select_for_the_Shipping_Method_and_select_Recall_Rule(java.lang.String,java.lang.String)"
+  "location": "stepDefinitions.VerifyShipping.click_OK_button_and_window_opens(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Check Manufacturer checkbox and check Sub Contractor checkbox",
+  "name": "Verify Facility_Name is Facility Name",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.check_Manufacturer_checkbox_and_check_Sub_Contractor_checkbox()"
+  "location": "stepDefinitions.VerifyFacility.verify_Facility_Name_is_Facility_Name()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify \"Inspect All\" checkbox is disabled",
+  "name": "Verify Tax Number is \"33333\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.verify_checkbox_is_disabled(java.lang.String)"
+  "location": "stepDefinitions.VerifyFacility.verify_Tax_Number_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click Lab checkbox",
+  "name": "Verify Facility Number is \"12345\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.click_Lab_checkbox()"
+  "location": "stepDefinitions.VerifyFacility.verify_Facility_Number_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify \"Inspect All\" checkbox is enabled",
+  "name": "Verify Fed Number is \"44444\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.verify_checkbox_is_enabled(java.lang.String)"
+  "location": "stepDefinitions.VerifyFacility.verify_Fed_Number_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify \"No Tax\" checkbox is disabled",
+  "name": "Verify Industry Code is \"66666\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.verify_checkbox_is_disabled(java.lang.String)"
+  "location": "stepDefinitions.VerifyFacility.verify_Industry_Code_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify \"Tax Rate\" field is disabled",
+  "name": "Verify Account Number is \"77777\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.verify_field_is_disabled(java.lang.String)"
+  "location": "stepDefinitions.VerifyFacility.verify_Account_Number_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click Customer checkbox",
+  "name": "Verify Company Code is \"88888\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.click_Customer_checkbox()"
+  "location": "stepDefinitions.VerifyFacility.verify_Company_Code_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify \"No Tax\" checkbox is enabled",
+  "name": "Verify Shipping Method is \"FedEx\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.verify_checkbox_is_enabled(java.lang.String)"
+  "location": "stepDefinitions.VerifyFacility.verify_Shipping_Method_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify \"Tax Rate\" field is enabled",
+  "name": "Verify Facility Web Site is \"www.MyFacility.com\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.verify_field_is_enabled(java.lang.String)"
+  "location": "stepDefinitions.VerifyFacility.verify_Facility_Web_Site_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Check Optional1 checkbox and check Inspect All checkbox and check No Tax checkbox",
+  "name": "Verify Recall Rule is \"End of Month\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.check_Optional1_checkbox_and_check_Inspect_All_checkbox_and_check_No_Tax_checkbox()"
+  "location": "stepDefinitions.VerifyFacility.verify_Recall_Rule_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify \"Tax Rate\" field is disabled",
+  "name": "Verify Tax Rate is \"9.8\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.verify_field_is_disabled(java.lang.String)"
+  "location": "stepDefinitions.VerifyFacility.verify_Tax_Rate_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Uncheck No Tax checkbox",
+  "name": "Verify Hourly Rate is \"50.50\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.uncheck_No_Tax_checkbox()"
+  "location": "stepDefinitions.VerifyFacility.verify_Hourly_Rate_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter Tax Rate \"9.8\"",
+  "name": "Verify Discount is \"5\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.enter_Tax_Rate(java.lang.String)"
+  "location": "stepDefinitions.VerifyFacility.verify_Discount_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter Hourly Rate \"50.50\"",
+  "name": "Verify Expedite Fee is \"75.00\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.enter_Hourly_Rate(java.lang.String)"
+  "location": "stepDefinitions.VerifyFacility.verify_Expedite_Fee_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter Discount \"5\"",
+  "name": "Verify Customet checkbox is checked",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.enter_Discount(java.lang.String)"
+  "location": "stepDefinitions.VerifyFacility.verify_Customet_checkbox_is_checked()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter Expedite Fee \"75.00\"",
+  "name": "Verify Inspect All checkbox is checked",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateFacility.enter_Expedite_Fee(java.lang.String)"
+  "location": "stepDefinitions.VerifyFacility.verify_Inspect_All_checkbox_is_checked()"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png", "Create MET_TEAM Facility");
+formatter.step({
+  "name": "Verify Manufacturer checkbox is checked",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyFacility.verify_Manufacturer_checkbox_is_checked()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify Sub Contractor checkbox is checked",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyFacility.verify_Sub_Contractor_checkbox_is_checked()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify Lab checkbox is checked",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyFacility.verify_Lab_checkbox_is_checked()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify Optional 1 checkbox is checked",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.VerifyFacility.verify_Optional_checkbox_is_checked(java.lang.Integer)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.embedding("image/png", "embedded0.png", "Verify MET_TEAM Facility");
 formatter.after({
   "status": "passed"
 });

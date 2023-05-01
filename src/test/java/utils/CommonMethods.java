@@ -179,6 +179,21 @@ public class CommonMethods extends PageInitializer {
 	}
 	
 	/**
+	 * This method will determine if the checkbox is checked or unchecked.
+	 * 
+	 * @param element
+	 * @return
+	 */
+	public static boolean isElementChecked(WebElement element) {
+		try {
+			return (element.isDisplayed() && element.isSelected());
+		} catch (Exception e) {
+			return false;
+		}
+		
+	}
+	
+	/**
 	 * This method will wait until element becomes clickable
 	 * 
 	 * @param element

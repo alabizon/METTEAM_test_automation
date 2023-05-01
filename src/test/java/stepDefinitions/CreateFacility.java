@@ -27,7 +27,7 @@ public class CreateFacility extends CommonMethods {
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame2);
 		CommonMethods.waitForVisib(addFacilityWindowElements.facilityName);
-		FacilityName = "Accreditation_"+CommonMethods.getDateAsString();
+		FacilityName = "Facility_Cust1_"+CommonMethods.getDateAsString();
 		CommonMethods.sendKeys(addFacilityWindowElements.facilityName, FacilityName);
 		
 		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
@@ -64,7 +64,8 @@ public class CreateFacility extends CommonMethods {
 		CommonMethods.click(addFacilityWindowElements.facilitySubContractor);
 		
 	}
-	
+		
+
 	@Then("Verify {string} checkbox is disabled")
 	public void verify_checkbox_is_disabled(String string) {
 		CommonMethods.isElementEnabled(addFacilityWindowElements.facilityInspectAll);
