@@ -3,6 +3,7 @@ package testBase;
 import pages.AddAccreditationWindowElements;
 import pages.AddAssetWindowElements;
 import pages.AddContactWindowElements;
+import pages.AddContractPricingWindowElements;
 import pages.AddFacilityWindowElements;
 import pages.AddGroupWindowElements;
 import pages.AddPartWindowElements;
@@ -25,6 +26,7 @@ import pages.FindTypeWindowElements;
 import pages.Frames;
 import pages.LoginPageElements;
 import pages.MaintenanceSubMenuElements;
+import pages.ManagementSubMenuElements;
 import pages.SelectShipItemsWindowElements;
 import pages.SetupSubMenuElements;
 import pages.WorkflowSubMenuElements;
@@ -36,6 +38,7 @@ public class PageInitializer extends BaseClass {
 	protected static Frames frames;
 	protected static ConsoleMenuMetTeamElements concoleMenuMetTeamElements;
 	protected static MaintenanceSubMenuElements maintenanceSubMenuElements;
+	protected static ManagementSubMenuElements managementSubMenuElements;
 	protected static FindScreenWindowElements findScreenWindowElements;
 	protected static AddAssetWindowElements addAssetWindowElements;
 	protected static AddTypeProcedureDefaultWindowElements addTypeProcedureDefaultWindowElements;
@@ -59,12 +62,14 @@ public class PageInitializer extends BaseClass {
 	protected static AddShipItemWindowElements addShipItemWindowElements;
 	protected static SelectShipItemsWindowElements selectShipItemsWindowElements;
 	protected static AddFacilityWindowElements addFacilityWindowElements;
+	protected static AddContractPricingWindowElements addContractPricingWindowElements;
 	public static void initializePageObjects() {
 		findScreenWindowElements = new FindScreenWindowElements();
 		loginPageElements = new LoginPageElements();
 		frames = new Frames();
 		concoleMenuMetTeamElements = new ConsoleMenuMetTeamElements();
 		maintenanceSubMenuElements = new MaintenanceSubMenuElements();
+		managementSubMenuElements = new ManagementSubMenuElements();
 		addAssetWindowElements = new AddAssetWindowElements();
 		addTypeProcedureDefaultWindowElements = new AddTypeProcedureDefaultWindowElements();
 		editWorkOrderElements = new EditWorkOrderElements();
@@ -87,6 +92,7 @@ public class PageInitializer extends BaseClass {
 		addShipItemWindowElements = new AddShipItemWindowElements();
 		selectShipItemsWindowElements = new SelectShipItemsWindowElements();
 		addFacilityWindowElements = new AddFacilityWindowElements();
+		addContractPricingWindowElements = new AddContractPricingWindowElements();
 			
 	}
 }

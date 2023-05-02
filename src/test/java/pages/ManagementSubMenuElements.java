@@ -29,7 +29,7 @@ public class ManagementSubMenuElements extends BaseClass {
 	public WebElement manageQuote;
 		
 	// Management -> Contract Pricing menu item 
-	@FindBy (xpath = "/html/body/div[7]/ul/li[7]/a/span")
+	@FindBy (xpath = "//*[@id='mnuContractPricing' and @class = 'x-menu-item']")
 	public WebElement manageContractPricing;
 	
 	// Management -> Calendar menu item 

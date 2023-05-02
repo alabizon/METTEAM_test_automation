@@ -69,26 +69,26 @@ Feature: Facility Steps
     Given Login With valid credentials
     When Click Maintenance and click Facilities 
     Then "Find Facility" window is open and click Add button
-    Then Enter Customer2 Facility Name and check Customer checkbox
-    And Click Save facility button
-    Then Click Add button
+    And Enter Customer2 Facility Name and check Customer checkbox
+    Then Click Save facility button
+    And Click Add button
     Then Enter Customer3 Facility Name and check Customer checkbox
     And Click Save facility button
     Then Click Add button
-    Then Enter Manufacturer Facility Name and check Manufacturer checkbox
-    And Click Save facility button
-    Then Click Add button
+    And Enter Manufacturer Facility Name and check Manufacturer checkbox
+    Then Click Save facility button
+    And Click Add button
     Then Enter Sub Contractor Facility Name and check Sub Contractor checkbox
     And Click Save facility button
     Then Click Add button
-    Then Enter Lab1 Facility Name and check Customer checkbox
-    And Click Save facility button
-    Then Click Add button
+    And Enter Lab1 Facility Name and check Customer checkbox
+    Then Click Save facility button
+    And Click Add button
     Then Enter Lab2 Facility Name and check Customer checkbox
     And Click Save facility button
     Then Click Add button
-    Then Enter Lab3 Facility Name and check Customer checkbox
-    And Click Save facility button
+    And Enter Lab3 Facility Name and check Customer checkbox
+    Then Click Save facility button
     And Click Close button
     
       
