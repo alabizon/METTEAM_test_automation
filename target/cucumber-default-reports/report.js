@@ -5,12 +5,12 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "Create MET_TEAM Contract Pricing",
+  "name": "Verify MET_TEAM Contract Pricing",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@Create_Contract_Pricing"
+      "name": "@Verify_Contract_Pricing"
     }
   ]
 });
@@ -23,83 +23,35 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "name": "\"Find Pricing\" window is open and click Add button",
+  "name": "\"Find Pricing\" window is open",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "\"Add Contract Pricing\" window is open",
+  "name": "Find \"Description\" by entering Description and click Find button",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Click elipsis bytton next to the Custoner field",
+  "name": "Click OK button on the \"Find Pricing\" screen",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "\"Find Facility\" window is open",
+  "name": "Verify Customer is \"\u003cCustomer\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Verify Working Facility is \"\u003cWorking_Facility\u003e\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Verify Effective Date is \"\u003cEffective_Date\u003e\"",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Enter \"\u003cCustomer\u003e\" into search criteria and click Find button",
+  "name": "Verify Expire Date is \"\u003cExpire_Date\u003e\"",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Click OK button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Click ellipsis button next to the Working Facility field",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "\"Find Facility\" window is open",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Enter \"\u003cWorking_Facility\u003e\" into Facility Name search criteria and click Find button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Click OK button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Click ellipsis button next to Type Procedure Default field",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "\"Find Type Procedure Default\" window is open",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Find \"Description\" by entering Types Description and click Find button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Click OK button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Enter Contract Pricing \"\u003cEffective_Date\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Click Save button and save Contract Pricing",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Enter Pricing \"\u003cExpire_Date\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Click Save button and save Contract Pricing",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Enter \"\u003cPrice\u003e\" to the Price field",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Click Save button and click Close button to close Contract Pricing screen",
+  "name": "Verify Contract Price is \"\u003cPrice\u003e\"",
   "keyword": "And "
 });
 formatter.examples({
@@ -128,12 +80,12 @@ formatter.examples({
   ]
 });
 formatter.scenario({
-  "name": "Create MET_TEAM Contract Pricing",
+  "name": "Verify MET_TEAM Contract Pricing",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@Create_Contract_Pricing"
+      "name": "@Verify_Contract_Pricing"
     }
   ]
 });
@@ -161,18 +113,8 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Find Pricing\" window is open and click Add button",
+  "name": "\"Find Pricing\" window is open",
   "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateProcedure.window_is_open_and_click_Add_button(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "\"Add Contract Pricing\" window is open",
-  "keyword": "And "
 });
 formatter.match({
   "location": "stepDefinitions.CreateContact.window_is_open(java.lang.String)"
@@ -181,186 +123,76 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click elipsis bytton next to the Custoner field",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateContractPricing.click_elipsis_bytton_next_to_the_Custoner_field()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "\"Find Facility\" window is open",
+  "name": "Find \"Description\" by entering Description and click Find button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateContact.window_is_open(java.lang.String)"
+  "location": "stepDefinitions.VerifyType.find_by_entering_Description_and_click_Find_button(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Enter \"My First Customer\" into search criteria and click Find button",
+  "name": "Click OK button on the \"Find Pricing\" screen",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateContractPricing.enter_into_search_criteria_and_click_Find_button(java.lang.String)"
+  "location": "stepDefinitions.VerifyContractPricing.click_OK_button_on_the_screen(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click OK button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateContact.click_OK_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click ellipsis button next to the Working Facility field",
+  "name": "Verify Customer is \"My First Customer\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateContractPricing.click_ellipsis_button_next_to_the_Working_Facility_field()"
+  "location": "stepDefinitions.VerifyContractPricing.verify_Customer_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Find Facility\" window is open",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateContact.window_is_open(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter \"My Lab\" into Facility Name search criteria and click Find button",
+  "name": "Verify Working Facility is \"My Lab\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateContractPricing.enter_into_Facility_Name_search_criteria_and_click_Find_button(java.lang.String)"
+  "location": "stepDefinitions.VerifyContractPricing.verify_Working_Facility_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click OK button",
+  "name": "Verify Effective Date is \"03/25/2022\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateContact.click_OK_button()"
+  "location": "stepDefinitions.VerifyContractPricing.verify_Effective_Date_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click ellipsis button next to Type Procedure Default field",
+  "name": "Verify Expire Date is \"04/25/2022\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateContractPricing.click_ellipsis_button_next_to_Type_Procedure_Default_field()"
+  "location": "stepDefinitions.VerifyContractPricing.verify_Expire_Date_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Find Type Procedure Default\" window is open",
+  "name": "Verify Contract Price is \"257.50\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateContact.window_is_open(java.lang.String)"
+  "location": "stepDefinitions.VerifyContractPricing.verify_Contract_Price_is(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.step({
-  "name": "Find \"Description\" by entering Types Description and click Find button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateContractPricing.find_by_entering_Types_Description_and_click_Find_button(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click OK button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateContact.click_OK_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter Contract Pricing \"03/25/2022\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateContractPricing.enter_Contract_Pricing(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click Save button and save Contract Pricing",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateContractPricing.click_Save_button_and_save_Contract_Pricing()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter Pricing \"04/25/2022\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateContractPricing.enter_Pricing(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click Save button and save Contract Pricing",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateContractPricing.click_Save_button_and_save_Contract_Pricing()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter \"257.50\" to the Price field",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateContractPricing.enter_to_the_Price_field(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click Save button and click Close button to close Contract Pricing screen",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateContractPricing.click_Save_button_and_click_Close_button_to_close_Contract_Pricing_screen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.embedding("image/png", "embedded0.png", "Create MET_TEAM Contract Pricing");
+formatter.embedding("image/png", "embedded0.png", "Verify MET_TEAM Contract Pricing");
 formatter.after({
   "status": "passed"
 });

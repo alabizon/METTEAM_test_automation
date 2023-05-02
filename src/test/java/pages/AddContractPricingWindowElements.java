@@ -40,7 +40,7 @@ public class AddContractPricingWindowElements extends BaseClass {
 	@FindBy (id = "tExpireDate")
 	public WebElement pricingExpireDate;
 	
-	@FindBy (id = "nPrice")
+	@FindBy (xpath = "//*[@id='nPrice' and @class = ' x-form-text x-form-field x-abs-layout-item']")
 	public WebElement pricingPrice;
 	
 	@FindBy (id = "nStandardPrice")
