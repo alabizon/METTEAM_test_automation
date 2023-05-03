@@ -1,16 +1,16 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/ContractPricing.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/AssignProcedureToType.feature");
 formatter.feature({
-  "name": "Contract Pricing Steps",
+  "name": "Assign Procedure to a Type Steps",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "Verify MET_TEAM Contract Pricing",
+  "name": "Assign Procedure to Type",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@Verify_Contract_Pricing"
+      "name": "@AssignProcedureToType"
     }
   ]
 });
@@ -19,11 +19,11 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "name": "Click Management and click Contract Pricing",
+  "name": "Click Maintenance and click Type",
   "keyword": "When "
 });
 formatter.step({
-  "name": "\"Find Pricing\" window is open",
+  "name": "\"Find Type\" window is open",
   "keyword": "Then "
 });
 formatter.step({
@@ -31,27 +31,43 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "name": "Click OK button on the \"Find Pricing\" screen",
+  "name": "click OK button",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Verify Customer is \"\u003cCustomer\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Verify Working Facility is \"\u003cWorking_Facility\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Verify Effective Date is \"\u003cEffective_Date\u003e\"",
+  "name": "Click Add Procedure Link button and \"Add Type Default Procedure\" window opens",
   "keyword": "And "
 });
 formatter.step({
-  "name": "Verify Expire Date is \"\u003cExpire_Date\u003e\"",
+  "name": "click Refresh button",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Verify Contract Price is \"\u003cPrice\u003e\"",
+  "name": "Click ellipsis button next to Procedure Name field",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "\"Find Procedure\" window is open",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Find \"Procedure Name\" by entering Procedure Name into search criteria and click Find button",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "Click OK button",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Enter intrval \"\u003cInterval\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "Click Save button",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Click Close button on the Edit Types screen",
   "keyword": "And "
 });
 formatter.examples({
@@ -61,31 +77,25 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "Customer",
-        "Working_Facility",
-        "Effective_Date",
-        "Expire_Date",
-        "Price"
+        "Interval",
+        ""
       ]
     },
     {
       "cells": [
-        "My First Customer",
-        "My Lab",
-        "03/25/2022",
-        "04/25/2022",
-        "257.50"
+        "12",
+        ""
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Verify MET_TEAM Contract Pricing",
+  "name": "Assign Procedure to Type",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@Verify_Contract_Pricing"
+      "name": "@AssignProcedureToType"
     }
   ]
 });
@@ -103,17 +113,17 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click Management and click Contract Pricing",
+  "name": "Click Maintenance and click Type",
   "keyword": "When "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateContractPricing.click_Management_and_click_Contract_Pricing()"
+  "location": "stepDefinitions.CreateType.click_Maintenance_and_click_Type()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Find Pricing\" window is open",
+  "name": "\"Find Type\" window is open",
   "keyword": "Then "
 });
 formatter.match({
@@ -133,66 +143,106 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click OK button on the \"Find Pricing\" screen",
+  "name": "click OK button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyContractPricing.click_OK_button_on_the_screen(java.lang.String)"
+  "location": "stepDefinitions.AssignProcedureToType.click_OK_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Customer is \"My First Customer\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyContractPricing.verify_Customer_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify Working Facility is \"My Lab\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.VerifyContractPricing.verify_Working_Facility_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify Effective Date is \"03/25/2022\"",
+  "name": "Click Add Procedure Link button and \"Add Type Default Procedure\" window opens",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyContractPricing.verify_Effective_Date_is(java.lang.String)"
+  "location": "stepDefinitions.AssignProcedureToType.click_Add_Procedure_Link_button_and_window_opens(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Expire Date is \"04/25/2022\"",
+  "name": "click Refresh button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyContractPricing.verify_Expire_Date_is(java.lang.String)"
+  "location": "stepDefinitions.AssignProcedureToType.click_Refresh_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify Contract Price is \"257.50\"",
+  "name": "Click ellipsis button next to Procedure Name field",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyContractPricing.verify_Contract_Price_is(java.lang.String)"
+  "location": "stepDefinitions.AssignProcedureToType.click_ellipsis_button_next_to_Procedure_Name_field()"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png", "Verify MET_TEAM Contract Pricing");
+formatter.step({
+  "name": "\"Find Procedure\" window is open",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.CreateContact.window_is_open(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Find \"Procedure Name\" by entering Procedure Name into search criteria and click Find button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.AssignProcedureToType.find_by_entering_Procedure_Name_into_search_criteria_and_click_Find_button(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click OK button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.CreateContact.click_OK_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Enter intrval \"12\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.AssignProcedureToType.enter_intrval(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click Save button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.CreateShipping.click_Save_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click Close button on the Edit Types screen",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefinitions.AssignProcedureToType.click_Close_button_on_the_Edit_Types_screen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.embedding("image/png", "embedded0.png", "Assign Procedure to Type");
 formatter.after({
   "status": "passed"
 });

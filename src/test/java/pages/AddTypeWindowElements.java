@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -57,6 +59,15 @@ public class AddTypeWindowElements extends BaseClass {
 	
 	@FindBy (xpath = "(//*[@type ='button' and  @class = ' x-btn-text btn-add-sm'])[1]")
 	public WebElement typeAddProcedureLink;
+	
+	@FindBy (xpath = "//*[@class = 'x-tool x-tool-refresh']")
+	public List<WebElement> sizeRefreshButton;
+	
+	@FindBy (xpath = "(//*[@class = 'x-tool x-tool-refresh'])[1]")
+	public WebElement refreshButton1;
+
+	@FindBy (xpath = "(//*[@class = 'x-tool x-tool-refresh'])[2]")
+	public WebElement refreshButton2;
 	
 	@FindBy (id = "tbSave")
 	public WebElement typeSave;

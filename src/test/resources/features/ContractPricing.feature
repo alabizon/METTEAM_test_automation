@@ -32,7 +32,7 @@ Feature: Contract Pricing Steps
       | My First Customer | My Lab           | 03/25/2022     | 04/25/2022  | 257.50 |
       
       
-  @Verify_Contract_Pricing
+  @Verify_Contract_Pricing @Create_Contract_Pricing
   Scenario Outline: Verify MET_TEAM Contract Pricing
     Given Login With valid credentials
     When Click Management and click Contract Pricing

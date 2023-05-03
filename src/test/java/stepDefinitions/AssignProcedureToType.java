@@ -30,6 +30,12 @@ public class AssignProcedureToType extends CommonMethods {
 		
 	}
 	
+	@Then("click Refresh button")
+	public void click_Refresh_button() throws Throwable {
+		CommonMethods.refreshElement();
+		
+	}
+	
 	@Then("Click ellipsis button next to Procedure Name field")
 	public void click_ellipsis_button_next_to_Procedure_Name_field() {
 		driver.switchTo().defaultContent();

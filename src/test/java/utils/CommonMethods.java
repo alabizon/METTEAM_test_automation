@@ -474,6 +474,25 @@ public class CommonMethods extends PageInitializer {
 		}
 	}
 	
+	/**
+	 * This method will do "Refresh" button clicking on the active frame. 
+	 * 	 */
+	
+	public static void refreshElement() throws Throwable {
+		driver.switchTo().defaultContent();
+		Actions actions = new Actions(driver);
+			if(addTypeWindowElements.sizeRefreshButton.size()>1){
+				Thread.sleep(1000);
+				actions.click(addTypeWindowElements.refreshButton2).build().perform();
+				JsCommonMethods.drawBlueBorder(addTypeWindowElements.refreshButton2);
+			}
+			if(addTypeWindowElements.sizeRefreshButton.size()==1) {
+				Thread.sleep(1000);
+				actions.click(addTypeWindowElements.refreshButton1).build().perform();
+				JsCommonMethods.drawBlueBorder(addTypeWindowElements.refreshButton1);
+			}
+	}
+	
 }
 
 	
