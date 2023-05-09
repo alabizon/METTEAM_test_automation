@@ -48,7 +48,7 @@ public class ReceivingWindowElements extends BaseClass {
 	@FindBy (xpath = "//*[@id ='cArea']/following-sibling::img")
 	public WebElement receivingWorkAreaButton;
 	
-	@FindBy (xpath = "//*[@class='combo-result-item']/div")
+	@FindBy (xpath = "(//*[@class='x-combo-list-inner'])[1]/div")
 	public List<WebElement> receivingWorkAreaList;
 	
 	@FindBy (id = "cArea")
@@ -60,7 +60,7 @@ public class ReceivingWindowElements extends BaseClass {
 	@FindBy (xpath = "//*[@id ='cServiceReason']/following-sibling::img")
 	public WebElement receivingReasonOfServiceButton;
 	
-	@FindBy (xpath = "//*[@class='combo-result-item']/div")
+	@FindBy (xpath = "(//*[@class='x-combo-list-inner'])[2]/div")
 	public List<WebElement> receivingReasonOfServiceList;
 	
 	@FindBy (id = "cServiceReason")
@@ -72,7 +72,7 @@ public class ReceivingWindowElements extends BaseClass {
 	@FindBy (xpath = "//*[@id ='cInitialCondition']/following-sibling::img")
 	public WebElement receivingInitialConditionButton;
 	
-	@FindBy (xpath = "//*[@class='combo-result-item']/div")
+	@FindBy (xpath = "(//*[@class='x-combo-list-inner'])[3]/div")
 	public List<WebElement> receivingInitialConditionList;
 	
 	@FindBy (id = "cInitialCondition")
@@ -129,7 +129,7 @@ public class ReceivingWindowElements extends BaseClass {
 	@FindBy (xpath = "//*[@id ='cCallSheetType']/following-sibling::img")
 	public WebElement receivingServiceTypeButton;
 	
-	@FindBy (xpath = "//*[@class='combo-result-item']/div")
+	@FindBy (xpath = "(//*[@class='x-combo-list-inner'])[4]/div")
 	public List<WebElement> receivingServiceTypeList;
 	
 	@FindBy (id = "cCallSheetType")
@@ -141,7 +141,7 @@ public class ReceivingWindowElements extends BaseClass {
 	@FindBy (xpath = "//*[@id ='cCallSheetStatus']/following-sibling::img")
 	public WebElement receivingStatusButton;
 	
-	@FindBy (xpath = "//*[@class='combo-result-item']/div")
+	@FindBy (xpath = "(//*[@class='x-combo-list-inner'])[5]/div")
 	public List<WebElement> receivingStatusList;
 	
 	@FindBy (id = "cCallSheetStatus")
@@ -189,10 +189,10 @@ public class ReceivingWindowElements extends BaseClass {
 	@FindBy (xpath = "//*[@type ='button' and  @class = ' x-btn-text btn-delete-sm']")
 	public WebElement receivingRemoveAssetButton;
 	
-	@FindBy (xpath = "")
+	@FindBy (xpath = "(//*[@class = ' x-btn-text btn-modify-sm'])[1]")
 	public WebElement receivingEditAssetButton;
 	
-	@FindBy (xpath = "")
+	@FindBy (xpath = "(//*[@class = ' x-btn-text btn-modify-sm'])[2]")
 	public WebElement receivingEditWOButton;
 	
 	@FindBy (id = "copyExt")
