@@ -36,7 +36,7 @@ public class AddLogNoteWindowElements extends BaseClass {
 	@FindBy (id = "nUserUID_display")
 	public WebElement addlognoteUser;
 	
-	@FindBy (id = "")
+	@FindBy (xpath = "//*[@id='tbSave' and @class = 'x-btn x-btn-icon-text x-btn-text-icon']")
 	public WebElement addlognoteSaveButton;
 	
 	@FindBy (id = "")
