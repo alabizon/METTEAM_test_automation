@@ -27,6 +27,9 @@ public class ReceivingWindowElements extends BaseClass {
 	@FindBy (xpath = "//*[@type='button' and contains(text(),'Process')]")
 	public WebElement receivingProcessButton;
 	
+	@FindBy (xpath = "//*[@type='button' and contains(text(),'OK')]")
+	public WebElement receivingAttentionOK;
+	
 	@FindBy (xpath = "//*[@type='button' and contains(text(),'Close')]")
 	public WebElement receivingCloseButton;
 	
@@ -171,7 +174,7 @@ public class ReceivingWindowElements extends BaseClass {
 	@FindBy (id = "chkCopynCategoryUID")
 	public WebElement receivingCategoryCheckbox;
 	
-	@FindBy (id = "//*[@id ='nSubCategoryUID_display']/following-sibling::img")
+	@FindBy (xpath = "//*[@id ='nSubCategoryUID_display']/following-sibling::img")
 	public WebElement elipsisSubCategory;
 	
 	@FindBy (id = "nSubCategoryUID_display")
