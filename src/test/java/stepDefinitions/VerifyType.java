@@ -1,7 +1,6 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import utils.CommonMethods;
 import utils.Constants;
 import utils.ExcelUtility;

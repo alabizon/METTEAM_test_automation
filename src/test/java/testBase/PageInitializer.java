@@ -22,7 +22,6 @@ import pages.ConsoleMenuMetTeamElements;
 import pages.EditWorkOrderElements;
 import pages.FindFacilityWindowElements;
 import pages.FindScreenWindowElements;
-import pages.FindTypeWindowElements;
 import pages.Frames;
 import pages.LoginPageElements;
 import pages.MaintenanceSubMenuElements;

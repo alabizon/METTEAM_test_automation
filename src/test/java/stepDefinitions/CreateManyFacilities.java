@@ -1,13 +1,9 @@
 package stepDefinitions;
 
-import org.junit.Assert;
-
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import utils.CommonMethods;
 import utils.Constants;
 import utils.ExcelUtility;
-import utils.JsCommonMethods;
 
 public class CreateManyFacilities extends CommonMethods {
 	
@@ -133,31 +129,6 @@ public class CreateManyFacilities extends CommonMethods {
 		
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
 
 
