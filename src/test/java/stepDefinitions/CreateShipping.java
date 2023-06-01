@@ -60,11 +60,8 @@ public class CreateShipping extends CommonMethods {
 		ShipmentName = "Shipment_"+CommonMethods.getDateAsString();
 		CommonMethods.sendKeys(addShippingWindowElements.shipShipmentName, ShipmentName);
 		CommonMethods.sendKeys(addShippingWindowElements.shipLocation, "TestLocation");
-		
-		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
-		ExcelUtility.getSheet("TestExel");
-		ExcelUtility.writeStringRow(ShipmentName, Constants.SHIPPING_CELL);
-		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+				
+		ExcelUtility.writeToExcel(Constants.TESTDATA_FILEPATH, "TestExel", Constants.SHIPPING_CELL, 1, ShipmentName);
 				
 	}
 	

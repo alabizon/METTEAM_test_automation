@@ -40,11 +40,8 @@ public class CreateAccreditation extends CommonMethods {
 		CommonMethods.waitForVisib(addAccreditationWindowElements.accredCode);
 		AccreditationCode = "Accreditation_"+CommonMethods.getDateAsString();
 		CommonMethods.sendKeys(addAccreditationWindowElements.accredCode, AccreditationCode);
-		
-		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
-		ExcelUtility.getSheet("TestExel");
-		ExcelUtility.writeStringRow(AccreditationCode, Constants.ACCREDITATION_CELL);
-		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+			
+		ExcelUtility.writeToExcel(Constants.TESTDATA_FILEPATH, "TestExel", Constants.ACCREDITATION_CELL, 1, AccreditationCode);
 		
 		CommonMethods.sendKeys(addAccreditationWindowElements.accredType, "22");
 		CommonMethods.sendKeys(addAccreditationWindowElements.accredDescription, "Auto");

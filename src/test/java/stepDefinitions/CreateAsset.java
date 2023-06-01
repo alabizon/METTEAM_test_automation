@@ -32,11 +32,8 @@ public class CreateAsset extends CommonMethods {
 		CommonMethods.waitForVisib(addAssetWindowElements.assetID);
 		addAssetWindowElements.assetID.clear();
 		CommonMethods.sendKeys(addAssetWindowElements.assetID, Barcode);
-		
-		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
-		ExcelUtility.getSheet("TestExel");
-		ExcelUtility.writeStringRow(Barcode, Constants.ASSET_CELL);
-		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+				
+		ExcelUtility.writeToExcel(Constants.TESTDATA_FILEPATH, "TestExel", Constants.ASSET_CELL, 1, Barcode);
 		
 	}
 	

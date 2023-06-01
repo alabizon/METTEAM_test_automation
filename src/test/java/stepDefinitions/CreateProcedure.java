@@ -35,11 +35,8 @@ public class CreateProcedure extends CommonMethods {
 		ProcedureName = "Procedure_"+CommonMethods.getDateAsString();
 		CommonMethods.waitForVisib(addProcedureWindowElements.procName);
 		CommonMethods.sendKeys(addProcedureWindowElements.procName, ProcedureName);
-		
-		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
-		ExcelUtility.getSheet("TestExel");
-		ExcelUtility.writeStringRow(ProcedureName, Constants.PROCEDURE_CELL);
-		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+				
+		ExcelUtility.writeToExcel(Constants.TESTDATA_FILEPATH, "TestExel", Constants.PROCEDURE_CELL, 1, ProcedureName);
 				
 	}
 	

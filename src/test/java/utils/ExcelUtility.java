@@ -94,9 +94,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 		/**
 		 * This method write in to specific row using String value
 		 */
-		public static void writeStringRow(String value, int rowIndex) {
+		public static void writeStringRow(String value, int rowIndex, int cellIndex) {
 		    row = sheet.createRow(rowIndex);
-		    cell = row.createCell(1);
+		    cell = row.createCell(cellIndex);
 		    cell.setCellValue(value);
 		}
 		
@@ -174,5 +174,32 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 			return list;
 		}
 	
+		public static void writeToExcel(String filePath, String sheetName, int rowNum, int colNum, String data) {
+	        try {
+	            FileInputStream fis = new FileInputStream(filePath);
+	            Workbook workbook = new XSSFWorkbook(fis);
+	            Sheet sheet = workbook.getSheet(sheetName);
+
+	            Row row = sheet.getRow(rowNum);
+	            if (row == null) {
+	                row = sheet.createRow(rowNum);
+	            }
+
+	            Cell cell = row.getCell(colNum);
+	            if (cell == null) {
+	                cell = row.createCell(colNum);
+	            }
+
+	            cell.setCellValue(data);
+
+	            FileOutputStream fos = new FileOutputStream(filePath);
+	            workbook.write(fos);
+	            fos.close();
+
+	 
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	    }
 
 	}

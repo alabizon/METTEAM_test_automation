@@ -29,11 +29,8 @@ public class CreateFacility extends CommonMethods {
 		CommonMethods.waitForVisib(addFacilityWindowElements.facilityName);
 		FacilityName = "Facility_Cust1_"+CommonMethods.getDateAsString();
 		CommonMethods.sendKeys(addFacilityWindowElements.facilityName, FacilityName);
-		
-		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
-		ExcelUtility.getSheet("TestExel");
-		ExcelUtility.writeStringRow(FacilityName, Constants.FACILITY_CUST1_CELL);
-		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+				
+		ExcelUtility.writeToExcel(Constants.TESTDATA_FILEPATH, "TestExel", Constants.FACILITY_CUST1_CELL, 1, FacilityName);
 		
 		CommonMethods.sendKeys(addFacilityWindowElements.facilityTaxNumber, "33333");
 		CommonMethods.sendKeys(addFacilityWindowElements.facilityNumber, "12345");

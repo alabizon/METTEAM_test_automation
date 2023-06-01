@@ -37,11 +37,8 @@ public class CreateType extends CommonMethods {
 		TypeDescription = "Type_"+CommonMethods.getDateAsString();
 		CommonMethods.waitForVisib(addTypeWindowElements.typeDescription);
 		CommonMethods.sendKeys(addTypeWindowElements.typeDescription, TypeDescription);
-		
-		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
-		ExcelUtility.getSheet("TestExel");
-		ExcelUtility.writeStringRow(TypeDescription, Constants.TYPE_CELL);
-		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+				
+		ExcelUtility.writeToExcel(Constants.TESTDATA_FILEPATH, "TestExel", Constants.TYPE_CELL, 1, TypeDescription);
 				
 	}
 	

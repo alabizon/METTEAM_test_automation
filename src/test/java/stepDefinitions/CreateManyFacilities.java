@@ -16,11 +16,8 @@ public class CreateManyFacilities extends CommonMethods {
 		CommonMethods.waitForVisib(addFacilityWindowElements.facilityName);
 		FacilityName = "Facility_Cust2_"+CommonMethods.getDateAsString();
 		CommonMethods.sendKeys(addFacilityWindowElements.facilityName, FacilityName);
-		
-		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
-		ExcelUtility.getSheet("TestExel");
-		ExcelUtility.writeStringRow(FacilityName, Constants.FACILITY_CUST2_CELL);
-		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+				
+		ExcelUtility.writeToExcel(Constants.TESTDATA_FILEPATH, "TestExel", Constants.FACILITY_CUST2_CELL, 1, FacilityName);
 		
 		CommonMethods.click(addFacilityWindowElements.facilityCustomer);
 		
@@ -44,11 +41,8 @@ public class CreateManyFacilities extends CommonMethods {
 		CommonMethods.waitForVisib(addFacilityWindowElements.facilityName);
 		FacilityName = "Facility_Cust3_"+CommonMethods.getDateAsString();
 		CommonMethods.sendKeys(addFacilityWindowElements.facilityName, FacilityName);
-		
-		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
-		ExcelUtility.getSheet("TestExel");
-		ExcelUtility.writeStringRow(FacilityName, Constants.FACILITY_CUST3_CELL);
-		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+				
+		ExcelUtility.writeToExcel(Constants.TESTDATA_FILEPATH, "TestExel", Constants.FACILITY_CUST3_CELL, 1, FacilityName);
 		
 		CommonMethods.click(addFacilityWindowElements.facilityCustomer);
 		
@@ -59,11 +53,8 @@ public class CreateManyFacilities extends CommonMethods {
 		CommonMethods.waitForVisib(addFacilityWindowElements.facilityName);
 		FacilityName = "Facility_Manufacturer_"+CommonMethods.getDateAsString();
 		CommonMethods.sendKeys(addFacilityWindowElements.facilityName, FacilityName);
-		
-		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
-		ExcelUtility.getSheet("TestExel");
-		ExcelUtility.writeStringRow(FacilityName, Constants.FACILITY_MANUFACTURER_CELL);
-		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+				
+		ExcelUtility.writeToExcel(Constants.TESTDATA_FILEPATH, "TestExel", Constants.FACILITY_MANUFACTURER_CELL, 1, FacilityName);
 		
 		CommonMethods.click(addFacilityWindowElements.facilityManufacturer);
 		
@@ -74,11 +65,8 @@ public class CreateManyFacilities extends CommonMethods {
 		CommonMethods.waitForVisib(addFacilityWindowElements.facilityName);
 		FacilityName = "Facility_Subcontractor_"+CommonMethods.getDateAsString();
 		CommonMethods.sendKeys(addFacilityWindowElements.facilityName, FacilityName);
-		
-		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
-		ExcelUtility.getSheet("TestExel");
-		ExcelUtility.writeStringRow(FacilityName, Constants.FACILITY_SUBCONTRACTOR_CELL);
-		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+				
+		ExcelUtility.writeToExcel(Constants.TESTDATA_FILEPATH, "TestExel", Constants.FACILITY_SUBCONTRACTOR_CELL, 1, FacilityName);
 		
 		CommonMethods.click(addFacilityWindowElements.facilitySubContractor);
 		
@@ -89,11 +77,8 @@ public class CreateManyFacilities extends CommonMethods {
 		CommonMethods.waitForVisib(addFacilityWindowElements.facilityName);
 		FacilityName = "Facility_Lab1_"+CommonMethods.getDateAsString();
 		CommonMethods.sendKeys(addFacilityWindowElements.facilityName, FacilityName);
-		
-		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
-		ExcelUtility.getSheet("TestExel");
-		ExcelUtility.writeStringRow(FacilityName, Constants.FACILITY_LAB1_CELL);
-		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+				
+		ExcelUtility.writeToExcel(Constants.TESTDATA_FILEPATH, "TestExel", Constants.FACILITY_LAB1_CELL, 1, FacilityName);
 		
 		CommonMethods.click(addFacilityWindowElements.facilityLab);
 		
@@ -104,11 +89,8 @@ public class CreateManyFacilities extends CommonMethods {
 		CommonMethods.waitForVisib(addFacilityWindowElements.facilityName);
 		FacilityName = "Facility_Lab2_"+CommonMethods.getDateAsString();
 		CommonMethods.sendKeys(addFacilityWindowElements.facilityName, FacilityName);
-		
-		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
-		ExcelUtility.getSheet("TestExel");
-		ExcelUtility.writeStringRow(FacilityName, Constants.FACILITY_LAB2_CELL);
-		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+				
+		ExcelUtility.writeToExcel(Constants.TESTDATA_FILEPATH, "TestExel", Constants.FACILITY_LAB2_CELL, 1, FacilityName);
 		
 		CommonMethods.click(addFacilityWindowElements.facilityLab);
 		
@@ -119,11 +101,8 @@ public class CreateManyFacilities extends CommonMethods {
 		CommonMethods.waitForVisib(addFacilityWindowElements.facilityName);
 		FacilityName = "Facility_Lab3_"+CommonMethods.getDateAsString();
 		CommonMethods.sendKeys(addFacilityWindowElements.facilityName, FacilityName);
-		
-		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
-		ExcelUtility.getSheet("TestExel");
-		ExcelUtility.writeStringRow(FacilityName, Constants.FACILITY_LAB3_CELL);
-		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+				
+		ExcelUtility.writeToExcel(Constants.TESTDATA_FILEPATH, "TestExel", Constants.FACILITY_LAB3_CELL, 1, FacilityName);
 		
 		CommonMethods.click(addFacilityWindowElements.facilityLab);
 		

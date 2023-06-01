@@ -33,11 +33,8 @@ public class CreateContact extends CommonMethods {
 		CommonMethods.sendKeys(addContactWindowElements.contactId, ContactId);
 		CommonMethods.sendKeys(addContactWindowElements.contactFirstName, "John");
 		CommonMethods.sendKeys(addContactWindowElements.contactMiddleName, "Bill");
-		
-		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
-		ExcelUtility.getSheet("TestExel");
-		ExcelUtility.writeStringRow(ContactId, Constants.CONTACT_CELL);
-		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+				
+		ExcelUtility.writeToExcel(Constants.TESTDATA_FILEPATH, "TestExel", Constants.CONTACT_CELL, 1, ContactId);
 		
 	}
 	

@@ -21,17 +21,14 @@ public class CreateTemplate extends CommonMethods {
 
 	}
 
-	@Then("{string} window is open and enter Template Name and click Template_Design tab")
-	public void window_is_open_and_enter_Template_Name_and_click_Template_Design_tab(String string) {
+	@Then("Add Manual Template window is open and enter Template Name and click Template_Design tab")
+	public void add_Manual_Template_window_is_open_and_enter_Template_Name_and_click_Template_Design_tab() {
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame2);
 		TemplateName = "Template_"+CommonMethods.getDateAsString();
 		CommonMethods.sendKeys(addTemplateWindowElements.tempateName, TemplateName);
-		
-		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
-		ExcelUtility.getSheet("TestExel");
-		ExcelUtility.writeStringRow(TemplateName, Constants.MANUAL_TEMPLATE_CELL);
-		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+				
+		ExcelUtility.writeToExcel(Constants.TESTDATA_FILEPATH, "TestExel", Constants.MANUAL_TEMPLATE_CELL, 1, TemplateName);
 		
 		CommonMethods.click(addTemplateWindowElements.templateTabTemplateDesign);
 		
@@ -43,8 +40,8 @@ public class CreateTemplate extends CommonMethods {
 		driver.switchTo().defaultContent();
 		Point point1 = addTemplateWindowElements.templateLeftBorder.getLocation();
 		int leftBorderCoord = point1.getX();
-		Point point2 = addTemplateWindowElements.templateRightBorder.getLocation();
-		int rightBorderCoord = point2.getX();
+		//Point point2 = addTemplateWindowElements.templateRightBorder.getLocation();
+		//int rightBorderCoord = point2.getX();
 		//System.out.print("----------------------------- " + leftBorderCoord);
 		//System.out.print("----------------------------- " + rightBorderCoord);
 		

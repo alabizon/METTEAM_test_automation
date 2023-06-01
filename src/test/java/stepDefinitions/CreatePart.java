@@ -38,11 +38,8 @@ public class CreatePart extends CommonMethods {
 		CommonMethods.waitForVisib(addPartWindowElements.partDescription);
 		PartDescription = "Part_"+CommonMethods.getDateAsString();
 		CommonMethods.sendKeys(addPartWindowElements.partDescription, PartDescription);
-		
-		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
-		ExcelUtility.getSheet("TestExel");
-		ExcelUtility.writeStringRow(PartDescription, Constants.PART_CELL);
-		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+				
+		ExcelUtility.writeToExcel(Constants.TESTDATA_FILEPATH, "TestExel", Constants.PART_CELL, 1, PartDescription);
 		
 	}
 	
