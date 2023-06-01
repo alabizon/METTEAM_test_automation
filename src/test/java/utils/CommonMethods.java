@@ -50,6 +50,16 @@ public class CommonMethods extends PageInitializer {
 	}
 	
 	/**
+	 * Use this method for drag and drop of WebElement by Selenium WebDriver.
+	 * 
+	 * @param int1 - xOffset, int2 - yOffset.
+	 */
+	public static void dragAndDrop(WebElement element, int int1, int int2) {
+		Actions actions = new Actions(driver);
+		actions.dragAndDropBy(element, int1, int2).build().perform();
+	}
+	
+	/**
 	 * Use this method in need of right-clicking on a WebElement by selenium WebDriver.
 	 * @param element Pass the desired WebElement to be right-clicked times.
 	 */

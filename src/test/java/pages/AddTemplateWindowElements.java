@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -22,35 +24,44 @@ public class AddTemplateWindowElements extends BaseClass {
 	@FindBy (xpath = "(//*[@class = 'x-tab-right'])[2]")
 	public WebElement templateTabTemplateDesign;
 	
-	@FindBy (xpath = "/html/body/div[4]/div/form/div/div/div/div/div[2]/div/div[2]/div/div/div/div/div/div/div[1]/div[2]")
+	@FindBy (xpath = "//*[@class = 'x-grid3-body']")
 	public WebElement templateDesignSpace;
 	
-	@FindBy (xpath = "/html/body/div[10]/ul/li[1]")
+	@FindBy (xpath = "(//*[text()='Add Row'])[1]")
+	public WebElement templateSubmenuAddRowFirst;
+	
+	@FindBy (xpath = "(//*[text()='Add Row'])[3]")
 	public WebElement templateSubmenuAddRow;
 	
-	@FindBy (xpath = "/html/body/div[10]/ul/li[2]")
+	@FindBy (xpath = "(//*[text()='Copy Row'])[3]")
 	public WebElement templateSubmenuCopyRow;
 	
-	@FindBy (xpath = "/html/body/div[10]/ul/li[3]")
+	@FindBy (xpath = "(//*[text()='Remove Row'])[3]")
 	public WebElement templateSubmenuRemoveRow;
 	
-	@FindBy (xpath = "/html/body/div[10]/ul/li[5]")
+	@FindBy (xpath = "(//*[text()='Update Formula'])[3]")
 	public WebElement templateSubmenuUpdateFormula;
 	
-	@FindBy (xpath = "/html/body/div[10]/ul/li[6]")
+	@FindBy (xpath = "(//*[text()='Delete Formula'])[3]")
 	public WebElement templateSubmenuDeleteFormula;
 	
-	@FindBy (xpath = "/html/body/div[10]/ul/li[8]")
+	@FindBy (xpath = "(//*[text()='Remove All'])[3]")
 	public WebElement templateSubmenuRemoveAll;
 	
-	@FindBy (xpath = "/html/body/div[10]/ul/li[10]")
+	@FindBy (xpath = "(//*[text()='Resequence Steps'])[3]")
 	public WebElement templateSubmenuResequence;
 	
-	@FindBy (xpath = "/html/body/div[10]/ul/li[12]")
+	@FindBy (xpath = "(//*[text()='Step Wizard'])[1]")
 	public WebElement templateSubmenuStepWizard;
 	
-	@FindBy (xpath = "/html/body/div[10]/ul/li[13]")
+	@FindBy (xpath = "(//*[text()='Step Wizard (Transducer)'])[3]")
 	public WebElement templateSubmenuStepWizardTrans;
+	
+	@FindBy (xpath = "//*[@class = 'x-resizable-handle x-resizable-handle-west x-unselectable x-window-handle']")
+	public WebElement templateLeftBorder;
+	
+	@FindBy (xpath = "//*[@class = 'x-resizable-handle x-resizable-handle-east x-unselectable x-window-handle']")
+	public WebElement templateRightBorder;
 	
 	@FindBy (xpath = "(//*[@class = 'x-grid3-cell-inner x-grid3-col-2'])[1]")
 	public WebElement templateDescription1;
@@ -172,22 +183,50 @@ public class AddTemplateWindowElements extends BaseClass {
 	@FindBy (xpath = "(//*[@class = 'x-grid3-cell-inner x-grid3-col-7'])[10]")
 	public WebElement templateNominal10;
 	
+	/////////////////////////////////////////////////////
+	//
+	//  Step Wizard Elements
+	//
+	/////////////////////////////////////////////////////
 	
+	@FindBy (id = "txtWizardStart")
+	public WebElement templateWizStart;
 	
+	@FindBy (id = "txtWizardEnd")
+	public WebElement templateWizEnd;
 	
+	@FindBy (id = "txtWizardStepSize")
+	public WebElement templateWizStepSize;
 	
+	@FindBy (xpath = "(//*[@class = 'x-form-trigger x-form-arrow-trigger'])[1]")
+	public WebElement templateWizUnitButton;
 	
+	@FindBy (id = "")
+	public WebElement templateWizUnits;
 	
+	@FindBy (xpath = "//*[@class = 'x-combo-list-inner']/div")
+	public List<WebElement> templateWizUnit;
 	
+	@FindBy (id = "txtReadingError")
+	public WebElement templateWizReading;
 	
+	@FindBy (id = "txtFullScaleError")
+	public WebElement templateWizFs;
 	
+	@FindBy (id = "txtFloor")
+	public WebElement templateWizFloor;
 	
+	@FindBy (id = "txtWizardResolution")
+	public WebElement templateWizResolution;
 	
-	@FindBy (id = "btnSave")
-	public WebElement partSave;
+	@FindBy (xpath = "(//*[@type ='button' and  @class = ' x-btn-text tb-save'])[2]")
+	public WebElement templateWizSave;
 	
-	@FindBy (id = "btnClose")
-	public WebElement partClose;
+	@FindBy (xpath = "//*[@type ='button' and  @class = ' x-btn-text tb-save']")
+	public WebElement templateSave;
+	
+	@FindBy (xpath = "//*[@type ='button' and  @class = ' x-btn-text tb-close']")
+	public WebElement templateClose;
 	
 	
 	/**

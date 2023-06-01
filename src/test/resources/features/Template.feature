@@ -6,42 +6,12 @@ Feature: Template Steps
     When Click Maintenance and click Manual Templates
     Then "Find Manual Template" window opens and click Add button
     And "Add Manual Template" window is open and enter Template Name and click Template_Design tab
-    Then Right-click and select "Add_Row" from context menu
-    And Right-click and select "Add_Row" from context menu
-    Then Right-click and select "Add_Row" from context menu
-    And Right-click and select "Add_Row" from context menu
-    Then Right-click and select "Add_Row" from context menu
-    And Right-click and select "Add_Row" from context menu
-    Then Right-click and select "Add_Row" from context menu
-    And Right-click and select "Add_Row" from context menu
-    Then Right-click and select "Add_Row" from context menu
-    And Right-click and select "Add_Row" from context menu
-    Then Double-click Row Type Line1 and select "Blank" and click Nominal field
-    #And Click Description Line2 and enter "Test_Description_2"
-    #Then Click Label Line2 and enter "Test_Label_2"
-    #And Click Nominal Line2 field and enter "52.78"
-    #Then Click Unit Line2 field and select "V"
-    #And Click Low Limit Line2 field and enter "50.56"
-    #Then Click High Limit Line2 field and enter "54.35"
-    #And Click Resolution Line2 field and enter "3"
-    #Then Click TUR Line2 field and enter "4"
-    #And Click Uncertainty Line2 field and enter "0.2" 
-    #Then Click Description Line3 and enter "Test_Description_3"
-    #And Click Label Line3 and enter "Test_Label_3"
-    #Then Click Row Type Line3 and select "<=Limit"
-    #And Click Nominal Line3 field and enter "82.63" 
-    #Then Click Unit Line3 field and select "V"
-    #And Click High Limit Line3 field and enter "86.24"
-    #Then Click TUR Line3 field and enter "4"
-    #And Click Uncertainty Line3 field and enter "0.2" 
-    #Then Click Description Line4 and enter "Test_Description_4"
-    #And Click Label Line4 and enter "Test_Label_4"
-    #Then Click Row Type Line4 and select ">=Limit"
-    #And Click Nominal Line4 field and enter "38.26"
-    #Then Click Unit Line4 field and select "V"
-    #And Click Low Limit Line4 field and enter "35.53"
-    #Then Click TUR Line4 field and enter "4"
-    #And Click Uncertainty Line4 field and enter "0.2" 
+    Then drag right border, extend and drop it
+    And Right-click and select "Step Wizard" from context menu
+    Then Enter Start, End, Step Size and select "<Unit>" Unit
+    And Enter %Reading, %FS, Floor and Resolution
+    Then Click Save wizard, click Save template and click Close
+    
     #Then Click Description Line5 and enter "Test_Description_5"
     #And Click Label Line5 and enter "Test_Label_5"
     #Then Click Row Type Line5 and select "Y=Pass" and click Nominal field
@@ -70,5 +40,5 @@ Feature: Template Steps
     
 
     Examples: 
-      |  |    |
-      |  |    |
+      | Unit |    |
+      | mV   |    |

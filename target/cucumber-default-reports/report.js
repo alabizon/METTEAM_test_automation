@@ -1,16 +1,19 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/AssignProcedureToType.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Template.feature");
 formatter.feature({
-  "name": "Assign Procedure to a Type Steps",
+  "name": "Template Steps",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "Assign Procedure to Type",
+  "name": "Create MET_TEAM Template",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@AssignProcedureToType"
+      "name": "@Create_Template"
+    },
+    {
+      "name": "@Alex"
     }
   ]
 });
@@ -19,56 +22,36 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "name": "Click Maintenance and click Type",
+  "name": "Click Maintenance and click Manual Templates",
   "keyword": "When "
 });
 formatter.step({
-  "name": "\"Find Type\" window is open",
+  "name": "\"Find Manual Template\" window opens and click Add button",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Find \"Description\" by entering Description and click Find button",
+  "name": "\"Add Manual Template\" window is open and enter Template Name and click Template_Design tab",
   "keyword": "And "
 });
 formatter.step({
-  "name": "click OK button",
+  "name": "drag right border, extend and drop it",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Click Add Procedure Link button and \"Add Type Default Procedure\" window opens",
+  "name": "Right-click and select \"Step Wizard\" from context menu",
   "keyword": "And "
 });
 formatter.step({
-  "name": "click Refresh button",
+  "name": "Enter Start, End, Step Size and select \"\u003cUnit\u003e\" Unit",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "Click ellipsis button next to Procedure Name field",
+  "name": "Enter %Reading, %FS, Floor and Resolution",
   "keyword": "And "
 });
 formatter.step({
-  "name": "\"Find Procedure\" window is open",
+  "name": "Click Save wizard, click Save template and click Close",
   "keyword": "Then "
-});
-formatter.step({
-  "name": "Find \"Procedure Name\" by entering Procedure Name into search criteria and click Find button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Click OK button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Enter intrval \"\u003cInterval\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Click Save button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Click Close button on the Edit Types screen",
-  "keyword": "And "
 });
 formatter.examples({
   "name": "",
@@ -77,25 +60,28 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "Interval",
+        "Unit",
         ""
       ]
     },
     {
       "cells": [
-        "12",
+        "mV",
         ""
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Assign Procedure to Type",
+  "name": "Create MET_TEAM Template",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@AssignProcedureToType"
+      "name": "@Create_Template"
+    },
+    {
+      "name": "@Alex"
     }
   ]
 });
@@ -113,136 +99,86 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click Maintenance and click Type",
+  "name": "Click Maintenance and click Manual Templates",
   "keyword": "When "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateType.click_Maintenance_and_click_Type()"
+  "location": "stepDefinitions.CreateTemplate.click_Maintenance_and_click_Manual_Templates()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Find Type\" window is open",
+  "name": "\"Find Manual Template\" window opens and click Add button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateContact.window_is_open(java.lang.String)"
+  "location": "stepDefinitions.CreatePart.window_opens_and_click_Add_button(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Find \"Description\" by entering Description and click Find button",
+  "name": "\"Add Manual Template\" window is open and enter Template Name and click Template_Design tab",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.VerifyType.find_by_entering_Description_and_click_Find_button(java.lang.String)"
+  "location": "stepDefinitions.CreateTemplate.window_is_open_and_enter_Template_Name_and_click_Template_Design_tab(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "click OK button",
+  "name": "drag right border, extend and drop it",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.AssignProcedureToType.click_OK_button()"
+  "location": "stepDefinitions.CreateTemplate.drag_right_border_extend_and_drop_it()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click Add Procedure Link button and \"Add Type Default Procedure\" window opens",
+  "name": "Right-click and select \"Step Wizard\" from context menu",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.AssignProcedureToType.click_Add_Procedure_Link_button_and_window_opens(java.lang.String)"
+  "location": "stepDefinitions.CreateTemplate.right_click_and_select_from_context_menu(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "click Refresh button",
+  "name": "Enter Start, End, Step Size and select \"mV\" Unit",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.AssignProcedureToType.click_Refresh_button()"
+  "location": "stepDefinitions.CreateTemplate.enter_Start_End_Step_Size_and_select_Unit(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Click ellipsis button next to Procedure Name field",
+  "name": "Enter %Reading, %FS, Floor and Resolution",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepDefinitions.AssignProcedureToType.click_ellipsis_button_next_to_Procedure_Name_field()"
+  "location": "stepDefinitions.CreateTemplate.enter_Reading_FS_Floor_and_Resolution()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "\"Find Procedure\" window is open",
+  "name": "Click Save wizard, click Save template and click Close",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.CreateContact.window_is_open(java.lang.String)"
+  "location": "stepDefinitions.CreateTemplate.click_Save_wizard_click_Save_template_and_click_Close()"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.step({
-  "name": "Find \"Procedure Name\" by entering Procedure Name into search criteria and click Find button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.AssignProcedureToType.find_by_entering_Procedure_Name_into_search_criteria_and_click_Find_button(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click OK button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateContact.click_OK_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Enter intrval \"12\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.AssignProcedureToType.enter_intrval(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click Save button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "stepDefinitions.CreateShipping.click_Save_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click Close button on the Edit Types screen",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefinitions.AssignProcedureToType.click_Close_button_on_the_Edit_Types_screen()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.embedding("image/png", "embedded0.png", "Assign Procedure to Type");
+formatter.embedding("image/png", "embedded0.png", "Create MET_TEAM Template");
 formatter.after({
   "status": "passed"
 });
