@@ -79,6 +79,9 @@ public class AddShippingWindowElements extends BaseClass {
 	@FindBy (id = "tbAddAsset")
 	public WebElement shipAddAsset;
 	
+	@FindBy (xpath = "//*[@class='x-grid3-cell-inner x-grid3-col-cBarcode' and text()='SAMPLE-10']")
+	public WebElement shipAddAssetSearchResult;
+	
 	@FindBy (id = "tbAddNonAsset")
 	public WebElement shipAddNonAsset;
 	

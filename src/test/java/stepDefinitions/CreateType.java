@@ -62,6 +62,7 @@ public class CreateType extends CommonMethods {
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame3);
 		CommonMethods.waitForVisib(findScreenWindowElements.findFacilityFacilityNameSearchValue);
+		CommonMethods.depressButton(findScreenWindowElements.RememberButton);
 		Actions actions = new Actions(driver);
 		actions.moveToElement(findScreenWindowElements.findFacilityFacilityNameSearchValue).click().sendKeys(string).build().perform();
 		CommonMethods.click(findScreenWindowElements.FindButton);

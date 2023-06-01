@@ -89,10 +89,17 @@ public class CreateAsset extends CommonMethods {
 	public void enter_to_the_search_criteria_and_click_Find_button(String string) throws Throwable {
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame5);
+		CommonMethods.depressButton(findScreenWindowElements.RememberButton);
 		CommonMethods.waitForVisib(findScreenWindowElements.findFacilityFacilityNameSearchValue);
 		Actions actions = new Actions(driver);
 		actions.moveToElement(findScreenWindowElements.findFacilityFacilityNameSearchValue).click().sendKeys(string).build().perform();
 		CommonMethods.click(findScreenWindowElements.FindButton);
+		
+	}
+	
+	@Then("Click OK button on the Find Asset screen")
+	public void click_OK_button_on_the_Find_Asset_screen() {
+		CommonMethods.click(findScreenWindowElements.OkButton);
 		
 	}
 	

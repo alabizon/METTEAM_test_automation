@@ -113,6 +113,8 @@ public class CreateShipping extends CommonMethods {
 	
 	@Then("Double-click search result and click OK button")
 	public void double_click_search_result_and_click_OK_button() {
+		CommonMethods.doubleClick(addShippingWindowElements.shipAddAssetSearchResult);
+		//CommonMethods.click(addShippingWindowElements.shipAddAssetSearchResult);
 		CommonMethods.click(selectShipItemsWindowElements.OkButton);
 		
 	}

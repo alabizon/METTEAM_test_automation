@@ -453,7 +453,7 @@ public class CommonMethods extends PageInitializer {
 	}
 	
 	/**
-	 * This method will de-press menu button if it is pressed.
+	 * This method will de-press Remember menu button if it is pressed.
 	 * @param element -- Pass the desired buttons WebElement to be de-pressed.
 	 * @throws Throwable 
 	 * 	 */

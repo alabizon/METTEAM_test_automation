@@ -7,6 +7,8 @@ import org.junit.Assert;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.CommonMethods;
+import utils.Constants;
+import utils.ExcelUtility;
 
 public class CreateGroup extends CommonMethods {
 	
@@ -30,6 +32,8 @@ public class CreateGroup extends CommonMethods {
 		
 		GroupName = "Group_"+CommonMethods.getDateAsString();
 		CommonMethods.sendKeys(addGroupWindowElements.groupName, GroupName);
+		
+		ExcelUtility.writeToExcel(Constants.TESTDATA_FILEPATH, "TestExel", Constants.GROUP_CELL, 1, GroupName);
 				
 		CommonMethods.click(addGroupWindowElements.groupBtnSave);
 		Thread.sleep(1000);
@@ -57,6 +61,7 @@ public class CreateGroup extends CommonMethods {
 		CommonMethods.swithToFrame(frames.Frame4);
 		Thread.sleep(500);
 		Actions actions = new Actions(driver);
+		//CommonMethods.refreshElement();
 		actions.moveToElement(findScreenWindowElements.findFacilityFacilityNameSearchValue).click().sendKeys(string).build().perform();
 		CommonMethods.click(findScreenWindowElements.FindButton);
 		

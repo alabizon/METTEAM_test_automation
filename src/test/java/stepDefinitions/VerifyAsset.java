@@ -38,6 +38,12 @@ public class VerifyAsset extends CommonMethods {
 	    CommonMethods.click(selectShipItemsWindowElements.FindButton);
 		
 	}
+	
+	@Then("Click OK button on the screen")
+	public void click_OK_button_on_the_screen() {
+		CommonMethods.click(findScreenWindowElements.OkButton);
+		
+	}
 		
 	@Then("Verify ID is ID")
 	public void verify_ID_is_ID() {
