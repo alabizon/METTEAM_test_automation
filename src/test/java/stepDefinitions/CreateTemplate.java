@@ -5,8 +5,12 @@ import org.openqa.selenium.Point;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.CommonMethods;
+import utils.Constants;
+import utils.ExcelUtility;
 
 public class CreateTemplate extends CommonMethods {
+	
+	public static String TemplateName;
 	
 	@When("Click Maintenance and click Manual Templates")
 	public void click_Maintenance_and_click_Manual_Templates() throws InterruptedException {
@@ -21,7 +25,14 @@ public class CreateTemplate extends CommonMethods {
 	public void window_is_open_and_enter_Template_Name_and_click_Template_Design_tab(String string) {
 		driver.switchTo().defaultContent();
 		CommonMethods.swithToFrame(frames.Frame2);
-		CommonMethods.sendKeys(addTemplateWindowElements.tempateName, "Template_"+CommonMethods.getDateAsString());
+		TemplateName = "Template_"+CommonMethods.getDateAsString();
+		CommonMethods.sendKeys(addTemplateWindowElements.tempateName, TemplateName);
+		
+		ExcelUtility.openExcel(Constants.TESTDATA_FILEPATH);
+		ExcelUtility.getSheet("TestExel");
+		ExcelUtility.writeStringRow(TemplateName, Constants.MANUAL_TEMPLATE_CELL);
+		ExcelUtility.writeExcel(Constants.TESTDATA_FILEPATH);
+		
 		CommonMethods.click(addTemplateWindowElements.templateTabTemplateDesign);
 		
 	}
