@@ -15,13 +15,13 @@ public class ReceivingWindowElements extends BaseClass {
 	 * Beginning Elements from Receiving Asset page
 	 */
 	
-	@FindBy (id = "tab-pnlCallSheet__ext-comp-1035")
+	@FindBy (xpath = "//*[@class='x-tab-strip-text ' and text()='Receiving Details']")
 	public WebElement receivingReceivingDetailsTab;
 	
-	@FindBy (id = "tab-pnlCallSheet__ext-comp-1040")
+	@FindBy (xpath = "//*[@class='x-tab-strip-text ' and text()='Work Order Extended Data']")
 	public WebElement receivingWOExtendedDataTab;
 	
-	@FindBy (id = "tab-pnlCallSheet__ext-comp-1041")
+	@FindBy (xpath = "//*[@class='x-tab-strip-text ' and text()='Log Notes']")
 	public WebElement receivingLogNotesTab;
 
 	@FindBy (xpath = "//*[@type='button' and contains(text(),'Process')]")
@@ -185,6 +185,12 @@ public class ReceivingWindowElements extends BaseClass {
 	
 	@FindBy (xpath = "//*[@type='button' and contains(text(),'Select')]")
 	public WebElement receivingSelectButton;
+	
+	@FindBy (xpath = "//*[@class='x-grid3-cell-inner x-grid3-col-cBarcode' and text()='SAMPLE-10']")
+	public WebElement receivingFirstAsset;
+	
+	@FindBy (xpath = "//*[@class='x-grid3-cell-inner x-grid3-col-cBarcode' and text()='SAMPLE-11']")
+	public WebElement receivingSecondAsset;
 	
 	@FindBy (xpath = "//*[@type ='button' and  @class = ' x-btn-text btn-add-sm']")
 	public WebElement receivingAddAssetButton;

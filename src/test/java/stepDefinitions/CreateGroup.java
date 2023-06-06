@@ -61,7 +61,6 @@ public class CreateGroup extends CommonMethods {
 		CommonMethods.swithToFrame(frames.Frame4);
 		Thread.sleep(500);
 		Actions actions = new Actions(driver);
-		//CommonMethods.refreshElement();
 		actions.moveToElement(findScreenWindowElements.findFacilityFacilityNameSearchValue).click().sendKeys(string).build().perform();
 		CommonMethods.click(findScreenWindowElements.FindButton);
 		

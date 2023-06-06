@@ -159,7 +159,7 @@ public class CommonMethods extends PageInitializer {
 	}
 
 	/**
-	 * This method will determine if element is present on ui or not.
+	 * This method will determine if element is present on UI or not.
 	 * 
 	 * @param element
 	 * @return
@@ -502,6 +502,28 @@ public class CommonMethods extends PageInitializer {
 				JsCommonMethods.drawBlueBorder(addTypeWindowElements.refreshButton1);
 			}
 	}
+	
+	/**
+	 *  
+	 * 	 */
+	public static void enterTheFindCriteriaForFindScreen(List<WebElement> element, WebElement frame, String targetElementText, String textToEnter) throws Throwable {
+        driver.switchTo().defaultContent();
+        CommonMethods.swithToFrame(frame);
+        for (int i = 0; i < element.size(); i++) {
+            if (element.get(i).getText().equalsIgnoreCase(targetElementText)) {
+
+                JsCommonMethods.drawRedBorder(element.get(i));
+                int elementIndex = i + 4;
+                WebElement searchField = element.get(elementIndex);
+                Actions actions = new Actions(driver);
+                actions.moveToElement(searchField).click().sendKeys(textToEnter).build().perform();
+
+                    break;
+                }
+            }
+        Thread.sleep(1000);
+        CommonMethods.click(selectShipItemsWindowElements.FindButton);
+        }
 	
 }
 

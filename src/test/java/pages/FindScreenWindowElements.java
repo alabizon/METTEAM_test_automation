@@ -36,8 +36,17 @@ public class FindScreenWindowElements extends BaseClass {
 	@FindBy (xpath = "//*[@class=' x-btn-text' and contains(text(),'Yes')]")
 	public WebElement ResetAllAlertYesButton;
 	
-	@FindBy (xpath = "//*[@class = 'x-grid3-col x-grid3-cell x-grid3-td-cValue x-grid3-cell-last x-grid3-cell-selected']/div")
+	@FindBy (xpath = "//*[@class ='x-grid3-row-table']/tbody/tr/td/div")  ///this one
+    public List<WebElement> listElementsFromTheFindScreen;
+	
+	@FindBy (xpath = "//*[@class = 'x-grid3-col x-grid3-cell x-grid3-td-cValue x-grid3-cell-last x-grid3-cell-selected']")
 	public WebElement findFacilityFacilityNameSearchValue;
+	
+	@FindBy (xpath = "//*[@class = 'x-grid3-col x-grid3-cell x-grid3-td-cValue x-grid3-cell-last x-grid3-dirty-cell x-grid3-cell-selected']")
+	public WebElement findFacilityFacilityNameSearch2Value;
+	
+	@FindBy (xpath = "//*[@class = 'x-grid3-cell-inner x-grid3-col-cBarcode']")
+	public WebElement FirstSearchResult;
 	
 	@FindBy (xpath = "//*[@type='button' and contains(text(),'Add')]")
 	public WebElement addButton;
