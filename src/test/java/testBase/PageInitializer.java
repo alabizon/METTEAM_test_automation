@@ -26,6 +26,7 @@ import pages.Frames;
 import pages.LoginPageElements;
 import pages.MaintenanceSubMenuElements;
 import pages.ManagementSubMenuElements;
+import pages.ReceivingWindowElements;
 import pages.SelectShipItemsWindowElements;
 import pages.SetupSubMenuElements;
 import pages.WorkflowSubMenuElements;
@@ -62,6 +63,7 @@ public class PageInitializer extends BaseClass {
 	protected static SelectShipItemsWindowElements selectShipItemsWindowElements;
 	protected static AddFacilityWindowElements addFacilityWindowElements;
 	protected static AddContractPricingWindowElements addContractPricingWindowElements;
+	protected static ReceivingWindowElements receivingWindowElements;
 	public static void initializePageObjects() {
 		findScreenWindowElements = new FindScreenWindowElements();
 		loginPageElements = new LoginPageElements();
@@ -92,6 +94,7 @@ public class PageInitializer extends BaseClass {
 		selectShipItemsWindowElements = new SelectShipItemsWindowElements();
 		addFacilityWindowElements = new AddFacilityWindowElements();
 		addContractPricingWindowElements = new AddContractPricingWindowElements();
+		receivingWindowElements = new ReceivingWindowElements();
 			
 	}
 }

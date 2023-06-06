@@ -504,8 +504,13 @@ public class CommonMethods extends PageInitializer {
 	}
 	
 	/**
-	 *  
-	 * 	 */
+	 * Use this method to enter search criteria and do Find by entered search criteria.
+	 * 
+	 * @param element           		List of elements from the find screen (parameters grid)
+	 * @param frame 					Active frame
+	 * @param targetElementText			Field that search will be done by
+	 * @param textToEnter				Search criteria
+	 */
 	public static void enterTheFindCriteriaForFindScreen(List<WebElement> element, WebElement frame, String targetElementText, String textToEnter) throws Throwable {
         driver.switchTo().defaultContent();
         CommonMethods.swithToFrame(frame);
@@ -516,7 +521,7 @@ public class CommonMethods extends PageInitializer {
                 int elementIndex = i + 4;
                 WebElement searchField = element.get(elementIndex);
                 Actions actions = new Actions(driver);
-                actions.moveToElement(searchField).click().sendKeys(textToEnter).build().perform();
+                actions.moveToElement(searchField).click().click().sendKeys(textToEnter).build().perform();
 
                     break;
                 }

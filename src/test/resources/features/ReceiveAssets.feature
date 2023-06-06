@@ -9,19 +9,19 @@ Feature: Receive Assets Steps
     And Click Search criteria and enter "SAMPLE-11" into Barcode search criteria and click Find button
     Then Double-click search result again
     And Click OK button on the Find Assets to Receive screen
-    #Then Click Department elipsis button and select "Quality Department"
-    #And Enter "<Location>" and enter "<Quantity>" and enter "<Contact Info>"
-    #Then Select "Mechanical" for Work Area
-    #And Select "One Time Only" for Reason for Service 
-    #Then Select "In Tolerance" for Initial Condition 
-    #And Check On Site checkbox and check Expedite checkbox
-    #Then Select second asset and verify the Department is blank
-    #And Verify Location is blank
-    #Then Verify Work Area is "Electronic"
-    #And Verify Reason of Service is "Normal Cycle"
-    #Then Verify Initial Condition is blank
-    #And Verify Quantity is "1" and Contact Info is blank
-    #Then Verify On Site checkbox is unchecked
+    Then Click Department elipsis button and select "Quality Department"
+    And Enter "<Location>" and enter "<Quantity>" and enter "<Contact Info>"
+    Then Select "Mechanical" for Work Area
+    And Select "One Time Only" for Reason for Service 
+    Then Select "In Tolerance" for Initial Condition 
+    And Check On Site checkbox and check Expedite checkbox
+    Then Select second asset and verify the Department is blank
+    And Verify Location is blank
+    Then Verify Work Area is "Electronic"
+    And Verify Reason of Service is "Normal Cycle"
+    Then Verify Initial Condition is blank
+    And Verify Quantity is "1" and Contact Info is blank
+    Then Verify On Site checkbox is unchecked
     #And Verify Expedite checkbox is unchecked
     #Then Select first asset and check Location checkbox
     #And Select second asset and verify Location is "<Location>"
