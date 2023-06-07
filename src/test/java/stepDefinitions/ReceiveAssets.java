@@ -1,19 +1,10 @@
 package stepDefinitions;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Point;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.CommonMethods;
-import utils.Constants;
-import utils.ExcelUtility;
 import utils.JsCommonMethods;
 
 public class ReceiveAssets extends CommonMethods {
@@ -40,7 +31,6 @@ public class ReceiveAssets extends CommonMethods {
 	@Then("Double-click search result")
 	public void double_click_search_result() throws Throwable {
 		CommonMethods.doubleClick(findScreenWindowElements.FirstSearchResult);
-		//Thread.sleep(3000);
 		
 	}
 		
@@ -283,8 +273,7 @@ public class ReceiveAssets extends CommonMethods {
 	
 	@Then("Enter {string} to Priority and Verify Required Date is Open Date plus {int} days")
 	public void enter_to_Priority_and_Verify_Required_Date_is_Open_Date_plus_days(String string, Integer int1) throws Throwable {
-		Thread.sleep(1000);
-		CommonMethods.doubleClick(receivingWindowElements.receivingPriority);
+		JsCommonMethods.clearByJS(receivingWindowElements.receivingPriority);
 		CommonMethods.sendKeys(receivingWindowElements.receivingPriority, string);
 		FieldContent = CommonMethods.getAttribute(receivingWindowElements.receivingRequiredDate);
 		String ReqDate = CommonMethods.getDate7DaysFromToday();
@@ -292,16 +281,21 @@ public class ReceiveAssets extends CommonMethods {
 		
 	}
 	
-
-	
-	
-	
-	
-	
-	
-	
-	
+	@Then("Enter {string} to Priority and click Process button")
+	public void enter_to_Priority_and_click_Process_button(String string) {
+		JsCommonMethods.clearByJS(receivingWindowElements.receivingPriority);
+		CommonMethods.sendKeys(receivingWindowElements.receivingPriority, string);
+		CommonMethods.click(receivingWindowElements.receivingProcessButton);
 		
+	}
+
+	@Then("cick OK on the Attention message and click Close button")
+	public void cick_OK_on_the_Attention_message_and_click_Close_button() throws Throwable {
+		Thread.sleep(5000);
+		CommonMethods.click(receivingWindowElements.receivingAttentionOK);
+		CommonMethods.click(receivingWindowElements.receivingCloseButton);
+		
+	}
 	
 }
 

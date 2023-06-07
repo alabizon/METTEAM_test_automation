@@ -572,7 +572,8 @@ public class CommonMethods extends PageInitializer {
                 int elementIndex = i + 4;
                 WebElement searchField = element.get(elementIndex);
                 Actions actions = new Actions(driver);
-                actions.moveToElement(searchField).click().click().sendKeys(textToEnter).build().perform();
+                actions.moveToElement(searchField).click().build().perform();
+                actions.sendKeys(textToEnter).build().perform();
 
                     break;
                 }

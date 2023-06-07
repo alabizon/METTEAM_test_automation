@@ -1,8 +1,9 @@
 package stepDefinitions;
 
+import org.junit.Assert;
+
 import io.cucumber.java.en.Then;
 import utils.CommonMethods;
-import org.junit.Assert;
 
 public class VerifyContractPricing extends CommonMethods {
 	

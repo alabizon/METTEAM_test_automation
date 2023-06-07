@@ -40,8 +40,8 @@ Feature: Receive Assets Steps
     Then Verify Required Date is Open Date plus 14 days
     And Enter "<Priority1>" to Priority and verify Required Date is Open Date plus 3 days
     Then Enter "<Priority2>" to Priority and Verify Required Date is Open Date plus 7 days
-    #And Enter "<Priority3>" to Priority and click Process button
-    #Then cick OK on the Attention message and click Close button
+    And Enter "<Priority3>" to Priority and click Process button
+    Then cick OK on the Attention message and click Close button
     
 
     Examples: 

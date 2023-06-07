@@ -1,11 +1,12 @@
 package stepDefinitions;
 
+import org.junit.Assert;
+import org.openqa.selenium.interactions.Actions;
+
 import io.cucumber.java.en.Then;
 import utils.CommonMethods;
 import utils.Constants;
 import utils.ExcelUtility;
-import org.junit.Assert;
-import org.openqa.selenium.interactions.Actions;
 
 public class VerifyShipping extends CommonMethods {
 	
