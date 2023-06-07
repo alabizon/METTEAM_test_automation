@@ -305,6 +305,57 @@ public class CommonMethods extends PageInitializer {
   }
 	
 	/**
+	   * This Method returns date which is 14-days from today's date in the "MM/dd/yyyy" format 
+	   */
+	public static String getDate14DaysFromToday() {
+		// Get today's date
+       LocalDate today = LocalDate.now();
+
+       // Add 12 months to today's date
+       LocalDate datePlus14Days = today.plusDays(14);
+
+       // Format the date using "MM/dd/yyyy" pattern
+       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+       String formattedDate = datePlus14Days.format(formatter);
+       return formattedDate;
+		
+ }
+	
+	/**
+	   * This Method returns date which is 7-days from today's date in the "MM/dd/yyyy" format 
+	   */
+	public static String getDate7DaysFromToday() {
+		// Get today's date
+      LocalDate today = LocalDate.now();
+
+      // Add 12 months to today's date
+      LocalDate datePlus7Days = today.plusDays(7);
+
+      // Format the date using "MM/dd/yyyy" pattern
+      DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+      String formattedDate = datePlus7Days.format(formatter);
+      return formattedDate;
+		
+}
+	
+	/**
+	   * This Method returns date which is 3-days from today's date in the "MM/dd/yyyy" format 
+	   */
+	public static String getDate3DaysFromToday() {
+		// Get today's date
+     LocalDate today = LocalDate.now();
+
+     // Add 12 months to today's date
+     LocalDate datePlus3Days = today.plusDays(3);
+
+     // Format the date using "MM/dd/yyyy" pattern
+     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+     String formattedDate = datePlus3Days.format(formatter);
+     return formattedDate;
+		
+}
+	
+	/**
 	 * Use this method to select a checkbox value
 	 */
 	public static void selectCheckbox(List<WebElement> checkboxList, String attribute, String value) {

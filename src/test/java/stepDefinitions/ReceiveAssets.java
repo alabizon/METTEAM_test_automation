@@ -1,5 +1,8 @@
 package stepDefinitions;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
@@ -15,7 +18,6 @@ import utils.JsCommonMethods;
 
 public class ReceiveAssets extends CommonMethods {
 	
-	//public static String Barcode;
 	public static String FieldContent;
 	
 	@When("Click Workflow and click Receiving")
@@ -38,7 +40,7 @@ public class ReceiveAssets extends CommonMethods {
 	@Then("Double-click search result")
 	public void double_click_search_result() throws Throwable {
 		CommonMethods.doubleClick(findScreenWindowElements.FirstSearchResult);
-		Thread.sleep(1000);
+		//Thread.sleep(3000);
 		
 	}
 		
@@ -164,7 +166,133 @@ public class ReceiveAssets extends CommonMethods {
 		
 	}
 	
+	@Then("Verify Expedite checkbox is unchecked")
+	public void verify_Expedite_checkbox_is_unchecked() {
+		CommonMethods.isElementChecked(receivingWindowElements.receivingExpedite);
+		
+	}
 	
+	@Then("Select first asset and check Location checkbox")
+	public void select_first_asset_and_check_Location_checkbox() {
+		CommonMethods.click(receivingWindowElements.receivingFirstAsset);
+		CommonMethods.click(receivingWindowElements.receivingLocationCheckbox);
+		
+	}
+	
+	@Then("Select second asset and verify Location is {string}")
+	public void select_second_asset_and_verify_Location_is(String string) {
+		CommonMethods.click(receivingWindowElements.receivingSecondAsset);
+		FieldContent = CommonMethods.getAttribute(receivingWindowElements.receivingLocation);
+		Assert.assertEquals(string, FieldContent);
+		
+	}
+	
+	@Then("Select first asset and uncheck Location checkbox")
+	public void select_first_asset_and_uncheck_Location_checkbox() {
+		CommonMethods.click(receivingWindowElements.receivingFirstAsset);
+		CommonMethods.click(receivingWindowElements.receivingLocationCheckbox);
+		
+	}
+	
+	@Then("Select first asset and click Select button")
+	public void select_first_asset_and_click_Select_button() {
+		CommonMethods.click(receivingWindowElements.receivingFirstAsset);
+		CommonMethods.click(receivingWindowElements.receivingSelectButton);
+		
+	}
+	
+	@Then("Verify Department relative checkbox is checked and Location relative checkbox is checked")
+	public void verify_Department_relative_checkbox_is_checked_and_Location_relative_checkbox_is_checked() {
+		CommonMethods.isElementChecked(receivingWindowElements.receivingDepartmentCheckbox);
+		CommonMethods.isElementChecked(receivingWindowElements.receivingLocationCheckbox);
+		
+	}
+	
+	@Then("Verify Work Area relative checkbox is checked and Reason for Service relative checkbox is checked")
+	public void verify_Work_Area_relative_checkbox_is_checked_and_Reason_for_Service_relative_checkbox_is_checked() {
+		CommonMethods.isElementChecked(receivingWindowElements.receivingWorkAreaCheckbox);
+		CommonMethods.isElementChecked(receivingWindowElements.receivingReasonOfServiceCheckbox);
+		
+	}
+	
+	@Then("Verify Initial Condition relative checkbox is checked and Priority relative checkbox is checked")
+	public void verify_Initial_Condition_relative_checkbox_is_checked_and_Priority_relative_checkbox_is_checked() {
+		CommonMethods.isElementChecked(receivingWindowElements.receivingInitialConditionCheckbox);
+		CommonMethods.isElementChecked(receivingWindowElements.receivingPriorityCheckbox);
+		
+	}
+	
+	@Then("Verify Quantity relative checkbox is checked and Job Number relative checkbox is checked")
+	public void verify_Quantity_relative_checkbox_is_checked_and_Job_Number_relative_checkbox_is_checked() {
+		CommonMethods.isElementChecked(receivingWindowElements.receivingQuantityCheckbox);
+		CommonMethods.isElementChecked(receivingWindowElements.receivingJobNumberCheckbox);
+		
+	}
+	
+	@Then("Verify On Site relative checkbox is checked and Expedite relative checkbox is checked")
+	public void verify_On_Site_relative_checkbox_is_checked_and_Expedite_relative_checkbox_is_checked() {
+		CommonMethods.isElementChecked(receivingWindowElements.receivingOnSiteCheckbox);
+		CommonMethods.isElementChecked(receivingWindowElements.receivingExpediteCheckbox);
+		
+	}
+	
+	@Then("Verify ISOCert relative checkbox is checked and Service Type relative checkbox is checked")
+	public void verify_ISOCert_relative_checkbox_is_checked_and_Service_Type_relative_checkbox_is_checked() {
+		CommonMethods.isElementChecked(receivingWindowElements.receivingISOCertCheckbox);
+		CommonMethods.isElementChecked(receivingWindowElements.receivingServiceTypeCheckbox);
+		
+	}
+	
+	@Then("Verify Status relative checkbox is checked and Open Date relative checkbox is checked")
+	public void verify_Status_relative_checkbox_is_checked_and_Open_Date_relative_checkbox_is_checked() {
+		CommonMethods.isElementChecked(receivingWindowElements.receivingStatusCheckbox);
+		CommonMethods.isElementChecked(receivingWindowElements.receivingOpenDateCheckbox);
+		
+	}
+	
+	@Then("Verify Required Date relative checkbox is checked and Category relative checkbox is checked")
+	public void verify_Required_Date_relative_checkbox_is_checked_and_Category_relative_checkbox_is_checked() {
+		CommonMethods.isElementChecked(receivingWindowElements.receivingRequiredDateCheckbox);
+		CommonMethods.isElementChecked(receivingWindowElements.receivingCategoryCheckbox);
+		
+	}
+	
+	@Then("Verify Sub Category relative checkbox is checked and Contact Info relative checkbox is checked")
+	public void verify_Sub_Category_relative_checkbox_is_checked_and_Contact_Info_relative_checkbox_is_checked() {
+		CommonMethods.isElementChecked(receivingWindowElements.receivingSubCategoryCheckbox);
+		CommonMethods.isElementChecked(receivingWindowElements.receivingContactInfoCheckbox);
+		
+	}
+	
+	@Then("Verify Required Date is Open Date plus {int} days")
+	public void verify_Required_Date_is_Open_Date_plus_days(Integer int1) {
+		FieldContent = CommonMethods.getAttribute(receivingWindowElements.receivingRequiredDate);
+		String ReqDate = CommonMethods.getDate14DaysFromToday();
+		Assert.assertEquals(ReqDate, FieldContent);
+		
+	}
+	
+	@Then("Enter {string} to Priority and verify Required Date is Open Date plus {int} days")
+	public void enter_to_Priority_and_verify_Required_Date_is_Open_Date_plus_days(String string, Integer int1) {
+		CommonMethods.sendKeys(receivingWindowElements.receivingPriority, string);
+		FieldContent = CommonMethods.getAttribute(receivingWindowElements.receivingRequiredDate);
+		String ReqDate = CommonMethods.getDate3DaysFromToday();
+		Assert.assertEquals(ReqDate, FieldContent);
+		
+	}
+	
+	@Then("Enter {string} to Priority and Verify Required Date is Open Date plus {int} days")
+	public void enter_to_Priority_and_Verify_Required_Date_is_Open_Date_plus_days(String string, Integer int1) throws Throwable {
+		Thread.sleep(1000);
+		CommonMethods.doubleClick(receivingWindowElements.receivingPriority);
+		CommonMethods.sendKeys(receivingWindowElements.receivingPriority, string);
+		FieldContent = CommonMethods.getAttribute(receivingWindowElements.receivingRequiredDate);
+		String ReqDate = CommonMethods.getDate7DaysFromToday();
+		Assert.assertEquals(ReqDate, FieldContent);
+		
+	}
+	
+
 	
 	
 	
