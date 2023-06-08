@@ -34,6 +34,18 @@ formatter.step({
   "name": "Click OK button on the screen",
   "keyword": "Then "
 });
+formatter.step({
+  "name": "Click Labor tab",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Click Edit Labor button",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Click Close button on Edit Labor screen",
+  "keyword": "Then "
+});
 formatter.examples({
   "name": "",
   "description": "",
@@ -114,6 +126,36 @@ formatter.step({
 });
 formatter.match({
   "location": "stepDefinitions.VerifyAsset.click_OK_button_on_the_screen()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click Labor tab",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.EditWorkOrder.click_Labor_tab()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click Edit Labor button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.EditWorkOrder.click_Edit_Labor_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click Close button on Edit Labor screen",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.EditWorkOrder.click_Close_button_on_Edit_Labor_screen()"
 });
 formatter.result({
   "status": "passed"

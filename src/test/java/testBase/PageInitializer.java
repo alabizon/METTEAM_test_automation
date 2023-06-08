@@ -6,6 +6,7 @@ import pages.AddContactWindowElements;
 import pages.AddContractPricingWindowElements;
 import pages.AddFacilityWindowElements;
 import pages.AddGroupWindowElements;
+import pages.AddLaborWindowElements;
 import pages.AddPartWindowElements;
 import pages.AddProcedureWindowElements;
 import pages.AddShipItemWindowElements;
@@ -64,6 +65,7 @@ public class PageInitializer extends BaseClass {
 	protected static AddFacilityWindowElements addFacilityWindowElements;
 	protected static AddContractPricingWindowElements addContractPricingWindowElements;
 	protected static ReceivingWindowElements receivingWindowElements;
+	protected static AddLaborWindowElements addLaborWindowElements;
 	public static void initializePageObjects() {
 		findScreenWindowElements = new FindScreenWindowElements();
 		loginPageElements = new LoginPageElements();
@@ -95,6 +97,7 @@ public class PageInitializer extends BaseClass {
 		addFacilityWindowElements = new AddFacilityWindowElements();
 		addContractPricingWindowElements = new AddContractPricingWindowElements();
 		receivingWindowElements = new ReceivingWindowElements();
+		addLaborWindowElements = new AddLaborWindowElements();
 			
 	}
 }

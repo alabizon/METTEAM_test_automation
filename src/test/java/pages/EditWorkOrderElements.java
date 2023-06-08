@@ -48,6 +48,15 @@ public class EditWorkOrderElements extends BaseClass {
 	@FindBy (xpath = "//*[@class='x-tab-strip-text ' and text()='Service']")
 	public WebElement woServiceTab;
 	
+	@FindBy (xpath = "//*[@id='tRequiredDate' and @name ='tRequiredDate']")
+	public WebElement woServiceRequiredDate;
+	
+	@FindBy (xpath = "//*[@id='nPriority' and @name ='nPriority']")
+	public WebElement woServicePriority;
+	
+	@FindBy (xpath = "//*[@id='tOpenDate' and @name ='tOpenDate']")
+	public WebElement woServiceOpenDate;
+	
 	@FindBy (xpath = "//*[@id='cCertificationNumber' and @name ='cCertificationNumber']")
 	public WebElement woServiceCertNumber;
 	

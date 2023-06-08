@@ -565,6 +565,7 @@ public class CommonMethods extends PageInitializer {
 	public static void enterTheFindCriteriaForFindScreen(List<WebElement> element, WebElement frame, String targetElementText, String textToEnter) throws Throwable {
         driver.switchTo().defaultContent();
         CommonMethods.swithToFrame(frame);
+        CommonMethods.depressButton(findScreenWindowElements.RememberButton);
         for (int i = 0; i < element.size(); i++) {
             if (element.get(i).getText().equalsIgnoreCase(targetElementText)) {
 
@@ -581,6 +582,29 @@ public class CommonMethods extends PageInitializer {
         Thread.sleep(1000);
         CommonMethods.click(selectShipItemsWindowElements.FindButton);
         }
+	
+	/* ****
+	****
+	****
+	**/
+	
+	/**
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
+	public static void clickElementByIndex(List<WebElement> elements, int index) {
+        if (index >= 0 && index < elements.size()) {
+            WebElement element = elements.get(index);
+            JsCommonMethods.drawRedBorder(element);
+            element.click();
+        } else {
+            System.out.println("Invalid index or element not found.");
+        }
+    }
+	
+	
 	
 }
 

@@ -143,8 +143,8 @@ public class CreateWorkOrderFromAsset extends CommonMethods {
 		Thread.sleep(1000);
 		driver.switchTo().parentFrame();
 		//CommonMethods.swithToFrame(editWorkOrderElements.FrameWorkOrder);
-		CommonMethods.waitForClickability(editWorkOrderElements.buttonAddResult);
-		CommonMethods.click(editWorkOrderElements.buttonAddResult);
+		CommonMethods.waitForClickability(editWorkOrderElements.woButtonAddResult);
+		CommonMethods.click(editWorkOrderElements.woButtonAddResult);
 		Thread.sleep(3000);
 	}
 	

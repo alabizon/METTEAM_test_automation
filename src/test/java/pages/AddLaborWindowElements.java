@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -14,43 +16,43 @@ public class AddLaborWindowElements extends BaseClass {
 	 */
 	
 	@FindBy (id = "lNoCharge")
-	public WebElement addlaborNoCharge;
+	public WebElement addLaborNoCharge;
 	
 	@FindBy (xpath = "//*[@id='tStartTime' and @class = 'x-form-text x-form-field']")
-	public WebElement addlaborStartDate;
+	public WebElement addLaborStartDate;
 	
 	@FindBy (xpath = "//*[@id='nDuration' and @class = 'x-form-text x-form-field x-abs-layout-item']")
-	public WebElement addlaborDuration;
+	public WebElement addLaborDuration;
 	
 	@FindBy (xpath = "//*[@id ='nUserUID_display']/following-sibling::img")
-	public WebElement elipsisUser;
+	public WebElement addLaborUserElipsisButton;
 	
 	@FindBy (id = "nUserUID_display")
-	public WebElement addlaborUser;
+	public WebElement addLaborUser;
 	
-	@FindBy (xpath = "")
-	public WebElement elipsisCategory;
+	@FindBy (xpath = "//*[@id ='nCategoryUID_display']/following-sibling::img")
+	public WebElement addLaborCategoryElipsisButton;
 	
-	@FindBy (id = "")
-	public WebElement addlaborCategory;
+	@FindBy (id = "nCategoryUID_display")
+	public WebElement addLaborCategory;
 	
-	@FindBy (xpath = "")
-	public WebElement elipsisSubCategory;
+	@FindBy (xpath = "//*[@id ='nSubCategoryUID_display']/following-sibling::img")
+	public WebElement addLaborSubCategoryElipsisButton;
 	
-	@FindBy (id = "")
-	public WebElement addlaborSubCategory;
+	@FindBy (id = "nSubCategoryUID_display")
+	public WebElement addLaborSubCategory;
 	
-	@FindBy (id = "nRate")
-	public WebElement addlaborRate;
+	@FindBy (xpath = "//*[@id='nRate' and @name ='nRate']")
+	public WebElement addLaborRate;
 	
-	@FindBy (id = "")
-	public WebElement addlaborCost;
+	@FindBy (xpath = "//*[@id='nCost' and @name ='nCost']")
+	public WebElement addLaborCost;
 	
-	@FindBy (xpath = "//*[@class='x-btn x-btn-icon-text x-btn-text-icon x-btn-over']")
-	public WebElement addlaborSaveButton;
+	@FindBy (xpath = "//*[@id='tbSave' and @class = 'x-btn x-btn-icon-text x-btn-text-icon']")
+	public WebElement addLaborSaveButton;
 	
-	@FindBy (id = "")
-	public WebElement addlaborCloseButton;
+	@FindBy (className = " x-btn-text tb-close")
+	public List<WebElement> addLaborCloseButton;
 	
 	/**
 	 * End Elements Add Labor page
