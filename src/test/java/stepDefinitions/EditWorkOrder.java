@@ -1,11 +1,8 @@
 package stepDefinitions;
 
-import org.junit.Assert;
-
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.CommonMethods;
-import utils.JsCommonMethods;
 
 public class EditWorkOrder extends CommonMethods {
 	
@@ -37,7 +34,7 @@ public class EditWorkOrder extends CommonMethods {
 	
 	@Then("Click Close button on Edit Labor screen")
 	public void click_Close_button_on_Edit_Labor_screen() {
-		CommonMethods.clickElementByIndex(addLaborWindowElements.addLaborCloseButton, 0);
+		CommonMethods.clickElementByIndex(addLaborWindowElements.addLaborCloseButton, 1);
 		
 	}
 	

@@ -46,10 +46,10 @@ public class AddProcedureWindowElements extends BaseClass {
 	@FindBy (xpath = "//*[@id ='nCategoryUID_display' and  @class = 'x-form-text x-form-field autoLookUpDisable']")
 	public WebElement procCategory;
 	
-	@FindBy (id = "ext-gen291")
+	@FindBy (id = "//*[@class=' x-btn-text tb-save' and contains(text(),'Save')]")
 	public WebElement buttonSave;
 	
-	@FindBy (id = "ext-gen297")
+	@FindBy (id = "//*[@class=' x-btn-text tb-close' and contains(text(),'Close')]")
 	public WebElement buttonClose;
 	
 	/**
