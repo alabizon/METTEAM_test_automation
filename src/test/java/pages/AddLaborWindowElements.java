@@ -51,8 +51,8 @@ public class AddLaborWindowElements extends BaseClass {
 	@FindBy (xpath = "//*[@id='tbSave' and @class = 'x-btn x-btn-icon-text x-btn-text-icon']")
 	public WebElement addLaborSaveButton;
 	
-	@FindBy (className = " x-btn-text tb-close")
-	public List<WebElement> addLaborCloseButton;
+	@FindBy (xpath = "//*[@class = ' x-btn-text tb-close']")
+    public WebElement addLaborCloseButton;
 	
 	/**
 	 * End Elements Add Labor page

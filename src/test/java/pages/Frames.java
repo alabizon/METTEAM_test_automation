@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -65,6 +67,9 @@ public class Frames extends BaseClass {
 	
 	@FindBy (id = "frame_17")
 	public WebElement Frame17;
+	
+	@FindBy (tagName = "iframe")
+    public List<WebElement> listFrame;
 		
 	public Frames() {
 		

@@ -33,8 +33,9 @@ public class EditWorkOrder extends CommonMethods {
 	}
 	
 	@Then("Click Close button on Edit Labor screen")
-	public void click_Close_button_on_Edit_Labor_screen() {
-		CommonMethods.clickElementByIndex(addLaborWindowElements.addLaborCloseButton, 1);
+	public void click_Close_button_on_Edit_Labor_screen() throws Throwable {
+		CommonMethods.switchToLastPresentFrame();
+		CommonMethods.click(addLaborWindowElements.addLaborCloseButton);
 		
 	}
 	

@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.OutputType;
@@ -583,17 +584,10 @@ public class CommonMethods extends PageInitializer {
         CommonMethods.click(selectShipItemsWindowElements.FindButton);
         }
 	
-	/* ****
-	****
-	****
-	**/
-	
 	/**
-	 * 
-	 * 
-	 * 
-	 * 
+	 * This method will click element by its index
 	 */
+	
 	public static void clickElementByIndex(List<WebElement> elements, int index) {
         if (index >= 0 && index < elements.size()) {
             WebElement element = elements.get(index);
@@ -604,7 +598,22 @@ public class CommonMethods extends PageInitializer {
         }
     }
 	
+	/**
+	 * This method will switch focus to the active frame. 
+	 * 	 */
 	
+	public static void switchToLastPresentFrame() {
+	      driver.switchTo().defaultContent();
+	          CommonMethods.waitForVisib(frames.listFrame.get(1));
+
+	        if (frames.listFrame.size()  > 0) {
+
+	            int frameCount = frames.listFrame.size();
+
+	                WebElement lastFrame = frames.listFrame.get(frameCount-1);
+	                driver.switchTo().frame(lastFrame);
+	            }
+	    }
 	
 }
 
